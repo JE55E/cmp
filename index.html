@@ -13,35 +13,90 @@
 </style>
 </head>
 <body>
+<div class="main">
 
-<div style="text-align:center">
-  <h2>Tabbed Image Gallery</h2>
-  <p>Click on the images below:</p>
+<h1>I Too Am Critial Makers Lab</h1>
+<hr>
+
+<h2>PORTFOLIO</h2>
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('nature')"> Nature</button>
+  <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+  <button class="btn" onclick="filterSelection('people')"> People</button>
 </div>
 
-<!-- The four columns -->
+<!-- Portfolio Gallery Grid -->
 <div class="row">
-  <div class="column">
-    <img src="https://d2w9rnfcy7mm78.cloudfront.net/2059955/large_8de5dab996ae7674f5dcec7f470c38d7.jpg?1524060820?bc=1" alt="Nature" style="" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="img/img_5terre.jpg" alt="Snow" style="" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="img/img_forest.jpg" alt="Mountains" style="" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="img/img_lights.jpg" alt="Lights" style="" onclick="myFunction(this);">
-  </div>
-    <div class="column">
-    <img src="img/img_mountains.jpg" alt="Snot" style="" onclick="myFunction(this);">
-  </div>
+
+<div class="column nature">
+<div class="content">
+<a href="">
+<img class="image" src="img/img_5terre.jpg" alt="Mountains" style="width:100%">  
+<div class="overlay">John</div>
+</a>
+</div>
 </div>
 
-<div class="container">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <img id="expandedImg" style="">
-  <div id="imgtext"></div>
+<div class="column nature">
+<div class="content">
+<a href=""><img class="image" src="img/img_forest.jpg" alt="Lights" style="width:100%">
+<div class="overlay">John</div></a>
+</div>
+</div>
+
+ <div class="column nature">
+ <div class="content">
+ <a href=""><img class="image" src="img/img_lights.jpg" alt="Nature" style="width:100%"></a>
+ <div class="overlay">John</div>
+ </div>
+ </div>
+  
+ <div class="column cars">
+ <div class="content">
+<a href=""><img class="image" src="img/img_mountains.jpg" alt="Car" style="width:100%"></a>
+<div class="overlay">John</div>
+</div>
+</div>
+
+<div class="column cars">
+<div class="content">
+<a href=""><img class="image" src="img/img_forest.jpg" alt="Car" style="width:100%"></a>
+<div class="overlay">John</div>
+</div>
+</div>
+
+<div class="column cars">
+<div class="content">
+<a href=""><img class="image" src="img/img_mountains.jpg" alt="Car" style="width:100%"></a>
+<div class="overlay">John</div>
+</div>
+</div>
+
+<div class="column people">
+<div class="content">
+<a href=""><img class="image" src="img/img_lights.jpg" alt="Car" style="width:100%"></a>
+<div class="overlay">John</div>
+</div>
+</div>
+
+<div class="column people">
+<div class="content">
+<a href=""><img class="image" src="img/img_mountains.jpg" alt="Car" style="width:100%"></a>
+<div class="overlay">John</div>
+</div>
+</div>
+
+<div class="column people">
+<div class="content">
+<a href=""><img class="image" src="img/img_5terre.jpg" alt="Car" style="width:100%"></a>
+<div class="overlay">John</div>
+</div>
+</div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
 </div>
 
 <script>
