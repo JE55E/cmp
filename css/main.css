@@ -57,6 +57,7 @@ a#cmp { text-decoration: none; color: #f68a16; font-size: 16px; }
 /* Content */
 .content {
   position: relative;
+
 }
 
 /* The "show" class is added to the filtered elements */
@@ -90,8 +91,9 @@ a#cmp { text-decoration: none; color: #f68a16; font-size: 16px; }
 .container { }
 
 .image {
-  width: 100%;
-  height: auto;
+/*  width: 100%;*/
+  width: 100px;
+  height: 100px;
   border-radius: 5px;
   object-fit: cover;
 }
