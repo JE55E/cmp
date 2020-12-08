@@ -4,9 +4,9 @@
 }
 
 body {
-font-family: 'Montserrat', sans-serif;
-font-weight: 900;
-padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  /*font-weight: 900;*/
+  padding: 20px;
 }
 
 #enter { 
@@ -18,13 +18,13 @@ padding: 20px;
   top: 0;
   left: 0;
   display: block;
- }
+}
 
- #enter button {
+#enter button {
   margin-left: 75%;
   margin-right: auto;
   display: block;
- }
+}
 
 /* Style the buttons */
 .btn {
@@ -75,9 +75,10 @@ h2 { margin: 10px 0; }
 .dropdown {
   position: relative;
   display: inline-block;
-  float:right;
+  float: right;
   z-index: 300;
   cursor: pointer;
+  font-weight: 900;
 }
 
 .dropdown-content {
@@ -88,6 +89,8 @@ h2 { margin: 10px 0; }
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
   z-index: 1;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .dropdown:hover .dropdown-content {
@@ -97,9 +100,13 @@ h2 { margin: 10px 0; }
   width: 100%;
 }
 
+#logo { width: 50px; margin-right: 10px; display: none;}
+
 a { font-size: 16px; font-weight: 300; }
 
-a#cmp { text-decoration: none; color: #f68a16; font-size: 24px ; }
+a#cmp { text-decoration: none; color: #f68a16; font-size: 24px ; display: none;}
+
+li { }
 
 .nature { animation: 1s ease-out 0s 1 slideInFromLeft; }
 
@@ -122,7 +129,15 @@ a#cmp { text-decoration: none; color: #f68a16; font-size: 24px ; }
   }
 }
 
-#logo { width: 50px; margin-right: 10px; }
+.people { animation: 1s ease-out 0s 1 slideInFromTop; }
+@keyframes slideInFromTop{
+  0% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 /* Center website */
 .main {
@@ -169,7 +184,7 @@ a#cmp { text-decoration: none; color: #f68a16; font-size: 24px ; }
 .container { }
 
 .image {
-/*  width: 100%;*/
+  /*  width: 100%;*/
   width: 100px;
   height: 100px;
   border-radius: 5px;
@@ -186,6 +201,7 @@ a#cmp { text-decoration: none; color: #f68a16; font-size: 24px ; }
   opacity: 0;
   color: #fff;
   font-size: 14px;
+  font-weight: 900;
   text-align: center;
 
 }
@@ -200,7 +216,7 @@ a#cmp { text-decoration: none; color: #f68a16; font-size: 24px ; }
   .btn { font-size: 12px; }
   .overlay { font-size: 12px; }
   div.main { float: none;}
-  
+
   #slogan { padding-top: 100px; } 
   #slogan h1 { font-size: 7em; text-align: left; }
   .btn { height: 75px; width: 75px; }
