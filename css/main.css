@@ -23,7 +23,7 @@ body {
 }
 
 #enter button {
-  margin-left: 75%;
+  margin-left: 50%;
   margin-right: auto;
   display: block;
 }
@@ -50,7 +50,9 @@ body {
   color: #333;
 }
 
-.btn.active:hover { background-color: rgb(41, 171, 226);  }
+.btn.active:hover { 
+  background-color: rgb(41, 171, 226);  
+}
 
 #slogan {   
   height: 100vh;
@@ -84,8 +86,9 @@ h2 { margin: 10px 0; }
   font-weight: 900;
   border: 5px solid #000;
   padding: 10px;
-  float: right;
+  /*float: right;*/
   box-shadow: 5px -5px 0px #000;
+  margin-left: 90%;
 }
 
 .dropdown:hover { 
@@ -158,10 +161,12 @@ li { }
 .main {
   margin: auto;
   filter: saturate(0);
+  
 }
 
 .row {
   margin: 10px -16px;
+  z-index: -10;
 }
 
 /* Add padding BETWEEN each column */
@@ -242,7 +247,8 @@ li { }
   #slogan { padding-top: 25px; max-height: 100vh;} 
   #slogan h1 { font-size: 6em; text-align: left; }
   .btn { height: 100px; width: 100px; }
-  .btn.active { background-color: #fff;}
+  .btn.active { background-color: #fff; }
+  .dropdown { margin-left: 80%; }
 }
 
 
