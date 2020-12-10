@@ -271,7 +271,7 @@ li { }
 
   #slogan { padding-top: 25px; max-height: 100vh;} 
 
-  #slogan h1 { font-size: 6.5em; text-align: left; }
+  #slogan h1 { font-size: 6.5em; text-align: left; display: block;}
   #cml { font-weight: 500; display: block; }
 
   .btn { font-size: 12px; height: 150px; width: 150px; }
