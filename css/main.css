@@ -271,10 +271,10 @@ li { }
 
   #slogan { padding-top: 25px; max-height: 100vh; height: 100vh; } 
 
-  #slogan h1 { font-size: 6.5em; text-align: left; display: block;}
+  #slogan h1 { font-size: 100px; text-align: left; display: block;}
   #cml { font-weight: 500; display: block; }
 
-  .btn { font-size: 12px; height: 150px; width: 150px; }
+  .btn { font-size: 14px; height: 200px; width: 200px; }
   .btn.active { background-color: #fff; }
   .dropdown { margin-left: 80%; }
 
