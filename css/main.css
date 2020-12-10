@@ -269,7 +269,7 @@ li { }
   .overlay { font-size: 12px; }
   div.main { float: none;}
 
-  #slogan { padding-top: 25px; max-height: 100vh;} 
+  #slogan { padding-top: 25px; max-height: 100vh; height: 100vh; } 
 
   #slogan h1 { font-size: 6.5em; text-align: left; display: block;}
   #cml { font-weight: 500; display: block; }
