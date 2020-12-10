@@ -70,7 +70,7 @@ h1 {
   width: 100%;
 }
 
-#cml { font-weight: 500; }
+#cml { font-weight: 500; display: inline; }
 h2 { margin: 10px 0; }
 
 /*LINKS*/
@@ -270,12 +270,13 @@ li { }
   div.main { float: none;}
 
   #slogan { padding-top: 25px; max-height: 100vh;} 
-<<<<<<< HEAD
+
   #slogan h1 { font-size: 6.5em; text-align: left; }
-=======
-  #slogan h1 { font-size: 6em; text-align: left; }
->>>>>>> origin/master
+  #cml { font-weight: 500; display: block; }
+
   .btn { font-size: 12px; height: 150px; width: 150px; }
   .btn.active { background-color: #fff; }
   .dropdown { margin-left: 80%; }
+
+
 }
