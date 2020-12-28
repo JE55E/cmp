@@ -1,149 +1,217 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-* {
-  box-sizing: border-box;
-}
-
 body {
-font-family: 'Montserrat', sans-serif;
-font-weight: 300;
-padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  max-width: 100%;
+  /*background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);*/
+  background: linear-gradient(-45deg, #f9af60, #f960aa, #60aaf9, #60f9af);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 }
 
-h1, h2 {
-  font-size: 50px;
-  font-weight: 400;
-}
-
-/*h1 { display: inline-block; }*/
-
-h2 { margin: 10px 0; }
-
-a { font-size: 16px; }
-
-a#cmp { text-decoration: none; color: #f68a16; font-size: 16px; }
-
-.nature { animation: 1s ease-out 0s 1 slideInFromLeft; }
-
-@keyframes slideInFromLeft {
+@keyframes gradient {
   0% {
-    transform: translateX(-100%);
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
   100% {
-    transform: translateX(0);
+    background-position: 0% 50%;
   }
 }
 
-.cars { animation: 1s ease-out 0s 1 slideInFromRight; }
-@keyframes slideInFromRight{
-  0% {
-    transform: translateX(200%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+#logo { 
+  width: 50px; 
+  margin: 0 5px 0 0; 
+  display: inline-block;
+  filter: saturate(236) grayscale(100%);
+  -webkit-filter: saturate(236) grayscale(100%);
 }
 
-#logo { width: 40px; margin-right: 10px;}
-
-/* Center website */
-.main {
-  margin: auto;
+#cmp { 
+  text-decoration: none; 
+  /*color: #f68a16; */
+  color: #131313;
+  font-size: 24px ; 
+  display: inline-block; 
 }
 
-.row {
-  margin: 10px -16px;
+h1 {
+  font-size: 9em;
+  font-weight: 900;
+  padding: 5px 25px 0 25px;
+  width: 100%;
 }
 
-/* Add padding BETWEEN each column */
-.row,
-.row > .column {
-  padding: 6px;
+#slogan-small {
+  display: none;
+  color: rgb(22,246,138);
+  font-weight: 900;
 }
 
-/* Create three equal columns that floats next to each other */
-.column {
+#slogan {
+  display: block;
+  margin-top: 50px;
+  color: rgb(22,246,138);
+  mix-blend-mode: exclusion;
+  z-index: -1;
+}
+
+#cml { 
+  font-weight: 500;
+}
+
+/*MAIN MENU*/
+
+/* Style tab links */
+.tablink {
+  background-color: #1c1c1c;
+  color: white;
   float: left;
-  width: 12.5%;
-  display: none; /* Hide all elements by default */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+  z-index: 1;
+  mix-blend-mode: exclusion;
+  font-weight: 900;
 }
 
-/* Clear floats after rows */ 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.tablink:hover {
+  background-color: #fff;
+  color: #1c1c1c;
+  z-index: 1;
 }
 
-/* Content */
-.content {
-  position: relative;
-
+.tabcontent {
+  color: #1c1c1c;
+  display: none;
+  padding: 50px 20px;
+  height: 100%;
+  z-index: 1;
 }
 
-/* The "show" class is added to the filtered elements */
-.show {
+/*FEATURED*/
+#featured {}
+
+#slideshow {
+  margin: 50px auto;
   display: block;
 }
 
-/* Style the buttons */
-.btn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  background-color: #f68a16;
+/*PROJECTS*/
+#projects {
+  /*background-color: #60f9af; */
+  height: 100%; 
+}
+
+#projects a { 
+  text-decoration: none; 
+  background-color: #fff; 
+  border-radius: 25px; 
+  padding: 10px; 
+}
+
+#projects a:hover { 
+  background-color: #f960aa; 
+  color: #fff;
+}
+
+/*ACCORDION*/
+.accordion {
+  background-color: #eee;
+  color: #444;
   cursor: pointer;
-  color: #fff;
-  border-radius: 5px;
-}
-
-.btn:hover {
-  background-color: rgb(41, 171, 226);
-}
-
-.btn.active {
-  background-color: rgb(34, 34, 34);
-  color: #fff;
-}
-
-.btn.active:hover { background-color: rgb(41, 171, 226);  }
-
-.container { }
-
-.image {
-/*  width: 100%;*/
-  width: 100px;
-  height: 100px;
-  border-radius: 5px;
-  object-fit: cover;
-}
-
-.overlay {
-  position: absolute; 
-  bottom: 5px; 
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.75); /* Black see-through */
+  padding: 50px;
   width: 100%;
-  transition: .5s ease;
-  opacity: 0;
+  border: 5px solid #1c1c1c;
+  box-shadow: 5px 5px 0 #1c1c1c;
+  margin: 10px 0;
+  text-align: left;
+  outline: none;
+  font-size: 17px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #f960aa;
   color: #fff;
-  font-size: 14px;
-  text-align: center;
-
 }
 
-.content:hover .overlay {
-  opacity: 1;
+.panel {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  mix-blend-mode: normal;
+  font-weight: 700;
+  /*background-color: rgba(255,255,255,.5);*/
 }
 
-/*MEDIA QUERIES*/
-@media screen and (max-width: 720px) {
-  .column { width: 25%; }
-  .btn { font-size: 12px; }
-  .overlay { font-size: 12px; }
-  div.main { text-align: center; float: none;}
+/*SCHOOLS*/
+#schools { 
+  /*background-color: #60f9af; */
+  height: 100%;
 }
 
+#schools a {
+  text-decoration: none; 
+  background-color: #fff; 
+  border-radius: 25px; 
+  padding: 10px; 
+}
 
+#schools a:hover {
+  background-color: #f960aa; 
+  color: #fff;
+}
 
+/*ABOUT*/
+#about { 
+  background-color: rgba(0,0,0,.25); 
+  height: 100%;
+  color: #fff;
+}
+
+#about a { 
+  display: inline-block; 
+  text-decoration: none; 
+  background-color: #fff; 
+}
+
+.social {
+  display: block;
+  color: #1c1c1c;
+}
+
+@media screen and (max-width: 760px) {
+
+  h3 {font-size: 16px;}
+
+  #cmp {margin: 0;}
+
+  #slogan-small {
+    position: relative;
+    display: block;
+    font-size: 18px;
+    margin: 0;
+    padding: 10px;
+  }
+
+  #slogan {display: none;}
+
+  .tablink {font-size: 14px;}
+
+  .subnav .subnavbtn {font-weight: 700;}
+
+  .tabcontent {
+  color: #1c1c1c;
+  display: none;
+  padding: 5px;
+  height: 100vh;
+  z-index: 1;
+  }
+}

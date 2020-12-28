@@ -25,8 +25,7 @@ body {
   width: 50px; 
   margin: 0 5px 0 0; 
   display: inline-block;
-  filter: saturate(236) grayscale(100%);
-  -webkit-filter: saturate(236) grayscale(100%);
+  filter: saturate(236) grayscale(1);
 }
 
 #cmp { 
@@ -45,21 +44,21 @@ h1 {
 }
 
 #slogan-small {
-  display: none;
-  color: rgb(22,246,138);
-  font-weight: 900;
+	display: none;
+	color: rgb(22,246,138);
+	font-weight: 900;
 }
 
 #slogan {
-  display: block;
-  margin-top: 50px;
-  color: rgb(22,246,138);
-  mix-blend-mode: exclusion;
-  z-index: -1;
+	display: block;
+	margin-top: 50px;
+	color: rgb(22,246,138);
+	mix-blend-mode: exclusion;
+	z-index: -1;
 }
 
 #cml { 
-  font-weight: 500;
+	font-weight: 500;
 }
 
 /*MAIN MENU*/
@@ -89,7 +88,7 @@ h1 {
 .tabcontent {
   color: #1c1c1c;
   display: none;
-  padding: 50px 20px;
+  padding: 100px 20px;
   height: 100%;
   z-index: 1;
 }
@@ -100,11 +99,12 @@ h1 {
 #slideshow {
   margin: 50px auto;
   display: block;
+  /*box-shadow: 5px 5px 5px #60f9af;*/
 }
 
 /*PROJECTS*/
 #projects {
-  /*background-color: #60f9af; */
+  background-color: #60f9af; 
   height: 100%; 
 }
 
@@ -120,7 +120,7 @@ h1 {
   color: #fff;
 }
 
-/*ACCORDION*/
+/*ACCORDION ACCORDION ACCORDION ACCORDION ACCORDION */
 .accordion {
   background-color: #eee;
   color: #444;
@@ -147,33 +147,36 @@ h1 {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   mix-blend-mode: normal;
-  font-weight: 700;
-  /*background-color: rgba(255,255,255,.5);*/
 }
 
 /*SCHOOLS*/
 #schools { 
-  /*background-color: #60f9af; */
-  height: 100%;
+  background-color: #60f9af; 
 }
 
 #schools a {
-  text-decoration: none; 
-  background-color: #fff; 
-  border-radius: 25px; 
-  padding: 10px; 
+  font-size: 17px;
+  padding: 50px;
+  display: block;
+  color: #1c1c1c;
+  text-decoration: none;
+  border: 5px solid #60aaf9;
+  box-shadow: 5px 5px 0 #60aaf9;
+  margin: 10px 0;
+  background-color: #fff;
 }
 
 #schools a:hover {
-  background-color: #f960aa; 
+  background-color: #60aaf9;
+  border: 5px solid #fff;
+  box-shadow: 5px 5px 0 #1c1c1c;
   color: #fff;
 }
 
 /*ABOUT*/
 #about { 
-  background-color: rgba(0,0,0,.25); 
+  background-color: #60aaf9; 
   height: 100%;
-  color: #fff;
 }
 
 #about a { 
@@ -183,31 +186,31 @@ h1 {
 }
 
 .social {
-  display: block;
-  color: #1c1c1c;
+	display: block;
+	color: #1c1c1c;
 }
 
 @media screen and (max-width: 760px) {
 
-  h3 {font-size: 16px;}
+	h3 {font-size: 16px;}
 
   #cmp {margin: 0;}
 
-  #slogan-small {
-    position: relative;
-    display: block;
-    font-size: 18px;
+	#slogan-small {
+		position: relative;
+		display: block;
+		font-size: 18px;
     margin: 0;
     padding: 10px;
-  }
+	}
 
-  #slogan {display: none;}
+	#slogan {display: none;}
 
   .tablink {font-size: 14px;}
 
-  .subnav .subnavbtn {font-weight: 700;}
+	.subnav .subnavbtn {font-weight: 700;}
 
-  .tabcontent {
+	.tabcontent {
   color: #1c1c1c;
   display: none;
   padding: 5px;
