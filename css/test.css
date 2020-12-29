@@ -22,40 +22,49 @@ body {
 }
 
 #logo { 
-  width: 50px; 
-  margin: 0 5px 0 0; 
+  width: 60px; 
+  margin: 10px 10px 0 10px; 
   display: inline-block;
-  filter: saturate(236) grayscale(100%);
-  -webkit-filter: saturate(236) grayscale(100%);
+/*  filter: saturate(236) grayscale(100%);
+  -webkit-filter: saturate(236) grayscale(100%);*/
+  mix-blend-mode: exclusion;
 }
 
 #cmp { 
   text-decoration: none; 
-  /*color: #f68a16; */
-  color: #131313;
-  font-size: 24px ; 
+  color: #f68a16; 
+  /*color: #131313;*/
+  font-size: 48px; 
   display: inline-block; 
-}
-
-h1 {
-  font-size: 9em;
+  mix-blend-mode: exclusion;
   font-weight: 900;
-  padding: 5px 25px 0 25px;
-  width: 100%;
-}
-
-#slogan-small {
-  display: none;
-  color: rgb(22,246,138);
-  font-weight: 900;
+  margin: 0;
 }
 
 #slogan {
+  font-size: 9em;
+  font-weight: 900;
+  padding: 25px 25px 0 25px;
+  width: 100%;
   display: block;
   margin-top: 50px;
   color: rgb(22,246,138);
   mix-blend-mode: exclusion;
   z-index: -1;
+  height: 100%;
+}
+
+/*h1 {
+  font-size: 9em;
+  font-weight: 900;
+  padding: 5px 25px 0 25px;
+  width: 100%;
+}*/
+
+#slogan-small {
+  display: none;
+  color: rgb(22,246,138);
+  font-weight: 900;
 }
 
 #cml { 
@@ -171,7 +180,7 @@ h1 {
 
 /*ABOUT*/
 #about { 
-  background-color: rgba(0,0,0,.25); 
+  background-color: rgba(0,0,0,.5); 
   height: 100%;
   color: #fff;
 }
@@ -191,7 +200,20 @@ h1 {
 
   h3 {font-size: 16px;}
 
-  #cmp {margin: 0;}
+  #logo {
+    margin-bottom:0; 
+    width: 50px; 
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #header {text-align: center;}
+  #cmp {
+    margin: 0; 
+    font-size: 24px;
+    display: block;
+  }
 
   #slogan-small {
     position: relative;
@@ -199,6 +221,7 @@ h1 {
     font-size: 18px;
     margin: 0;
     padding: 10px;
+    text-align: center;
   }
 
   #slogan {display: none;}
@@ -214,4 +237,5 @@ h1 {
   height: 100vh;
   z-index: 1;
   }
+
 }
