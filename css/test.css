@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  max-width: 100%;
+  /*max-width: 100%;*/
   /*background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);*/
   background: linear-gradient(-45deg, #f9af60, #f960aa, #60aaf9, #60f9af);
   background-size: 400% 400%;
@@ -138,9 +138,16 @@ body {
   transition: 0.4s;
 }
 
-.active, .accordion:hover {
+div#projects > .active, button.accordion:hover {
   background-color: #f960aa;
   color: #fff;
+}
+
+#projects button:hover {background-color: #f960aa;}
+
+div#schools > .active, button.accordion:hover {
+  background-color: #60f9af;
+  color: #1c1c1c;
 }
 
 .panel {
@@ -169,7 +176,8 @@ body {
   font-size: 14px
 }
 #schools a:hover {
-  background-color: #f960aa; 
+
+  background-color: #60f9af; 
   color: #fff;
 }
 
