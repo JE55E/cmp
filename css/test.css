@@ -22,23 +22,24 @@ body {
   }
 }
 
-#header {padding: 10px;}
+#header {padding: 5px 12px;}
 
 #logo { 
   width: 60px; 
-  margin-right: 10px; 
-  display: inline-block;
+  margin-right: 10px;
+  margin-top: 10px;
+  display: inline;
   mix-blend-mode: overlay;
 }
 
 #cmp { 
   text-decoration: none; 
   color: #f68a16; 
-  font-size: 48px; 
-  display: inline-block; 
+  font-size: 36px; 
+  display: inline; 
   mix-blend-mode: overlay;
-  font-weight: 900;
-  margin: 0;
+  font-weight: 500;
+  margin: 0 0 25px 0;
 }
 
 #slogan {
@@ -52,12 +53,6 @@ body {
   mix-blend-mode: exclusion;
   z-index: -1;
   height: 100vh;
-}
-
-#slogan-small {
-  display: none;
-  color: rgb(22,246,138);
-  font-weight: 900;
 }
 
 #cml { 
@@ -111,11 +106,11 @@ body {
 
 #projects a { 
   text-decoration: none; 
-  background-color: #fff; 
-  border-radius: 25px; 
   padding: 6px 10px; 
-  color: #60aaf9;
-  font-size: 14px
+  color: #fff;
+  font-size: 14px;
+  display: inline-block;
+  border: 3px solid #fff;
 }
 
 #projects a:hover { 
@@ -170,11 +165,11 @@ div#schools > .active, button.accordion:hover {
 
 #schools a {
   text-decoration: none; 
-  background-color: #fff; 
-  border-radius: 25px; 
   padding: 6px 10px; 
-  color: #60aaf9;
-  font-size: 14px
+  color: #fff;
+  font-size: 14px;
+  display: inline-block;
+  border: 3px solid #fff;
 }
 #schools a:hover {
 
@@ -204,33 +199,6 @@ div#schools > .active, button.accordion:hover {
 @media screen and (max-width: 760px) {
 
   h3 {font-size: 16px;}
-
-  #logo {
-    margin-bottom:0; 
-    width: 50px; 
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  #header {text-align: center;}
-
-  #cmp {
-    margin: 0; 
-    font-size: 24px;
-    display: block;
-  }
-
-  #slogan-small {
-    position: relative;
-    display: block;
-    font-size: 18px;
-    margin: 0;
-    padding: 10px;
-    text-align: center;
-  }
-
-/*  #slogan {display: none;}*/
 
   .tablink {font-size: 16px;}
 
