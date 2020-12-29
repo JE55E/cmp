@@ -5,9 +5,9 @@ $(document).ready(function(){
     $('#slogan').css({
       'display': 'none',
     });
-    $('.tablink').css({
-      'mix-blend-mode': 'normal',
-    });
+    // $('.tablink').css({
+    //   'mix-blend-mode': 'normal',
+    // });
   
 });
 });
