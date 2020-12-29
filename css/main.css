@@ -7,6 +7,7 @@ body {
   background: linear-gradient(-45deg, #f9af60, #f960aa, #60aaf9, #60f9af);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
+  margin: 0;
 }
 
 @keyframes gradient {
@@ -41,16 +42,18 @@ body {
 }
 
 #slogan {
-  font-size: 9em;
+  font-size: 10em;
   font-weight: 900;
-  padding: 50px 25px 0 25px;
+  padding-top: 25px;
+  padding-left: 25px;
   width: 100%;
+  height: 100vh;
   display: block;
   /*margin-top: 50px;*/
   color: rgba(22,246,138,1);
   mix-blend-mode: exclusion;
   z-index: -1;
-  height: 100vh;
+  margin: 0;
 }
 
 #slogan-small {
@@ -213,6 +216,7 @@ div#schools > .active, button.accordion:hover {
   }
 
   #header {text-align: center;}
+
   #cmp {
     margin: 0; 
     font-size: 24px;
