@@ -43,14 +43,14 @@ body {
 #slogan {
   font-size: 9em;
   font-weight: 900;
-  padding: 25px 25px 0 25px;
+  padding: 50px 25px 0 25px;
   width: 100%;
   display: block;
-  margin-top: 50px;
+  /*margin-top: 50px;*/
   color: rgba(22,246,138,1);
   mix-blend-mode: exclusion;
   z-index: -1;
-  height: 100%;
+  height: 100vh;
 }
 
 #slogan-small {
@@ -213,6 +213,7 @@ div#schools > .active, button.accordion:hover {
   }
 
   #header {text-align: center;}
+  
   #cmp {
     margin: 0; 
     font-size: 24px;
