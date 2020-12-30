@@ -181,7 +181,7 @@
     opacity:0;
   }
 }
-
+  .bg-bubbles li {height: 80%;}
 @media screen and (max-width: 720px) {
   .animateme { 
     font-size: 16px; 
@@ -189,4 +189,4 @@
     height: 80%;}
 }
 
-  .bg-bubbles li {height: 80%;}
+

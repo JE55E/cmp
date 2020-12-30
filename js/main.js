@@ -1,15 +1,10 @@
 // SHOW & HIDE ELEMENTS
-
 $(document).ready(function(){
   $('button').click(function() {
     $('#slogan').css({
       'display': 'none',
     });
-    // $('.tablink').css({
-    //   'mix-blend-mode': 'normal',
-    // });
-  
-});
+  });
 });
 
 // MAIN MENU
@@ -27,9 +22,6 @@ function openPage(pageName,elmnt,color) {
   elmnt.style.backgroundColor = color;
 }
 
-// p5
-// createCanvas(windowWidth, windowHeight, WEBGL);
-// background('rgba(0,255,0, 0)');
 
 
 
