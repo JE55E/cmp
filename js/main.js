@@ -4,6 +4,9 @@ $(document).ready(function(){
     $('#slogan').css({
       'display': 'none',
     });
+    $('#slogan-small').css({
+    'display': 'block',
+    });
   });
 });
 
