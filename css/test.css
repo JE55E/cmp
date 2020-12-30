@@ -268,7 +268,7 @@ div#schools > .active, button.accordion:hover {
   /*ACCORDION DROPDOWN // PROJECTS AND SCHOOLS*/
 
   .accordion {
-    padding: 14px;
+    padding: 25px;
     margin-top: 12px;
     font-size: 15px;
   }
