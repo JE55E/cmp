@@ -58,7 +58,7 @@ body {
   font-weight: 600px
   margin: 0;
   /*padding: 5px 0 0 0;*/
-  rotate: -35deg;
+  transform: rotate(-35deg);
   position: fixed;
   color: #60f9af;
   display: none;
