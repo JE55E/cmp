@@ -269,15 +269,6 @@
 			</div>
 		</div>
 
-		<div class="column groupC">
-			<div class="content">
-				<a href="img/collages/kevin-licona.jpg" alt="Identity of Kevin Licona">
-					<img class="image" src="img/collages/KATHERINE-LOPEZ.png" alt="" style="width:100%">
-				</a>
-				<div class="name">Kevin Licona</div>
-			</div>
-		</div>
-
 		<div class="column groupA">
 			<div class="content">
 				<a href="img/collages/LIANI-CHAVEZ.png" alt="Identity of LIANI CHAVEZ">
@@ -455,15 +446,17 @@
 	</div>
 </div>
 
-	<script type="text/javascript">
+<script type="text/javascript">
 
-	var cards = $(".column");
+// RANDOMIZE DIVS
 
-	for (var i = 0; i < cards.length; i++){
-    var target = Math.floor(Math.random() * cards.length -1) + 1;
-    var target2 = Math.floor(Math.random() * cards.length -1) +1;
-    cards.eq(target).before(cards.eq(target2));
-	}	
+var cards = $(".column");
+
+for (var i = 0; i < cards.length; i++){
+	var target = Math.floor(Math.random() * cards.length -1) + 1;
+	var target2 = Math.floor(Math.random() * cards.length -1) +1;
+	cards.eq(target).before(cards.eq(target2));
+}	
 
 // LIGHTBOX
 var $overlay = $('<div id="overlay"></div>');

@@ -14,7 +14,7 @@ a { font-size: 16px; font-weight: 300; }
 
 #logo {}
 
-.groupA { animation: .71s ease-out 0s 1 slideInFromLeft; }
+/*.groupA { animation: 3s ease-out 0s 1 slideInFromLeft; }
 
 @keyframes slideInFromLeft {
   0% {
@@ -25,7 +25,7 @@ a { font-size: 16px; font-weight: 300; }
   }
 }
 
-.groupB { animation: .42s ease-out 0s 1 slideInFromRight; }
+.groupB { animation: 4s ease-out 0s 1 slideInFromRight; }
 @keyframes slideInFromRight{
   0% {
     transform: translateX(200%);
@@ -35,7 +35,7 @@ a { font-size: 16px; font-weight: 300; }
   }
 }
 
-.groupC { animation: .53s ease-out 0s 1 slideInFromTop; }
+.groupC { animation: 5s ease-out 0s 1 slideInFromTop; }
 @keyframes slideInFromTop{
   0% {
     transform: translateY(200%);
@@ -43,7 +43,7 @@ a { font-size: 16px; font-weight: 300; }
   100% {
     transform: translateY(0);
   }
-}
+}*/
 
 /* Center website */
 .main {
@@ -90,8 +90,8 @@ a { font-size: 16px; font-weight: 300; }
 .container { }
 
 .image {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 5px;
   object-fit: cover;
 }
