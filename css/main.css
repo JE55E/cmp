@@ -118,12 +118,12 @@ body {
   color: #1c1c1c;
   display: none;
   padding: 100px 20px;
-  height: 100vh;
+  /*height: 100vh;*/
   z-index: 1;
 }
 
 /*FEATURED*/
-#featured {}
+#featured {height:100vh;}
 
 #slideshow {
   margin: 50px auto;
@@ -132,7 +132,7 @@ body {
 
 /*PROJECTS*/
 #projects {
-  height: 100vh; 
+  height: 100%; 
 }
 
 #projects a { 
@@ -189,7 +189,7 @@ div#schools > .active, button.accordion:hover {
 
 /*SCHOOLS*/
 #schools { 
-  height: 100vh;
+  height: 100%;
 }
 
 #schools a {
@@ -268,7 +268,7 @@ div#schools > .active, button.accordion:hover {
   color: #1c1c1c;
   font-size: 50px;
   display: none;
-  height: 100vh;
+  height: 100%;
   z-index: 1;
   }
 
