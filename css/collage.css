@@ -7,7 +7,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   padding: 80px 20px;
   /*background: linear-gradient(-145deg, rgba(1, 1, 1, 1), rgba(105, 201, 208, 1), rgba(255, 255, 255, 1), rgba(238, 29, 82, 1));*/
-  background-color: rgba(105, 201, 208, 1);
+  background-color: #60aaf9;
 }
 
 #header {
@@ -73,7 +73,7 @@ a {
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
-  width: 12.5%;
+  width: 20%;
   margin: auto;
   padding: 0 2.5px;
 }
@@ -104,7 +104,7 @@ a {
   object-fit: cover;
 /*  mix-blend-mode: exclusion;*/
   box-shadow: 2px 2px 2px black;
-  filter: saturate(0);
+/*  filter: saturate(0);*/
 }
 
 .image:hover {filter: grayscale(0);}
