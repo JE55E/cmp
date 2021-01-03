@@ -492,6 +492,15 @@ $("body").append($overlay, $caption);
     $( "#caption" ).hide();
   });
 
+  // SHOW & HIDE ELEMENTS
+$(document).ready(function(){
+  $('#photo-gallery a').click(function() {
+    $('#caption').css({
+      'display': 'block',
+    });
+  });
+});
+
 	</script>
 		</body>
 		</html>
