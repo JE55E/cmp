@@ -192,6 +192,7 @@ div#schools > .active, button.accordion:hover {
   mix-blend-mode: normal;
   -webkit-mix-blend-mode: normal;
   font-weight: 600;
+
 }
 
 /*SCHOOLS*/
@@ -207,10 +208,21 @@ div#schools > .active, button.accordion:hover {
   display: inline-block;
   border: 3px solid #fff;
 }
+
 #schools a:hover {
   background-color: #60f9af; 
   color: #fff;
 }
+
+#schools a.school-link {
+  color: #1c1c1c;
+  font-style: italic;
+  font-weight: 800;
+  margin: 10px 5px 0 0;
+  border-radius: 50px;
+}
+
+#schools a.school-link:hover {margin-top: 5px;}
 
 /*ABOUT*/
 #about { 
