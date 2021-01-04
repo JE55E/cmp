@@ -224,6 +224,10 @@ div#schools > .active, button.accordion:hover {
 
 #schools a.school-link:hover {margin-top: 5px;}
 
+#schools a.school-home {
+  border: 3px solid #1c1c1c;
+}
+
 /*ABOUT*/
 #about { 
   background-color: rgba(0,0,0,.6); 
