@@ -178,7 +178,7 @@ a {
   white-space: nowrap;
   display: inline-block;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   top: 80px;
   font-size: 48px;
 }
