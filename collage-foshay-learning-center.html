@@ -21,7 +21,7 @@
 <div id="photos" class="row">
 <div id="photo-gallery" class="lightbox-gallery">
 
-	<div class="column groupB">
+	<div class="column foshay groupB">
 		<div class="content">
 			<a href="img/collages/WENDY-CHAVEZ.png" alt="WENDY CHAVEZ">
 				<img class="image" src="img/collages/WENDY-CHAVEZ.png" alt="" style="width:100%">
@@ -30,7 +30,7 @@
 		</div>
 	</div>
 
-	<div class="column groupC">
+	<div class="column foshay groupC">
 		<div class="content">
 			<a href="img/collages/Youngin-Darwin.jpeg" alt="Youngin Darwin">
 				<img class="image" src="img/collages/Youngin-Darwin.jpeg" alt="" style="width:100%">
@@ -39,7 +39,7 @@
 		</div>
 	</div>
 
-	<div class="column groupC">
+	<div class="column foshay groupC">
 		<div class="content">
 			<a href="img/collages/CHELSEA-PENA.png" alt="CHELSEA PENA">
 				<img class="image" src="img/collages/CHELSEA-PENA.png" alt="" style="width:100%">
@@ -48,7 +48,7 @@
 		</div>
 	</div>
 
-	<div class="column groupA">
+	<div class="column foshay groupA">
 		<div class="content">
 			<a href="img/collages/Julissa-Ramos.png" alt="Julissa Ramos">
 				<img class="image" src="img/collages/Julissa-Ramos.png" alt="" style="width:100%">
@@ -57,7 +57,7 @@
 		</div>
 	</div>	
 
-	<div class="column groupC">
+	<div class="column foshay groupC">
 		<div class="content">
 			<a href="img/collages/VIVIAN-SANCHEZ.PNG" alt="VIVIAN SANCHEZ">
 				<img class="image" src="img/collages/VIVIAN-SANCHEZ.PNG" alt="" style="width:100%">
@@ -66,7 +66,7 @@
 		</div>
 	</div>
 
-	<div class="column groupA">
+	<div class="column foshay groupA">
 		<div class="content">
 			<a href="img/collages/SARAHI-GALLEGOS.png" alt="SARAH GALLEGOS">
 				<img class="image" src="img/collages/SARAHI-GALLEGOS.png" alt="" style="width:100%">
@@ -75,7 +75,7 @@
 		</div>
 	</div>
 
-	<div class="column groupA">
+	<div class="column foshay groupA">
 		<div class="content">
 			<a href="img/collages/Kenny-Castillo.png" alt="Kenny Castillo">
 				<img class="image" src="img/collages/Kenny-Castillo.png" alt="" style="width:100%">
@@ -87,11 +87,14 @@
 </div>
 </div>
 <!-- END MAIN -->
-
+<!-- TICKER -->
+<div id="ticker-wrap">
+<span id="ticker"></span>
+</div>
 <script type="text/javascript">
 
 // RANDOMIZE DIVS
-var cards = $(".column");
+var cards = $(".column foshay");
 
 for (var i = 0; i < cards.length; i++){
 	var target = Math.floor(Math.random() * cards.length -1) + 1;
@@ -147,8 +150,59 @@ $(document).ready(function(){
   		'filter': 'grayscale(0)',
   	});
   });
+  $('body').click(function() {
+  	$('.image').css({
+  		'mix-blend-mode': 'normal',
+  	});
+  	$('#ticker').css({
+  		'color': 'rgba(147,172,198,.25)',
+  	});
+  	$('body').css({
+  		'background-color': '#333',
+  	});
+  	$('.name').css({
+  		'background-color': 'rgba(0,0,0,.6)',
+  	});
+  	 $('#header a').css({
+  	'background-color': 'rgba(255,255,255,0)',
+  	});
+  	 $('#header').css({
+  	 	'border-bottom': '5px solid #fff',
+  	 	'background-color': 'rgba(0,0,0,0)',
+  	 });
+  	 $('#header #title').css({
+  	 	'background-color': 'rgba(255,255,255,0)',
+  	 });
+ 	});
 });
 
+// TICKER
+
+var $t = $('#ticker');
+var $tw = $('#ticker-wrap');
+var $w = $(window);
+$tw.bind("transitionend", function(){
+  $tw.css({'-webkit-transition':'all linear 0s',
+            'transition':'all linear 0s'});
+  set();
+});
+$t.text("identity self-portrait");
+var fs = 1;
+while($tw.height() < $w.height()){
+  fs++;
+  $t.css("font-size",fs+"px");
+}
+var width = $tw.width();
+var wwidth = $w.width();
+console.log(width)
+function set(){
+  $tw.css({'-webkit-transform':'translate3d('+wwidth+'px,0,0)','transform':'translate3d('+wwidth+'px,0,0)'});
+  window.setInterval(function(){
+    $tw.css({'-webkit-transition':'all linear '+(((width+wwidth)/500)*.5)+'s','transition':'all linear '+(((width+wwidth)/500)*3)+'s'});
+    $tw.css({'-webkit-transform':'translate3d('+(width*-1)+'px,0,0)','transform':'translate3d('+(width*-1)+'px,0,0)'});
+  },1)
+}
+set();
 	</script>
 		</body>
 		</html>

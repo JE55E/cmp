@@ -6,12 +6,12 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <script src="js/collage.js" type="text/javascript"></script>
 <link rel="stylesheet" href="css/collage.css" type="text/css">
 <style></style>
 </head>
 <body>
-
 
 <div id="header">
 	<a href="index.html"><span class="navigation">&#10094;&#10094; </span><i>Back 2</i> #cml</a>
@@ -241,7 +241,9 @@
 </div>
 </div>
 <!-- END MAIN -->
-
+<div id="ticker-wrap">
+<span id="ticker"></span>
+</div>
 <script type="text/javascript">
 
 // RANDOMIZE DIVS
@@ -301,7 +303,57 @@ $(document).ready(function(){
   		'filter': 'grayscale(0)',
   	});
   });
+  $('body').click(function() {
+  	$('.image').css({
+  		'mix-blend-mode': 'normal',
+  	});
+  	$('#ticker').css({
+  		'color': 'rgba(147,172,198,.25)',
+  	});
+  	$('body').css({
+  		'background-color': '#333',
+  	});
+  	$('.name').css({
+  		'background-color': 'rgba(0,0,0,.6)',
+  	});
+  	 $('#header a').css({
+  	'background-color': 'rgba(255,255,255,0)',
+  	});
+  	 $('#header').css({
+  	 	'border-bottom': '5px solid #fff',
+  	 	'background-color': 'rgba(0,0,0,0)',
+  	 });
+  	 $('#header #title').css({
+  	 	'background-color': 'rgba(255,255,255,0)',
+  	 });
+ 	});
 });
+
+// TICKER
+var $t = $('#ticker');
+var $tw = $('#ticker-wrap');
+var $w = $(window);
+$tw.bind("transitionend", function(){
+  $tw.css({'-webkit-transition':'all linear 0s',
+            'transition':'all linear 0s'});
+  set();
+});
+$t.text("identity self-portrait");
+var fs = 1;
+while($tw.height() < $w.height()){
+  fs++;
+  $t.css("font-size",fs+"px");
+}
+var width = $tw.width();
+var wwidth = $w.width();
+console.log(width)
+function set(){
+  $tw.css({'-webkit-transform':'translate3d('+wwidth+'px,0,0)','transform':'translate3d('+wwidth+'px,0,0)'});
+  window.setInterval(function(){
+    $tw.css({'-webkit-transition':'all linear '+(((width+wwidth)/500)*.5)+'s','transition':'all linear '+(((width+wwidth)/500)*3)+'s'});
+    $tw.css({'-webkit-transform':'translate3d('+(width*-1)+'px,0,0)','transform':'translate3d('+(width*-1)+'px,0,0)'});
+  },1)
+}
 
 	</script>
 		</body>
