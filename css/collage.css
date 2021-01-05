@@ -20,6 +20,7 @@ body {
   border-bottom: 5px solid #93acc6;
   background-color: #93acc6;
   background-size: 200%;
+  z-index: 1;
 }
 
 #header a {
@@ -139,6 +140,7 @@ a {
   left: 0;
   display: none;
   text-align: center;
+  z-index: 2;
 }
 
 #overlay img {
@@ -146,6 +148,7 @@ a {
   height: 500px;
   max-width: 100%;
   border-radius: 5px;
+  z-index: 2;
 }
 
 #caption {
@@ -161,6 +164,7 @@ a {
   text-transform: uppercase;
   transform: skew(5deg, -15deg);
   font-style: italic;
+  z-index: 2;
 }
 
 /*TICKER*/
@@ -168,7 +172,7 @@ a {
   display: inline-block;
   white-space: nowrap;
   color: #f960aa;
-  top: 50px;
+  /*top: 50px;*/
   font-size: 48px;
 }
 
@@ -179,7 +183,7 @@ a {
   display: inline-block;
   overflow: hidden;
   position: fixed;
-  top: 80px;
+  top: 0;
   font-size: 48px;
 }
 
