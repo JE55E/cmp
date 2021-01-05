@@ -3,16 +3,11 @@
   box-sizing: border-box;
 }
 
-html {
-  background-color: #fff;
-  z-index: -100;
-}
+html {background-color: #fff;}
 
 body {
   font-family: 'Montserrat', sans-serif;
   padding: 80px 20px;
-  /*background: linear-gradient(-145deg, rgba(1, 1, 1, 1), rgba(105, 201, 208, 1), rgba(255, 255, 255, 1), rgba(238, 29, 82, 1));*/
-/*  background-color: #60aaf9;*/
   background-color: #fff;
 }
 
@@ -34,7 +29,7 @@ body {
   box-shadow: 5px 5px 0 #60f9af;
   padding: 10px;
   font-size: 20px;
-  background-color: #acacad;
+  /*background-color: #acacad;*/
 }
 
 #header a:hover {
@@ -55,7 +50,7 @@ body {
   margin: 0;
   box-shadow: -5px -5px 0 #f960aa;
   padding: 10px;
-  background-color: #adacac;
+  /*background-color: #adacac;*/
 }
 
 a { 
@@ -63,11 +58,10 @@ a {
   font-weight: 300; 
 }
 
-#logo {}
-
 /* Center website */
 .main {
   margin: auto;
+  isolation: isolate;
 }
 
 .row {
@@ -105,19 +99,17 @@ a {
   display: block;
 }
 
-.container { }
-
 .image {
   width: 200px;
   height: 200px;
   border-radius: 5px;
   object-fit: cover;
   box-shadow: 2px 2px 2px black;
-  mix-blend-mode: color;
   background-color: #fff;
+  mix-blend-mode: color;
 }
 
-.image:hover {filter: grayscale(0);}
+/*.image:hover {filter: saturate(2);}*/
 
 .name {
   position: absolute; 
@@ -154,7 +146,6 @@ a {
   height: 500px;
   max-width: 100%;
   border-radius: 5px;
-  /*box-shadow: 5px 5px 8px rgba(1, 1, 1, .8), 10px 10px 8px rgba(105, 201, 208, .8), 15px 15px 8px rgba(255, 255, 255, .8), 20px 20px 8px rgba(238, 29, 82, .8);*/
 }
 
 #caption {
@@ -174,7 +165,7 @@ a {
 
 /*TICKER*/
 #ticker {
-  display:inline-block;
+  display: inline-block;
   white-space: nowrap;
   color: #f960aa;
   top: 50px;
@@ -187,9 +178,8 @@ a {
   white-space: nowrap;
   display: inline-block;
   overflow: hidden;
-  position: fixed;
-  top: 10px;
-  z-index: 0;
+  position: absolute;
+  top: 80px;
   font-size: 48px;
 }
 
@@ -208,21 +198,17 @@ a {
   #header a {
     text-decoration: none;
     font-weight: 700;
-    /*color: rgb(238, 29, 82);*/
     border: none;
-    /*box-shadow: 5px 5px 0 rgb(238, 29, 82);*/
     padding: 10px;
     font-size: 14px;
   }
 
   #header #title {
     display: inline-block;
- /*   color: #fff;*/
     float: right;
     font-size: 14px;
     font-weight: 700;
     margin: 0;
-    /*box-shadow: -5px -5px 0 #fff;*/
     padding: 10px;
   }
 
@@ -256,6 +242,5 @@ a {
   #caption {
     top: 55%;
     left: 25%;
-    /*width: 300px;*/
   }
 }
