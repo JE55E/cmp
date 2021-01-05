@@ -3,6 +3,11 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: #fff;
+  z-index: -100;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   padding: 80px 20px;
@@ -73,7 +78,6 @@ a {
 .row,
 .row > .column {
   padding: 6px;
-  
 }
 
 /* Create three equal columns that floats next to each other */
@@ -108,11 +112,9 @@ a {
   height: 200px;
   border-radius: 5px;
   object-fit: cover;
-/*  mix-blend-mode: exclusion;*/
   box-shadow: 2px 2px 2px black;
-/*  filter: saturate(0);*/
- mix-blend-mode: color;
- background-color: #fff;
+  mix-blend-mode: color;
+  background-color: #fff;
 }
 
 .image:hover {filter: grayscale(0);}
@@ -187,7 +189,7 @@ a {
   overflow: hidden;
   position: fixed;
   top: 10px;
-  z-index: -1;
+  z-index: 0;
   font-size: 48px;
 }
 

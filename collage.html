@@ -13,11 +13,17 @@
 </head>
 <body>
 
-<!-- Image Gallery Grid -->
 <div id="header">
 	<a href="index.html"><span class="navigation">&#10094;&#10094; </span><i>Back 2</i> #cml</a>
 	<p id="title">&#10075;Identity Collages&#10076;</p>
 </div>
+
+<!-- TICKER -->
+<div id="ticker-wrap">
+<span id="ticker"></span>
+</div>
+
+<!-- Image Gallery Grid -->
 <div id="photos" class="row">
 <div id="photo-gallery" class="lightbox-gallery">
 
@@ -537,11 +543,8 @@
 </div>
 </div>
 <!-- END MAIN -->
-<div id="ticker-wrap">
-<span id="ticker"></span>
-</div>
-<script type="text/javascript">
 
+<script type="text/javascript">
 // RANDOMIZE DIVS
 var cards = $(".column");
 
@@ -608,6 +611,9 @@ $(document).ready(function(){
   	$('body').css({
   		'background-color': '#333',
   	});
+  	$('html').css({
+  		'background-color': '#333',
+  	});
   	$('.name').css({
   		'background-color': 'rgba(0,0,0,.6)',
   	});
@@ -650,6 +656,6 @@ function set(){
   },1)
 }
 set();
-	</script>
-		</body>
+</script>
+	</body>
 		</html>

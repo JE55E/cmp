@@ -18,6 +18,11 @@
 	<p id="title">&#10075;Identity Collages&#10076;</p>
 </div>
 
+<!-- TICKER -->
+<div id="ticker-wrap">
+<span id="ticker"></span>
+</div>
+
 <!-- Image Gallery Grid -->
 <div id="photos" class="row">
 <div id="photo-gallery" class="lightbox-gallery">
@@ -79,13 +84,8 @@
 </div>
 </div>
 <!-- END MAIN -->
-<!-- TICKER -->
-<div id="ticker-wrap">
-<span id="ticker"></span>
-</div>
 
 <script type="text/javascript">
-
 // RANDOMIZE DIVS
 var cards = $(".column bravo");
 
@@ -152,6 +152,9 @@ $(document).ready(function(){
   	$('body').css({
   		'background-color': '#333',
   	});
+  	$('html').css({
+  		'background-color': '#333',
+  	});
   	$('.name').css({
   		'background-color': 'rgba(0,0,0,.6)',
   	});
@@ -196,6 +199,6 @@ function set(){
 }
 set();
 
-	</script>
-		</body>
+</script>
+	</body>
 		</html>
