@@ -112,6 +112,7 @@ a {
   box-shadow: 2px 2px 2px black;
 /*  filter: saturate(0);*/
  mix-blend-mode: color;
+ background-color: #fff;
 }
 
 .image:hover {filter: grayscale(0);}
