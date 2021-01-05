@@ -148,7 +148,7 @@ a {
   height: 500px;
   max-width: 100%;
   border-radius: 5px;
-  z-index: 2;
+  /*z-index: 2;*/
 }
 
 #caption {
@@ -183,7 +183,7 @@ a {
   display: inline-block;
   overflow: hidden;
   position: fixed;
-  top: 0;
+  top: 10px;
   font-size: 48px;
 }
 
