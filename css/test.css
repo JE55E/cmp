@@ -1,334 +1,627 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');
 
-html { 
-  background-color: #fff; 
+html {
+  color: #F68A16;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(-45deg, #f9af60, #f960aa, #60aaf9, #60f9af);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-  margin: 0;
+  font-family: 'Montserrat', sans-serif; 
+  /*font-weight: 300;*/
+  letter-spacing: 0.03em;
+  font-size: 1em;
+  line-height: 1.4;
+  /*overflow: hidden;*/
+  /*background: linear-gradient(#fff, #1a16f6);*/
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+a {
+  text-decoration: none;
+  color: #F68A16;
 }
+
+a:hover {
+  color: #b3d4fc;
+}
+
+hr {  
+  border-top: 1px dashed #F68A16; 
+  /*width: 100%;*/
+  color: rgba(0,0,0,0);
+  margin: 0;
+  display: block;
+}
+
+.footer {
+   position: static;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #F68A16;
+   color: white;
+   text-align: center;
+   padding: 1em 0;
+}
+/* ==========================================================================
+   Headers
+   ========================================================================== */
+
+/*h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+  font-weight: normal;
+}
+*/
+
+h2 {
+  font-size: 1.5em;
+  /*margin: 0.83em 0;*/
+}
+
+h3 {
+/*  font-size: 2em;*/
+  /*margin: 2em 0 3em 0;*/
+  color: #F68A16;
+  border: 1px solid #F68A16;
+  box-shadow: 5px 5px 0px #F68A16;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 300;
+  min-width: 200px;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+/* ==========================================================================
+   Main Header
+   ========================================================================== */
 
 #header {
-  padding: 5px 12px;
-}
-
-#logo { 
-  width: 60px; 
-  margin-right: 10px;
-  margin-top: 10px;
-  display: inline;
-  mix-blend-mode: overlay;
-  -webkit-mix-blend-mode: overlay;
-}
-
-#cmp { 
-  text-decoration: none; 
-  color: #f68a16; 
-  font-size: 42px; 
-  display: inline; 
-  mix-blend-mode: overlay;
-  font-weight: 500;
-  margin: 0 0 25px 0;
-}
-
-#slogan {
-  font-size: 10em;
-  font-weight: 900;
-  padding: 0 25px;
-  display: block;
-  color: rgba(22,246,138,1);
-  mix-blend-mode: exclusion;
-  -webkit-mix-blend-mode: exclusion;
-  z-index: -1;
-  height: 100vh;
-  margin-top: 50px;
-  margin-bottom: 0;
-}
-
-  #slogan-small {
-  font-family: 'Schoolbell', cursive;
-  font-size: 24px;
-  font-weight: 600px
   margin: 0;
-  /*padding: 5px 0 0 0;*/
-  transform: rotate(-35deg);
-  position: fixed;
-  color: #60f9af;
-  display: none;
-  right: 100px;
-  /*z-index: -2;*/
-}
-
-#cml { 
-  font-weight: 400;
-  height: 100vh;
-}
-
-/*MAIN MENU*/
-
-.tablink {
-  background-color: #1c1c1c;
-  color: white;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 24px;
-  width: 25%;
-  z-index: 1;
-  mix-blend-mode: screen;
-  -webkit-mix-blend-mode: screen;
-  font-weight: 700;
-}
-
-.tablink:hover {
-  background-color: #fff;
-  color: #1c1c1c;
-  z-index: 1;
-  background: linear-gradient(-135deg, #f9af60, #f960aa, #60aaf9, #60f9af);
-  background-size: 400% 400%;
-  animation: linkgradient 3s ease-in-out infinite;
-}
-
-@keyframes linkgradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.tabcontent {
-  color: #1c1c1c;
-  display: none;
-  padding: 100px 20px;
-  /*height: 100vh;*/
-  z-index: 1;
-}
-
-/*FEATURED*/
-#featured {height:100vh;}
-
-#slideshow {
-  margin: 50px auto;
-  display: block;
-}
-
-/*PROJECTS*/
-#projects {
-  height: 100%; 
-}
-
-#projects a { 
-  text-decoration: none; 
-  padding: 6px 10px; 
-  color: #fff;
-  font-size: 17px;
-  display: inline-block;
-  border: 3px solid #fff;
-}
-
-#projects a:hover { 
-  background-color: #f960aa; 
-  color: #fff;
-}
-
-/*ACCORDION ~ for #projects and #schools*/
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 50px;
   width: 100%;
-  border: 5px solid #1c1c1c;
-  box-shadow: 5px 5px 0 #1c1c1c;
-  margin: 10px 0;
-  text-align: left;
-  outline: none;
-  font-size: 17px;
-  transition: 0.4s;
-}
-
-div#projects > .active, button.accordion:hover {
-  background-color: #f960aa;
-  color: #fff;
-}
-
-#projects button:hover {background-color: #f960aa;}
-
-div#schools > .active, button.accordion:hover {
-  background-color: #60f9af;
-  color: #1c1c1c;
-}
-
-.panel {
-  padding: 0 6px;
-  max-height: 0;
+  max-width: 1200px;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  mix-blend-mode: normal;
-  -webkit-mix-blend-mode: normal;
-  font-weight: 600;
-
+/*  background-image: linear-gradient(90deg, #F68A16, #b3d4fc);*/
+  padding: 0;
+  z-index: 1;
 }
 
-/*SCHOOLS*/
-#schools { 
-  height: 100%;
+.logo {
+  /*padding: 1em 0;*/
+  display: inline;
+  float: left;
+  margin: 0;
+  padding: 0;
 }
 
-#schools a {
-  text-decoration: none; 
-  padding: 6px 10px; 
-  color: #fff;
-  font-size: 14px;
-  display: inline-block;
-  border: 3px solid #fff;
+.logo img {
+  width: 50px;
+  margin: 0;
+  padding: 0;
 }
 
-#schools a:hover {
-  background-color: #60f9af; 
-  color: #fff;
+.logo .site-title {
+  font-size: 1.5rem;
+  display: inline;
+  margin: 0 0 0 1rem;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+  line-height: 1.7;
+  font-weight: normal;
 }
 
-#schools a.school-link {
-  color: #1c1c1c;
-  font-style: italic;
-  font-weight: 800;
-  margin: 10px 5px 0 0;
-  border-radius: 50px;
+h1.site-title {
+  display: inline;
 }
 
-#schools a.school-link:hover {margin-top: 5px;}
-
-#schools a.school-home {
-  border: 3px solid #1c1c1c;
+#cml {
+  float: right;
+  padding: 1em;
 }
 
-/*ABOUT*/
-#about { 
-  background-color: rgba(0,0,0,.6); 
-  height: 100%;
-  color: #fff;
-  line-height: 1.6;
+
+/* ==========================================================================
+   Menus
+   ========================================================================== */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #F68A16;
 }
 
-#about a { 
-  display: inline-block; 
-  text-decoration: underline; 
-  color: #fff;
+/*.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}*/
+
+li {
+  float: left;
 }
 
-#about a:hover {color: #60f9af;}
-
-.social {
+li a {
   display: block;
-  color: #1c1c1c;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-.social img {width: 50px;}
-
-.social img:hover {opacity: .5;}
-
-#design-by {
-  font-family: 'Cute Font', cursive;
-  font-size: 24px;
+li a:hover:not(.active) {
+  background-color: #fff;
+  color: #F68A16;
 }
 
-#design-by a {
-  color: #fa897b;
-  background-color: rgba(0,0,0,0);
+.active {
+  background-color: #4CAF50;
+}
+
+/*Dropdown*/
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #b3d4fc;
+}
+
+.dropdown {
   display: inline-block;
-  /*font-weight: 900;*/
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-size: .8em;
+}
+
+.dropdown-content a {
+  color: #F68A16;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#i-too {
+  float: right;
+  /*background-image: linear-gradient(90deg, #F68A16, #b3d4fc);*/
+}
+
+#i-too a:hover {
+  background-color: #F68A16;
+  color: #fff;
+  /*background-image: linear-gradient(90deg, #F68A16, #b3d4fc);*/
+}
+
+#i-too-small-screen {display: none;}
+
+/* ==========================================================================
+   jar-one
+   ========================================================================== */
+
+.jar {
+  /*height:50%;*/
+  padding: 5em 0 10em 0;
+}
+
+#about-link {
+  /*font-weight: 800px;*/
   text-decoration: underline;
+}
+
+.jar-one { 
+  /*text-align: right; */
+  /*padding: 3em 2em;*/
+  /*padding-bottom: 10em;*/
+}
+
+.jar-one #circle-img {
+  float: left;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  position: relative;
+  padding: 1em;
+  opacity: .8;
+}
+
+.jar-one img {
+  float: left;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+
+.jar-one h3 { 
+  margin: 4em 0 1em 0;
+  /*margin: 5em 0 1em 0;*/
+}
+
+.jar-one p { 
+  text-align: left; 
+  /*padding-bottom: 7em;*/
+  /*padding: 3em 4em;*/
+}
+
+/* ==========================================================================
+   jar-two
+   ========================================================================== */
+
+.jar-two {
+  text-align: center;
+}
+
+/* ==========================================================================
+   Projects
+   ========================================================================== */
+
+.jar-two h3 {
+  margin-bottom: 3em;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+}
+
+.grid-item {
+  background-color: #F68A16;
+  border: 1px solid #fff;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  padding: 120px 60px;
+  position: relative;
+}
+
+#item-1 {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/f/fc/DasUndbild.jpg);
+  background-size: contain;
+}
+
+#item-2 {  
+  background-image: url("https://www.playfullearning.net/wp-content/uploads/2015/02/heartmap2.jpg");
+  background-size: contain;
+}
+
+#item-3 {  
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.c5K3Law0HRv0B2M5Gd7zkwHaEU%26pid%3DApi&f=1);
+  background-size: contain;
+}
+
+#item-4 {  
+  background-image: url(https://static01.nyt.com/images/2018/09/27/opinion/27vivionbrooks/merlin_142931106_b873a380-8d89-4d23-ad65-302dedb73fc8-articleLarge.jpg?quality=75&auto=webp&disable=upscale);
+  background-size: cover;
+}
+
+#item-5 {  
+  background-image: url(https://graphics8.nytimes.com/images/2012/10/07/sunday-review/07GRAY/07GRAY-superJumbo.jpg);
+  background-size: contain;
+}
+
+#item-6 {  
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fability360.org%2Fwp-content%2Fuploads%2F2018%2F04%2FLivAbililty-Edition-12-Advocacy-WP-Header.jpg&f=1&nofb=1);
+  background-size: cover;
+}
+
+#projects {}
+
+.dropbtn-projects {
+  background-color: rgba(255,255,255,.9);
+  color: #F68A16;
+  padding: 1em;
+  font-size: .8em;
+  /*font-weight: 500;*/
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #F68A16;
+  width: 200px;
+  /*text-shadow: #F68A16 1px 1px, 1px 1px 2px #F68A16;*/
+}
+
+.dropdown-projects {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content-projects {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  color: #F68A16;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-size: .8em;
+  /*border-radius: 4px;*/
+}
+
+.dropdown-content-projects a {
+  color: #F68A16;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content-projects a:hover {background-color: #fff;}
+
+.dropdown-projects:hover .dropdown-content-projects {display: block;}
+
+.dropdown-projects:hover .dropbtn-projects {background-color: #b3d4fc;}
+
+
+/* ==========================================================================
+   jar-three
+   ========================================================================== */
+
+.jar-three {
+  /*margin-top: 3em;*/
+  text-align: center;
+  /*background-image: linear-gradient(#F68A16, #fff);*/
+  /*padding: 0;*/
+  /*width: 100%;*/
+/*  border: 5px dashed #F68A16;*/
+}
+
+.jar-three h3 {
+  margin-bottom: 3em;
+}
+
+/* ==========================================================================
+   Schools
+   ========================================================================== */
+
+.column {
+  /*float: left;*/
+  width: 200px;
+  padding: 1em;
+  display: inline-block;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+  object-fit: cover;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+#tab-img-grid {
+  max-width: 100%;
+  text-align: center;
+}
+
+#tab-img-grid button {
+  border: none;
+  padding: 10px;
+  font-size: .8em;
+  padding: .5em;
+  background-color: rgba(255,255,255,.9);
+  color: #F68A16;
+  border: 1px solid #F68A16;
+  border-radius: 4px;
+  margin: 1em;
+  width: 150px;
+  /*height: 150px;*/
+}
+
+/* Clear floats after the columns */
+.row:after {
+/*  content: "";
+  display: table;
+  clear: both;
+*/}
+
+.dropbtn {
+/*  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;*/
+}
+
+.dropup {
+  position: relative;
+  display: inline-block;
+  /*cursor: pointer;*/
+}
+
+.dropup-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 100%;
+  bottom: 50px;
+  z-index: 1;
+  font-size: .8em;
+}
+
+.dropup-content a {
+  color: #F68A16;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropup-content a:hover {background-color: #b3d4fc;}
+
+.dropup:hover .dropup-content {
+  display: block;
+}
+
+.dropup:hover .dropbtn {
+  background-color: #2980B9;
 }
 
 /*MEDIA QUERIES*/
 @media only screen and (max-width: 768px) {
 
-  #header {margin-bottom: 5px;}
 
-  #logo {width: 50px;}
+  .logo { }
 
-  #cmp {font-size: 28px;}  
-
-  #slogan {
-    font-size: 60px;
-    margin-top: 65px;
-    letter-spacing: 2px;
+  .logo .site-title {
+    text-align: center;
+    font-size: 1.4em;
   }
 
-  #slogan-small {
-    font-size: 14px;
-    font-weight: 700;
-    right: 10px;
+  #logo { 
+    width:50px;
   }
 
-  h3 {font-size: 16px;}
-
-  /*MAIN MENU*/
-  .tablink {font-size: 16px;}
-
-  .tabcontent {
-  color: #1c1c1c;
-  font-size: 50px;
-  display: none;
-  height: 100%;
-  z-index: 1;
+  .dropdown-content a {
+    font-size: .8em;
+  }
+  .jar {
+    text-align: center;
+    padding: 0;
   }
 
-  /*ACCORDION DROPDOWN // PROJECTS AND SCHOOLS*/
-
-  .accordion {
-    padding: 25px;
-    margin-top: 12px;
-    font-size: 15px;
+  .jar-one {
+    text-align: left;
   }
 
-  .panel {
-    font-size: 15px;
+  .jar-one img {
+    padding: 0;
+    margin: 0;
+    display: block;
+    float: none;
+    width: 100%;
+    border-radius: 0;
+    overflow: hidden;
   }
 
-  .panel p {
-    font-weight: 500;
+  #i-too { display: none; }
+
+  #circle-img #i-too-small-screen {
+    position: absolute; 
+    top: 25%; 
+    left: 50%;
+    display: block;
+    background-color: rgba(246,138,22,.9);
+    color: #fff;
+    padding: 1em;
+    opacity: 0.8; 
   }
 
-  #featured {padding-top: 65px;}
+  .jar-one #circle-img { 
+    padding: 0;
+    width: 100%;
 
-  #projects {padding-top: 65px;}
-
-  #projects a {font-size: 14px;}
-
-  #schools {padding-top: 65px;}
-
-  #schools a {font-size: 14px;}
-
-  #about {
-    font-size: 15px;
-    padding-top: 65px;
   }
 
+  .jar-one h3 {
+    float: none;
+    text-align: center;
+    /*margin: 3em 1em 1em 0;*/
+    padding: 1em 0;
+    font-size: 1em;
+    /*text-shadow: #F68A16 1px 1px, 1px 1px 2px #F68A16;*/
+    color: #F68A16;
+    box-shadow: none;
+    width: 100%;
+    border: 1px solid #F68A16;
+    box-shadow: 5px 5px 0px #F68A16;
+  }
+
+  .jar-one p {
+    text-align: justify;
+    padding: 1em;
+  }
+
+  .jar-two h3 {    
+    float: none;
+    text-align: center;
+    /*margin: 1em 1em 1em 0;*/
+    padding: 1em 0;
+    font-size: 1em;
+    /*text-shadow: #F68A16 1px 1px, 1px 1px 2px #F68A16;*/
+    color: #F68A16;
+    box-shadow: none;
+    width: 100%;
+    border: 1px solid #F68A16;
+    box-shadow: 5px 5px 0px #F68A16;
+  }
+
+  .grid-container {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+
+  #schools a {
+    width: 100%;
+  }
+
+  .dropbtn-projects {
+    width: 100px;
+  }
+
+  .img-grid img {width: 96vw;}
+
+  .img-overlay {width: 96vw;}
+
+  h3#about { width: 98%;}
+
+  .jar-two h3 {
+    text-align: center; 
+    width: 98%;
+  }
+
+  .jar-three h3 {
+    color: #F68A16;
+    /*font-size: 1em;*/
+    width: 92%;
+  }
+
+  hr {display: none;}
+
+  .column {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 300px;
+  }
+
+  .column img {
+    height: 300px;
+  }
+
+}
+
+@media only screen and (max-width: 560px) {
+  .grid-container {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
 }

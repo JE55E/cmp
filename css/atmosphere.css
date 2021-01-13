@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');
+
+html { 
+  background-color: #fff; 
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(-45deg, #f9af60, #f960aa, #60aaf9, #60f9af);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  margin: 0;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#header {
+  padding: 5px 12px;
+}
+
+#logo { 
+  width: 60px; 
+  margin-right: 10px;
+  margin-top: 10px;
+  display: inline;
+  mix-blend-mode: overlay;
+  -webkit-mix-blend-mode: overlay;
+}
+
+#cmp { 
+  text-decoration: none; 
+  color: #f68a16; 
+  font-size: 42px; 
+  display: inline; 
+  mix-blend-mode: overlay;
+  font-weight: 500;
+  margin: 0 0 25px 0;
+}
+
+#slogan {
+  font-size: 10em;
+  font-weight: 900;
+  padding: 0 25px;
+  display: block;
+  color: rgba(22,246,138,1);
+  mix-blend-mode: exclusion;
+  -webkit-mix-blend-mode: exclusion;
+  z-index: -1;
+  height: 100vh;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+  #slogan-small {
+  font-family: 'Schoolbell', cursive;
+  font-size: 24px;
+  font-weight: 600px
+  margin: 0;
+  /*padding: 5px 0 0 0;*/
+  transform: rotate(-35deg);
+  position: fixed;
+  color: #60f9af;
+  display: none;
+  right: 100px;
+  /*z-index: -2;*/
+}
+
+#cml { 
+  font-weight: 400;
+  height: 100vh;
+}
+
+/*MAIN MENU*/
+
+.tablink {
+  background-color: #1c1c1c;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 24px;
+  width: 25%;
+  z-index: 1;
+  mix-blend-mode: screen;
+  -webkit-mix-blend-mode: screen;
+  font-weight: 700;
+}
+
+.tablink:hover {
+  background-color: #fff;
+  color: #1c1c1c;
+  z-index: 1;
+  background: linear-gradient(-135deg, #f9af60, #f960aa, #60aaf9, #60f9af);
+  background-size: 400% 400%;
+  animation: linkgradient 3s ease-in-out infinite;
+}
+
+@keyframes linkgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.tabcontent {
+  color: #1c1c1c;
+  display: none;
+  padding: 100px 20px;
+  /*height: 100vh;*/
+  z-index: 1;
+}
+
+/*FEATURED*/
+#featured {height:100vh;}
+
+#slideshow {
+  margin: 50px auto;
+  display: block;
+}
+
+/*PROJECTS*/
+#projects {
+  height: 100%; 
+}
+
+#projects a { 
+  text-decoration: none; 
+  padding: 6px 10px; 
+  color: #fff;
+  font-size: 17px;
+  display: inline-block;
+  border: 3px solid #fff;
+}
+
+#projects a:hover { 
+  background-color: #f960aa; 
+  color: #fff;
+}
+
+/*ACCORDION ~ for #projects and #schools*/
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 50px;
+  width: 100%;
+  border: 5px solid #1c1c1c;
+  box-shadow: 5px 5px 0 #1c1c1c;
+  margin: 10px 0;
+  text-align: left;
+  outline: none;
+  font-size: 17px;
+  transition: 0.4s;
+}
+
+div#projects > .active, button.accordion:hover {
+  background-color: #f960aa;
+  color: #fff;
+}
+
+#projects button:hover {background-color: #f960aa;}
+
+div#schools > .active, button.accordion:hover {
+  background-color: #60f9af;
+  color: #1c1c1c;
+}
+
+.panel {
+  padding: 0 6px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  mix-blend-mode: normal;
+  -webkit-mix-blend-mode: normal;
+  font-weight: 600;
+
+}
+
+/*SCHOOLS*/
+#schools { 
+  height: 100%;
+}
+
+#schools a {
+  text-decoration: none; 
+  padding: 6px 10px; 
+  color: #fff;
+  font-size: 14px;
+  display: inline-block;
+  border: 3px solid #fff;
+}
+
+#schools a:hover {
+  background-color: #60f9af; 
+  color: #fff;
+}
+
+#schools a.school-link {
+  color: #1c1c1c;
+  font-style: italic;
+  font-weight: 800;
+  margin: 10px 5px 0 0;
+  border-radius: 50px;
+}
+
+#schools a.school-link:hover {margin-top: 5px;}
+
+#schools a.school-home {
+  border: 3px solid #1c1c1c;
+}
+
+/*ABOUT*/
+#about { 
+  background-color: rgba(0,0,0,.6); 
+  height: 100%;
+  color: #fff;
+  line-height: 1.6;
+}
+
+#about a { 
+  display: inline-block; 
+  text-decoration: underline; 
+  color: #fff;
+}
+
+#about a:hover {color: #60f9af;}
+
+.social {
+  display: block;
+  color: #1c1c1c;
+}
+
+.social img {width: 50px;}
+
+.social img:hover {opacity: .5;}
+
+#design-by {
+  font-family: 'Cute Font', cursive;
+  font-size: 24px;
+}
+
+#design-by a {
+  color: #fa897b;
+  background-color: rgba(0,0,0,0);
+  display: inline-block;
+  /*font-weight: 900;*/
+  text-decoration: underline;
+}
+
+/*MEDIA QUERIES*/
+@media only screen and (max-width: 768px) {
+
+  #header {margin-bottom: 5px;}
+
+  #logo {width: 50px;}
+
+  #cmp {font-size: 28px;}  
+
+  #slogan {
+    font-size: 60px;
+    margin-top: 65px;
+    letter-spacing: 2px;
+  }
+
+  #slogan-small {
+    font-size: 14px;
+    font-weight: 700;
+    right: 10px;
+  }
+
+  h3 {font-size: 16px;}
+
+  /*MAIN MENU*/
+  .tablink {font-size: 16px;}
+
+  .tabcontent {
+  color: #1c1c1c;
+  font-size: 50px;
+  display: none;
+  height: 100%;
+  z-index: 1;
+  }
+
+  /*ACCORDION DROPDOWN // PROJECTS AND SCHOOLS*/
+
+  .accordion {
+    padding: 25px;
+    margin-top: 12px;
+    font-size: 15px;
+  }
+
+  .panel {
+    font-size: 15px;
+  }
+
+  .panel p {
+    font-weight: 500;
+  }
+
+  #featured {padding-top: 65px;}
+
+  #projects {padding-top: 65px;}
+
+  #projects a {font-size: 14px;}
+
+  #schools {padding-top: 65px;}
+
+  #schools a {font-size: 14px;}
+
+  #about {
+    font-size: 15px;
+    padding-top: 65px;
+  }
+
+}

@@ -106,7 +106,7 @@ a {
   border-radius: 5px;
   object-fit: cover;
   box-shadow: 2px 2px 2px black;
-  background-color: #fff;
+/*  background-color: #fff;*/
   mix-blend-mode: color;
 }
 
@@ -172,7 +172,6 @@ a {
   display: inline-block;
   white-space: nowrap;
   color: #f960aa;
-  /*top: 50px;*/
   font-size: 48px;
 }
 
@@ -183,7 +182,7 @@ a {
   display: inline-block;
   overflow: hidden;
   position: fixed;
-  top: 10px;
+  top: 0;
   font-size: 48px;
 }
 
