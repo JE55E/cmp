@@ -341,7 +341,7 @@ li a:hover, .dropdown:hover .dropbtn {
   border: none;
   cursor: pointer;
   border-radius: 4px;
-  border: 1px solid #F68A16;
+  /*border: 1px solid #F68A16;*/
   width: 200px;
   /*text-shadow: #F68A16 1px 1px, 1px 1px 2px #F68A16;*/
 }
