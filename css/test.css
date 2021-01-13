@@ -23,6 +23,13 @@ a:hover {
   color: #b3d4fc;
 }
 
+#arrow {
+  display:block;
+  text-align: center;
+  padding-top: 55px;
+  font-size: 4em;
+}
+
 hr {  
   border-top: 1px dashed #F68A16; 
   /*width: 100%;*/
@@ -226,7 +233,7 @@ li a:hover, .dropdown:hover .dropbtn {
 
 .jar {
   /*height:50%;*/
-  padding: 5em 0 10em 0;
+  padding: 5em 0;
 }
 
 #about-link {
@@ -246,7 +253,7 @@ li a:hover, .dropdown:hover .dropbtn {
   height: 350px;
   border-radius: 50%;
   position: relative;
-  padding: 1em;
+  padding: 1em 1em 0 1em;
   opacity: .8;
 }
 
@@ -502,6 +509,8 @@ li a:hover, .dropdown:hover .dropbtn {
   .dropdown-content a {
     font-size: .8em;
   }
+
+  #arrow {display: none;}
   .jar {
     text-align: center;
     padding: 0;
@@ -525,11 +534,11 @@ li a:hover, .dropdown:hover .dropbtn {
 
   #circle-img #i-too-small-screen {
     position: absolute; 
-    top: 25%; 
+    bottom: 0;    
     left: 50%;
     display: block;
-    background-color: rgba(246,138,22,.9);
-    color: #fff;
+    background-color: #fff;
+    color: rgba(246,138,22,1);;
     padding: 1em;
     opacity: 0.8; 
   }
