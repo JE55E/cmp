@@ -299,8 +299,13 @@ li a:hover, .dropdown:hover .dropbtn {
     padding: 0;
   }
 
+  #i-too a:hover {
+  background-color: #fff;
+  color: #F68A16;
+}
+
   .dropdown-content a {
-    font-size: .8em;
+    font-size: .9em;
   }
 
   .column { 
