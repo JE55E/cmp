@@ -5,12 +5,9 @@
 
 body {
   font-family: 'Montserrat', sans-serif; 
-  /*font-weight: 300;*/
   letter-spacing: 0.03em;
   font-size: 1em;
   line-height: 1.4;
-  /*overflow: hidden;*/
-  /*background: linear-gradient(#fff, #1a16f6);*/
 }
 
 a {
@@ -27,13 +24,14 @@ a {
   width: 100%;
   max-width: 1200px;
   overflow: hidden;
-/*  background-image: linear-gradient(90deg, #F68A16, #b3d4fc);*/
   padding: 0;
   z-index: 1;
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 6px;
 }
 
 .logo {
-  /*padding: 1em 0;*/
   display: inline;
   float: left;
   margin: 0;
@@ -136,16 +134,12 @@ li a:hover, .dropdown:hover .dropbtn {
 
 #i-too {
   float: right;
-  /*background-image: linear-gradient(90deg, #F68A16, #b3d4fc);*/
 }
 
 #i-too a:hover {
   background-color: #F68A16;
   color: #fff;
-  /*background-image: linear-gradient(90deg, #F68A16, #b3d4fc);*/
 }
-
-/*#i-too-small-screen {display: none;}*/
 
 /* Center website */
 .main {
@@ -153,14 +147,12 @@ li a:hover, .dropdown:hover .dropbtn {
   isolation: isolate;
 }
 
-.row {
-  margin: 10px -16px;
-}
+/*.row {margin: 10px -16px;}*/
 
 /* Add padding BETWEEN each column */
 .row,
 .row > .column {
-  padding: 6px;
+  padding: 6px 0;
 }
 
 /* Create three equal columns that floats next to each other */
@@ -194,10 +186,7 @@ li a:hover, .dropdown:hover .dropbtn {
   border-radius: 5px;
   object-fit: cover;
   box-shadow: 2px 2px 2px black;
-/*  background-color: #fff;*/
 }
-
-/*.image:hover {filter: saturate(2);}*/
 
 .name {
   position: absolute; 
@@ -208,9 +197,10 @@ li a:hover, .dropdown:hover .dropbtn {
   opacity: 0;
   color: #fff;
   font-size: 14px;
-/*  font-weight: 900;*/
+  font-weight: 500;
   text-align: center;
   text-transform: uppercase;
+  padding: 1em;
 }
 
 .content:hover .name {
@@ -254,25 +244,6 @@ li a:hover, .dropdown:hover .dropbtn {
   z-index: 2;
 }
 
-/*TICKER*/
-#ticker {
-  display: inline-block;
-  white-space: nowrap;
-  color: #f960aa;
-  font-size: 48px;
-}
-
-#ticker-wrap {
-  -webkit-transition-property: all;
-  transition-property: all;
-  white-space: nowrap;
-  display: inline-block;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  font-size: 48px;
-}
-
 /*MEDIA QUERIES*/
 
 @media screen and (max-width: 720px) {
@@ -300,6 +271,7 @@ li a:hover, .dropdown:hover .dropbtn {
     text-align: right;
     padding: 0;
   }
+
   .dropdown-content a {
     font-size: .8em;
   }
@@ -316,7 +288,8 @@ li a:hover, .dropdown:hover .dropbtn {
     opacity: 1;
     font-size: 12px;
     font-weight: 600;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0,0,0,.75);
+    padding: 0;
   }
 
   .row { 

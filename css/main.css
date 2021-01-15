@@ -6,12 +6,9 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif; 
-  /*font-weight: 300;*/
   letter-spacing: 0.03em;
   font-size: 1em;
   line-height: 1.4;
-  /*overflow: hidden;*/
-  /*background: linear-gradient(#fff, #1a16f6);*/
 }
 
 a {
@@ -27,46 +24,69 @@ a:hover {
   display:block;
   text-align: center;
   padding-top: 55px;
+  margin-bottom: 0;
   font-size: 4em;
 }
 
 hr {  
   border-top: 1px dashed #F68A16; 
-  /*width: 100%;*/
   color: rgba(0,0,0,0);
   margin: 0;
   display: block;
 }
 
 .footer {
-   position: static;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: #F68A16;
-   color: white;
-   text-align: center;
-   padding: 1em 0;
+  position: static;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #F68A16;
+  color: #fff;
+  text-align: left;
+  padding: 1em 0;
+  text-align: center;
+}
+
+.footer .dropup {
+  display: block;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #F68A16; 
+  color: #fff;
+}
+
+.footer .dropup-content {
+  bottom: 0;
+}
+
+.footer .dropup button {
+  background-color: #F68A16; 
+  color: #fff;
+  border: 1px dashed #fff;
+}
+
+#social-buttons {
+  display: block;
+}
+
+.social img {
+  width: 40px;
+  margin: 5px;
+}
+
+.social img:hover {
+  filter: blur(2px);
 }
 /* ==========================================================================
    Headers
    ========================================================================== */
 
-/*h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-  font-weight: normal;
-}
-*/
-
 h2 {
   font-size: 1.5em;
-  /*margin: 0.83em 0;*/
 }
 
 h3 {
-/*  font-size: 2em;*/
-  /*margin: 2em 0 3em 0;*/
   color: #F68A16;
   border: 1px solid #F68A16;
   box-shadow: 5px 5px 0px #F68A16;
@@ -74,21 +94,6 @@ h3 {
   padding: 10px;
   font-weight: 300;
   min-width: 200px;
-}
-
-h4 {
-  font-size: 1em;
-  margin: 1.33em 0;
-}
-
-h5 {
-  font-size: 0.83em;
-  margin: 1.67em 0;
-}
-
-h6 {
-  font-size: 0.75em;
-  margin: 2.33em 0;
 }
 
 /* ==========================================================================
@@ -100,13 +105,14 @@ h6 {
   width: 100%;
   max-width: 1200px;
   overflow: hidden;
-/*  background-image: linear-gradient(90deg, #F68A16, #b3d4fc);*/
   padding: 0;
   z-index: 1;
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 6px;
 }
 
 .logo {
-  /*padding: 1em 0;*/
   display: inline;
   float: left;
   margin: 0;
@@ -140,7 +146,7 @@ h1.site-title {
 
 
 /* ==========================================================================
-   Menus
+   Main Menu
    ========================================================================== */
 
 ul {
@@ -150,13 +156,6 @@ ul {
   overflow: hidden;
   background-color: #F68A16;
 }
-
-/*.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}*/
 
 li {
   float: left;
@@ -191,7 +190,7 @@ li a:hover, .dropdown:hover .dropbtn {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #f1f1f1;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -207,7 +206,7 @@ li a:hover, .dropdown:hover .dropbtn {
 }
 
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background-color: #fff;
 }
 
 .dropdown:hover .dropdown-content {
@@ -216,13 +215,11 @@ li a:hover, .dropdown:hover .dropbtn {
 
 #i-too {
   float: right;
-  /*background-image: linear-gradient(90deg, #F68A16, #b3d4fc);*/
 }
 
 #i-too a:hover {
   background-color: #F68A16;
   color: #fff;
-  /*background-image: linear-gradient(90deg, #F68A16, #b3d4fc);*/
 }
 
 #i-too-small-screen {display: none;}
@@ -232,20 +229,14 @@ li a:hover, .dropdown:hover .dropbtn {
    ========================================================================== */
 
 .jar {
-  /*height:50%;*/
   padding: 5em 0;
 }
 
 #about-link {
-  /*font-weight: 800px;*/
   text-decoration: underline;
 }
 
-.jar-one { 
-  /*text-align: right; */
-  /*padding: 3em 2em;*/
-  /*padding-bottom: 10em;*/
-}
+.jar-one {}
 
 .jar-one #circle-img {
   float: left;
@@ -266,13 +257,10 @@ li a:hover, .dropdown:hover .dropbtn {
 
 .jar-one h3 { 
   margin: 4em 0 1em 0;
-  /*margin: 5em 0 1em 0;*/
 }
 
 .jar-one p { 
   text-align: left; 
-  /*padding-bottom: 7em;*/
-  /*padding: 3em 4em;*/
 }
 
 /* ==========================================================================
@@ -313,7 +301,7 @@ li a:hover, .dropdown:hover .dropbtn {
 }
 
 #item-2 {  
-  background-image: url("https://www.playfullearning.net/wp-content/uploads/2015/02/heartmap2.jpg");
+  background-image: url(https://www.playfullearning.net/wp-content/uploads/2015/02/heartmap2.jpg);
   background-size: contain;
 }
 
@@ -344,13 +332,10 @@ li a:hover, .dropdown:hover .dropbtn {
   color: #F68A16;
   padding: 1em;
   font-size: .8em;
-  /*font-weight: 500;*/
   border: none;
   cursor: pointer;
   border-radius: 4px;
-/*  border: 1px solid #F68A16;*/
   width: 200px;
-  /*text-shadow: #F68A16 1px 1px, 1px 1px 2px #F68A16;*/
 }
 
 .dropdown-projects {
@@ -367,7 +352,6 @@ li a:hover, .dropdown:hover .dropbtn {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   font-size: .8em;
-  /*border-radius: 4px;*/
 }
 
 .dropdown-content-projects a {
@@ -389,12 +373,7 @@ li a:hover, .dropdown:hover .dropbtn {
    ========================================================================== */
 
 .jar-three {
-  /*margin-top: 3em;*/
   text-align: center;
-  /*background-image: linear-gradient(#F68A16, #fff);*/
-  /*padding: 0;*/
-  /*width: 100%;*/
-/*  border: 5px dashed #F68A16;*/
 }
 
 .jar-three h3 {
@@ -415,14 +394,9 @@ li a:hover, .dropdown:hover .dropbtn {
 /* Style the images inside the grid */
 .column img {
   opacity: 0.8; 
-  cursor: pointer; 
   object-fit: cover;
   height: 200px;
   border-radius: 50%;
-}
-
-.column img:hover {
-  opacity: 1;
 }
 
 #tab-img-grid {
@@ -430,7 +404,7 @@ li a:hover, .dropdown:hover .dropbtn {
   text-align: center;
 }
 
-#tab-img-grid button {
+.dropup button {
   border: none;
   padding: 10px;
   font-size: .8em;
@@ -441,27 +415,15 @@ li a:hover, .dropdown:hover .dropbtn {
   border-radius: 4px;
   margin: 1em;
   width: 150px;
-  /*height: 150px;*/
-}
-
-/* Clear floats after the columns */
-.row:after {
-/*  content: "";
-  display: table;
-  clear: both;
-*/}
-
-.dropbtn {
-/*  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;*/
 }
 
 .dropup {
   position: relative;
   display: inline-block;
-  /*cursor: pointer;*/
+}
+
+.dropup:hover {
+  background-color: ;
 }
 
 .dropup-content {
@@ -481,14 +443,24 @@ li a:hover, .dropdown:hover .dropbtn {
   display: block;
 }
 
-.dropup-content a:hover {background-color: #b3d4fc;}
+.dropup-content a:hover {background-color: #fff;}
 
 .dropup:hover .dropup-content {
   display: block;
 }
 
 .dropup:hover .dropbtn {
-  background-color: #2980B9;
+  background-color: #b3d4fc;
+}
+
+a.schools-menu-title {
+  background-color: #F68A16;
+  color: #fff;
+}
+
+a.schools-menu-title:hover {
+  background-color: #F68A16;
+  color: #fff;
 }
 
 /*MEDIA QUERIES*/
@@ -552,34 +524,32 @@ li a:hover, .dropdown:hover .dropbtn {
   .jar-one h3 {
     float: none;
     text-align: center;
-    /*margin: 3em 1em 1em 0;*/
     padding: 1em 0;
+    margin: 1em 0;
     font-size: 1em;
-    /*text-shadow: #F68A16 1px 1px, 1px 1px 2px #F68A16;*/
-    color: #F68A16;
+    color: #fff;
     box-shadow: none;
     width: 100%;
-    border: 1px solid #F68A16;
-    box-shadow: 5px 5px 0px #F68A16;
+    background-color: #F68A16;
   }
 
   .jar-one p {
     text-align: justify;
-    padding: 1em;
+    padding: 0;
+    margin: 0;
   }
+
 
   .jar-two h3 {    
     float: none;
     text-align: center;
-    /*margin: 1em 1em 1em 0;*/
     padding: 1em 0;
+    margin: 1em 0;
     font-size: 1em;
-    /*text-shadow: #F68A16 1px 1px, 1px 1px 2px #F68A16;*/
-    color: #F68A16;
+    color: #fff;
     box-shadow: none;
     width: 100%;
-    border: 1px solid #F68A16;
-    box-shadow: 5px 5px 0px #F68A16;
+    background-color: #F68A16;
   }
 
   .grid-container {
@@ -599,17 +569,19 @@ li a:hover, .dropdown:hover .dropbtn {
 
   .img-overlay {width: 96vw;}
 
-  h3#about { width: 98%;}
-
-  .jar-two h3 {
-    text-align: center; 
-    width: 98%;
-  }
-
+/* ==========================================================================
+   Schools
+   ========================================================================== */
   .jar-three h3 {
-    color: #F68A16;
-    /*font-size: 1em;*/
-    width: 92%;
+    float: none;
+    text-align: center;
+    padding: 1em 0;
+    margin: 1em 0;
+    font-size: 1em;
+    color: #fff;
+    box-shadow: none;
+    width: 100%;
+    background-color: #F68A16;
   }
 
   hr {display: none;}
@@ -626,6 +598,30 @@ li a:hover, .dropdown:hover .dropbtn {
     height: 300px;
   }
 
+  .footer {
+    text-align: center;
+  }
+
+  .footer .dropup {
+    display: block;
+    width: 100%;
+    float: none;
+  }
+
+  .footer .dropup-content {
+    bottom: -15px;
+  }
+
+  #social-buttons {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .social img {
+    display: inline-block;
+    width: 30px;
+  }
 }
 
 @media only screen and (max-width: 560px) {
