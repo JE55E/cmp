@@ -20,14 +20,6 @@ a:hover {
   color: #b3d4fc;
 }
 
-#arrow {
-  display:block;
-  text-align: center;
-  padding-top: 55px;
-  margin-bottom: 0;
-  font-size: 4em;
-}
-
 hr {  
   border-top: 1px dashed #F68A16; 
   color: rgba(0,0,0,0);
@@ -264,6 +256,14 @@ li a:hover, .dropdown:hover .dropbtn {
   text-align: left; 
 }
 
+#arrow {
+  display:block;
+  text-align: center;
+  padding-top: 55px;
+  margin-bottom: 0;
+  font-size: 4em;
+}
+
 /* ==========================================================================
    jar-two
    ========================================================================== */
@@ -462,9 +462,13 @@ a.schools-menu-title:hover {
   color: #fff;
 }
 
+a.school-page {
+  color: #F68A16;
+  border-top: 1px dashed #F68A16;
+}
+
 /*MEDIA QUERIES*/
 @media only screen and (max-width: 768px) {
-
 
   .logo { }
 
@@ -478,7 +482,7 @@ a.schools-menu-title:hover {
   }
 
   .dropdown-content a {
-    font-size: .8em;
+    font-size: .9em;
   }
 
   #arrow {display: none;}
@@ -511,7 +515,7 @@ a.schools-menu-title:hover {
     background-color: #fff;
     color: rgba(246,138,22,1);;
     padding: 1em;
-    opacity: 0.8; 
+    opacity: 0.9; 
   }
 
   .jar-one #circle-img { 
@@ -560,7 +564,7 @@ a.schools-menu-title:hover {
   }
 
   .dropbtn-projects {
-    width: 100px;
+    /*width: 100px;*/
   }
 
   .img-grid img {width: 96vw;}
