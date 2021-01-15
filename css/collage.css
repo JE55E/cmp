@@ -244,6 +244,33 @@ li a:hover, .dropdown:hover .dropbtn {
   z-index: 2;
 }
 
+/*Footer*/
+
+.footer {
+  position: static;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #F68A16;
+  color: #fff;
+  text-align: left;
+  padding: 1em 0;
+  text-align: center;
+}
+
+#social-buttons {
+  display: block;
+}
+
+.social img {
+  width: 40px;
+  margin: 5px;
+}
+
+.social img:hover {
+  filter: blur(2px);
+}
+
 /*MEDIA QUERIES*/
 
 @media screen and (max-width: 720px) {
@@ -305,5 +332,22 @@ li a:hover, .dropdown:hover .dropbtn {
   #caption {
     top: 55%;
     left: 25%;
+  }
+
+  /*Footer*/
+
+  .footer {
+    text-align: center;
+  }
+
+  #social-buttons {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .social img {
+    display: inline-block;
+    width: 30px;
   }
 }

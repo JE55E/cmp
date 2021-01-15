@@ -57,7 +57,7 @@ hr {
 }
 
 .footer .dropup-content {
-  bottom: 0;
+  bottom: 34px;
 }
 
 .footer .dropup button {
@@ -78,6 +78,7 @@ hr {
 .social img:hover {
   filter: blur(2px);
 }
+
 /* ==========================================================================
    Headers
    ========================================================================== */
@@ -325,8 +326,6 @@ li a:hover, .dropdown:hover .dropbtn {
   background-size: cover;
 }
 
-#projects {}
-
 .dropbtn-projects {
   background-color: rgba(255,255,255,.9);
   color: #F68A16;
@@ -518,7 +517,6 @@ a.schools-menu-title:hover {
   .jar-one #circle-img { 
     padding: 0;
     width: 100%;
-
   }
 
   .jar-one h3 {
@@ -606,10 +604,6 @@ a.schools-menu-title:hover {
     display: block;
     width: 100%;
     float: none;
-  }
-
-  .footer .dropup-content {
-    bottom: -15px;
   }
 
   #social-buttons {
