@@ -16,6 +16,10 @@ h1 {
 	color: #333;
 }
 
+h1.names {
+  /*text-shadow: 1px 1px 1px #333;*/
+}
+
 #title {
 	text-decoration: underline;
 }
@@ -43,6 +47,11 @@ img {
   height: 100px;
   object-fit: cover;
   margin-right: 10px;
+  box-shadow: 1px 1px 2px black;
+}
+
+.thumbnail:hover {
+  box-shadow: 1px 1px 2px #F68A16;
 }
 
 table, td, th {
@@ -240,7 +249,7 @@ li a:hover, .dropdown:hover .dropbtn {
   }
 
   h1.names { 
-    font-size: 14px; 
+    font-size: 16px; 
   }
 
   .logo .site-title {
