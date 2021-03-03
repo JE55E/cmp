@@ -239,6 +239,10 @@ li a:hover, .dropdown:hover .dropbtn {
     background-size: 100vw 110vh;
   }
 
+  h1.names { 
+    font-size: 14px; 
+  }
+
   .logo .site-title {
     text-align: center;
     font-size: 1.4em;
@@ -255,5 +259,12 @@ li a:hover, .dropdown:hover .dropbtn {
   #i-too { display: none; }
 
   ul.general-list { width: 300px; }
+
+  .thumbnail {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+}
 }
 
