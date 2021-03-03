@@ -14,6 +14,7 @@ body {
 a {
   text-decoration: none;
   color: #F68A16;
+  cursor: pointer;
 }
 
 a:hover {
@@ -485,6 +486,19 @@ a.school-page {
     font-size: .9em;
   }
 
+  #i-too { display: none; }
+
+  #circle-img #i-too-small-screen {
+    position: absolute; 
+    bottom: 0;    
+    left: 50%;
+    display: block;
+    background-color: #fff;
+    color: rgba(246,138,22,1);;
+    padding: 1em;
+    opacity: 0.9; 
+  }
+
   #arrow {display: none;}
   .jar {
     text-align: center;
@@ -503,19 +517,6 @@ a.school-page {
     width: 100%;
     border-radius: 0;
     overflow: hidden;
-  }
-
-  #i-too { display: none; }
-
-  #circle-img #i-too-small-screen {
-    position: absolute; 
-    bottom: 0;    
-    left: 50%;
-    display: block;
-    background-color: #fff;
-    color: rgba(246,138,22,1);;
-    padding: 1em;
-    opacity: 0.9; 
   }
 
   .jar-one #circle-img { 
