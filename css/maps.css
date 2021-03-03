@@ -9,7 +9,7 @@ body {
 
 #main-map-page {
 	background-image: url('../img/maps/bw-map.jpg');
-	background-size: 100vw 150vh;
+	background-size: 100vw 175vh;
 }
 
 h1 {
@@ -36,6 +36,13 @@ p {
 
 img {
 	width: 100%;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 10px;
 }
 
 table, td, th {
