@@ -303,6 +303,10 @@ li a:hover, .dropdown:hover .dropbtn {
     background-size: 100vw 110vh;
   }
 
+  h1 {
+    text-align: center;
+  }
+
   h1.names { 
     font-size: 16px; 
   }
