@@ -20,8 +20,21 @@ h1.names {
   /*text-shadow: 1px 1px 1px #333;*/
 }
 
-#title {
-	text-decoration: underline;
+h1#title {
+  text-align: center;
+  text-decoration: 3px underline #fff;
+}
+
+h1#title a {
+  color: #F68A16;
+  background-color: #fff;
+  border: 3px solid #F68A16;
+  box-shadow: 5px 5px 0px #F68A16;
+}
+
+h1#title a:hover {
+  background-color: #F68A16;
+  color: #fff;
 }
 
 a {
@@ -280,6 +293,11 @@ li a:hover, .dropdown:hover .dropbtn {
 
   h1.names { 
     font-size: 16px; 
+  }
+
+  h1#title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
   }
 
   .logo .site-title {
