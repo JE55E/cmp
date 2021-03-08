@@ -33,6 +33,36 @@ a:hover {
 	/*color:#b3d4fc;*/
 	color: #333;
 }
+span.map-nav #previous{
+  float: left;
+}
+span.map-nav #next{
+  float: right;
+}
+
+span.map-nav a {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.arrow {
+  border: solid #F68A16;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin-left: 5px;
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin-right: 5px;
+}
 
 p {
 	color: #333;
@@ -267,7 +297,7 @@ li a:hover, .dropdown:hover .dropbtn {
 
   #i-too { display: none; }
 
-  ul.general-list { width: 300px; }
+  ul.general-list { width: 280px; }
 
   .thumbnail {
   width: 50px;
