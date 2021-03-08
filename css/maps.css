@@ -9,7 +9,7 @@ body {
 
 #main-map-page {
 	background-image: url('../img/maps/bw-map.jpg');
-	background-size: 100vw 175vh;
+	background-size: 100% 100%;
 }
 
 h1 {
@@ -304,6 +304,6 @@ li a:hover, .dropdown:hover .dropbtn {
   height: 50px;
   object-fit: cover;
   margin-right: 10px;
-}
+  }
 }
 
