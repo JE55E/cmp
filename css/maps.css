@@ -87,6 +87,8 @@ span.map-nav a {
   margin-right: 5px;
 }
 
+a#personal-map-home {}
+
 p {
 	color: #333;
 }
