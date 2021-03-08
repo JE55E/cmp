@@ -14,12 +14,12 @@ body {
 
 #foshay-map-page {
   background-image: url('../img/maps/bw-map.jpg');
-  background-size: 100vw 100vh;
+  background-size: 125vw 125vh;
 }
 
 #expo-map-page {
   background-image: url('../img/maps/bw-map.jpg');
-  background-size: 100vw 100vh;
+  background-size: auto 100vw 125vh;
 }
 
 h1 {
