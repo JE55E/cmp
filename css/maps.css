@@ -7,27 +7,50 @@ body {
   line-height: 1.4;
 }
 
-#main-map-page {
-	background-image: url('../img/maps/bw-map.jpg');
-	background-size: 100% 100%;
-}
-
-#foshay-map-page {
-  background-image: url('../img/maps/bw-map.jpg');
-  background-size: 125vw 125vh;
-}
-
-#expo-map-page {
-  background-image: url('../img/maps/bw-map.jpg');
-  background-size: auto 100vw 125vh;
-}
-
 h1 {
 	color: #333;
 }
 
+div#grid {
+  text-align: center;
+}
+
 h1.names {
   /*text-shadow: 1px 1px 1px #333;*/
+  text-align: center;
+  display: inline-block;
+  /*margin-top: 50px;*/
+  font-size: 12px;
+  margin: 10px;
+  background-color: #fffcf9;
+  border: .5px dashed #000;
+}
+
+h1.names:hover {
+  border: .5px solid #f65216;
+}
+
+.names img {
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+img {
+  width: 100%;
+}
+
+.thumbnail {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: .5px dashed #000;
+  /*box-shadow: 1px 1px 2px #000;*/
+}
+
+.thumbnail:hover {
+  opacity: .75;
+  border-bottom: .5px solid #f65216;
 }
 
 h1#title {
@@ -54,7 +77,7 @@ a {
 
 a:hover {
 	/*color:#b3d4fc;*/
-	color: #333;
+	color: #f65216;
 }
 span.map-nav #previous{
   float: left;
@@ -93,22 +116,6 @@ p {
 	color: #333;
 }
 
-img {
-	width: 100%;
-}
-
-.thumbnail {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  margin-right: 10px;
-  box-shadow: 1px 1px 2px black;
-}
-
-.thumbnail:hover {
-  box-shadow: 1px 1px 2px #F68A16;
-}
-
 table, td, th {
   border: 1px dotted #333;
   padding: 5px;
@@ -128,6 +135,7 @@ ul.general-list {
 	display: block;
 	padding: 12px;
 	background-color: #fff;
+  line-height: 1.6;
 }
 
 ul.general-list li {
@@ -297,11 +305,16 @@ li a:hover, .dropdown:hover .dropbtn {
   }
 }
 
+iframe {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: 480px;
+  width: 75%;
+}
+
 /*MEDIA QUERIES*/
 @media only screen and (max-width: 768px) {
-  #main-map-page {
-    background-size: 100vw 110vh;
-  }
 
   h1 {
     text-align: center;
@@ -333,11 +346,13 @@ li a:hover, .dropdown:hover .dropbtn {
 
   #i-too { display: none; }
 
+  ul {font-size: 12px;}
+
   ul.general-list { width: 280px; }
 
-  .thumbnail {
+/*  .thumbnail {
   display: none;
-  }
+  }*/
 
 }
 

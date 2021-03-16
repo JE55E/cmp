@@ -112,7 +112,7 @@ li a:hover, .dropdown:hover .dropbtn {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
   z-index: 1;
   font-size: .8em;
 }
@@ -153,7 +153,7 @@ li a:hover, .dropdown:hover .dropbtn {
 /* Add padding BETWEEN each column */
 .row,
 .row > .column {
-  padding: 6px 0;
+  /*padding: 6px 0;*/
 }
 
 /* Create three equal columns that floats next to each other */
@@ -184,9 +184,9 @@ li a:hover, .dropdown:hover .dropbtn {
 .image {
   width: 200px;
   height: 200px;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
   object-fit: cover;
-  box-shadow: 2px 2px 2px black;
+  /*box-shadow: 2px 2px 2px black;*/
 }
 
 .name {
@@ -225,7 +225,7 @@ li a:hover, .dropdown:hover .dropbtn {
   margin: 9% auto 0;
   height: 500px;
   max-width: 100%;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
   /*z-index: 2;*/
 }
 
