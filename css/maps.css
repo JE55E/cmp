@@ -30,6 +30,10 @@ h1.names:hover {
   border: .5px solid #f65216;
 }
 
+h4 {
+  color:#333;
+}
+
 .names img {
   text-align: center;
   display: block;
@@ -56,6 +60,7 @@ img {
 h1#title {
   text-align: center;
   text-decoration: 3px underline #fff;
+  margin-top: 25px;
 }
 
 h1#title a {
@@ -79,11 +84,14 @@ a:hover {
 	/*color:#b3d4fc;*/
 	color: #f65216;
 }
+
 span.map-nav #previous{
   float: left;
+  /*padding-bottom: 10px;*/
 }
 span.map-nav #next{
   float: right;
+  /*padding-bottom: 10px;*/
 }
 
 span.map-nav a {
@@ -329,6 +337,10 @@ iframe {
   h1#title {
     /*font-size: 1.5em;*/
     margin-bottom: 20px;
+  }
+
+  h4 {
+    font-size: 12px;
   }
 
   .logo .site-title {
