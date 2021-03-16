@@ -362,9 +362,7 @@ iframe {
 
   ul.general-list { width: 280px; }
 
-/*  .thumbnail {
-  display: none;
-  }*/
+  i {display: block;}
 
 }
 
