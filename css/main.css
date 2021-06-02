@@ -75,7 +75,23 @@ hr {
 /* ==========================================================================
    Headers
    ========================================================================== */
+h1#title {
+  text-align: center;
+  text-decoration: 3px underline #fff;
+  margin-top: 25px;
+}
 
+h1#title a {
+  color: #F68A16;
+  background-color: #fff;
+  border: 3px solid #F68A16;
+  box-shadow: 5px 5px 0px #F68A16;
+}
+
+h1#title a:hover {
+  background-color: #F68A16;
+  color: #fff;
+}
 h2 {
   font-size: 1.5em;
 }
@@ -627,5 +643,9 @@ a.school-page {
   .grid-container {
     grid-template-columns: auto;
     grid-template-rows: auto;
+  }
+    h1#title {
+    /*font-size: 1.5em;*/
+    margin-bottom: 20px;
   }
 }
