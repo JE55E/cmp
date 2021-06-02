@@ -128,7 +128,7 @@ a#personal-map-home {}
 
 p {
 	color: #333;
-  text-align: left;
+  /*text-align: left;*/
 }
 
 p.project-info {margin: 50px; text-align: left; margin-bottom: 0; padding-bottom: 0; color: #000;}
