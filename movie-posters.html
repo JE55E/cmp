@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CMP</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="stylesheet" href="css/collage.css" type="text/css">
+    <style>
+      body {height: 100vh; background: linear-gradient(45deg, #b3d4fc, #fff);}
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <div class="logo">
+        <a href="index.html"><img id="logo" src="img/icon.png"></a>
+        <sup><h1 class="site-title"><a href="https://criticalmediaproject.org" target="_blank">critical media project</a></h1></sup>
+      </div>
+    </div>
+
+<!-- Main menu -->
+    <ul>
+      <li><a href="index.html">home</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">schools</a>
+        <div id="schools" class="dropdown-content">
+          <a href="index.html#schools-jar">32nd St LAUSD/USC Media Arts & Engineering Magnet</a>
+          <a href="index.html#schools-jar">Ambassador School</a>
+          <a href="index.html#schools-jar">Bravo Medical Magnet</a>
+          <a href="index.html#schools-jar">The Clubhouse @ EXPO Center</a>
+          <a href="index.html#schools-jar">Foshay Learning Center</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">projects</a>
+        <div class="dropdown-content">
+          <a href="collage.html">Identity Collage</a>
+          <a href="personal-map.html">Personal Map</a>
+          <a href="community-interviews.html">Community Interview</a>
+          <a>Visibility // Visual Argument (coming soon)</a>
+          <a>Stereotypes // Personal Video (coming soon)</a>
+          <a>Advocacy !!!</a> 
+        </div>
+      </li>
+      <li id="i-too"><a><i>I TOO AM</i> critical makers lab</a></li>
+    </ul>
+
+<!-- Image Gallery Grid -->
+    <div id="photos" class="row">
+    	<div id="photo-gallery" class="lightbox-gallery">
+
+    		<div class="column groupA">
+    			<div id="" class="content">
+    				<a href="img/posters/WARENN-TRUJEQUE.png" alt="WARENN TRUJEQUE">
+    					<img class="image" src="img/posters/WARENN-TRUJEQUE.png" style="width:100%">  
+    					<div class="name">WARENN TRUJEQUE</div>
+    				</a>
+    			</div>
+    		</div>
+
+        <div class="column groupB">
+          <div class="content">
+            <a href="img/posters/CAMILLA-SHARP.png" alt="CAMILLA SHARP">
+              <img class="image" src="img/posters/CAMILLA-SHARP.png" alt="" style="width:100%">
+              <div class="name">CAMILLA SHARP</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="column groupC">
+          <div class="content">
+            <a href="img/posters/AIDEN-VEGA.png" alt="AIDEN VEGA">
+              <img class="image" src="img/posters/AIDEN-VEGA.png" alt="" style="width:100%">
+              <div class="name">AIDEN VEGA</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="column groupB">
+          <div class="content">
+            <a href="img/posters/MADISON-DOMINGUEZ.jpg" alt="MADISON DOMINGUEZ">
+              <img class="image" src="img/posters/MADISON-DOMINGUEZ.jpg" alt="" style="width:100%">
+              <div class="name">MADISON DOMINGUEZ</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="column groupC">
+          <div class="content">
+            <a href="img/posters/MIA_NIEVEZ-MAYS.png" alt="">
+              <img class="image" src="img/posters/MIA_NIEVEZ-MAYS.png" alt="" style="width:100%">
+              <!-- <div class="name">MIA NIEVEZ-MAYS</div> -->
+            </a>
+          </div>
+        </div>
+
+        <div class="column groupA">
+          <div class="content">
+            <a href="img/posters/SHAMIRA-ALTAMIRANO.jpeg" alt="">
+              <img class="image" src="img/posters/SHAMIRA-ALTAMIRANO.jpeg" alt="" style="width:100%">
+              <!-- <div class="name">SHAMIRA ALTAMIRANO</div> -->
+            </a>
+          </div>
+        </div>
+
+        <div class="column groupB">
+          <div class="content">
+            <a href="img/posters/ARIXANDER-HENRIQUEZ.png" alt="">
+              <img class="image" src="img/posters/ARIXANDER-HENRIQUEZ.png" alt="" style="width:100%">
+              <!-- <div class="name">ARIXANDER HENRIQUEZ</div> -->
+            </a>
+          </div>
+        </div>
+
+        <div class="column groupC">
+          <div class="content">
+            <a href="img/posters/MARAKI-SOLOMON.jpg" alt="">
+              <img class="image" src="img/posters/MARAKI-SOLOMON.jpg" alt="" style="width:100%">
+              <!-- <div class="name">MARAKI SOLOMON</div> -->
+            </a>
+          </div>
+        </div>
+
+<!-- END OF GRID -->
+      </div>
+    </div>
+
+    <script type="text/javascript">
+    // RANDOMIZE DIVS
+    var cards = $(".column");
+
+    for (var i = 0; i < cards.length; i++){
+      var target = Math.floor(Math.random() * cards.length -1) + 1;
+      var target2 = Math.floor(Math.random() * cards.length -1) +1;
+      cards.eq(target).before(cards.eq(target2));
+    } 
+
+    // LIGHTBOX
+    var $overlay = $('<div id="overlay"></div>');
+    var $image = $("<img>");
+    var $caption = $("<p id='caption'></p>");
+
+    //An image to name
+    $overlay.append($image, $caption);
+
+    //Add name
+    $("body").append($overlay, $caption);
+
+    //click the image and a scaled version of the full size image will appear
+    $("#photo-gallery a").click( function(e) {
+      e.preventDefault();
+
+      var imageLocation = $(this).attr("href");
+      var captionLocation = $(this).attr("alt");
+
+      //update name with the image linked in the link
+      $image.attr("src", imageLocation);
+      $caption.text(captionLocation);
+
+      //show the name
+      $overlay.show();
+      $caption.show();
+     });
+
+    $("#overlay").click(function() {
+      $( "#overlay" ).hide();
+      $( "#caption" ).hide();
+    });
+
+    // SHOW & HIDE ADDITIONAL ELEMENTS
+    $(document).ready(function(){
+      $('#photo-gallery a').click(function() {
+        $('#caption').css({
+          'display': 'block',
+        });
+        $('.image').css({
+          'filter': 'grayscale(1)',
+        });
+      });
+      $('#overlay').click(function() {
+        $('.image').css({
+          'filter': 'grayscale(0)',
+        });
+      });
+      $('body').click(function() {
+
+        $('.name').css({
+          'background-color': 'rgba(0,0,0,.6)',
+        });
+      });
+    });
+    </script>
+  </body>
+</html>

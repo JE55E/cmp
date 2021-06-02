@@ -308,8 +308,8 @@ li a:hover, .dropdown:hover .dropbtn {
 }
 
 #item-3 {  
-  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.c5K3Law0HRv0B2M5Gd7zkwHaEU%26pid%3DApi&f=1);
-  background-size: contain;
+  background-image: url('../img/belong.jpg');
+  background-size: 150%;
 }
 
 #item-4 {  

@@ -148,6 +148,7 @@ li a:hover, .dropdown:hover .dropbtn {
   isolation: isolate;
 }
 
+#photos {margin-top: 12px;}
 /*.row {margin: 10px -16px;}*/
 
 /* Add padding BETWEEN each column */
@@ -192,7 +193,7 @@ li a:hover, .dropdown:hover .dropbtn {
 .name {
   position: absolute; 
   bottom: 5px; 
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba( 22, 130, 246, 0.75);
   width: 100%;
   transition: .5s ease;
   opacity: 0;
