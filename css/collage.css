@@ -18,6 +18,9 @@ a {
 
   p.project-info {margin: 40px; text-align: left; padding-bottom: 0; color: #000;}
 
+  .footer-title {font-size:1.5em; font-weight: 500;}
+  
+
 /* ==========================================================================
    Main Header
    ========================================================================== */
@@ -295,7 +298,7 @@ h1#title a:hover {
 
 .social img {
   width: 40px;
-  margin: 5px;
+  margin: 25px 5px;
 }
 
 .social img:hover {
@@ -336,6 +339,8 @@ h1#title a:hover {
   background-color: #fff;
   color: #F68A16;
 }
+
+  h1 {font-size: 22px;}
 
   h1#title {
     /*font-size: 1.5em;*/
@@ -379,9 +384,12 @@ h1#title a:hover {
 
   /*Footer*/
 
-  .footer {
+  .footer p {
     text-align: center;
+    font-size: .7em;
   }
+
+  footer p.footer-title {font-weight: 500;}
 
   #social-buttons {
     width: 100%;

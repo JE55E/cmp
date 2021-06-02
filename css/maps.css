@@ -342,6 +342,8 @@ iframe {
   text-align: center;
 }
 
+.footer-title {font-size:1.5em; font-weight: 500;}
+
 .footer .dropup {
   display: block;
   width: 20%;
@@ -361,13 +363,15 @@ iframe {
   border: 1px dashed #fff;
 }
 
+footer a, p {margin-top: 10px; margin-bottom: 5px;}
+
 #social-buttons {
   display: block;
 }
 
 .social img {
   width: 40px;
-  margin: 5px;
+  margin: 25px 5px;
 }
 
 .social img:hover {
@@ -417,6 +421,11 @@ iframe {
   ul.general-list { width: 280px; }
 
   i {display: block;}
+
+    .footer p {
+    text-align: center;
+    font-size: .7em;
+  }
 
 }
 

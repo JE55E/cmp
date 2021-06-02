@@ -47,6 +47,8 @@ hr {
   text-align: center;
 }
 
+footer p {margin-top: 10px; }
+
 .footer .dropup {
   display: block;
   width: 20%;
@@ -72,7 +74,7 @@ hr {
 
 .social img {
   width: 40px;
-  margin: 5px;
+  margin: 25px 5px;
 }
 
 .social img:hover {
@@ -629,6 +631,8 @@ a.school-page {
 
   .footer {
     text-align: center;
+    margin: 0;
+    width: 100%;
   }
 
   .footer .dropup {
@@ -654,6 +658,10 @@ a.school-page {
     grid-template-columns: auto;
     grid-template-rows: auto;
   }
+
+/*  p.project-info {font-size: 1em;}*/
+  h1 {font-size: 22px;}
+
     h1#title {
     /*font-size: 1.5em;*/
     margin-bottom: 20px;
