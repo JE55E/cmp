@@ -21,6 +21,9 @@ a:hover {
   color: #b3d4fc;
 }
 
+p {text-align: center; margin-bottom: 0; padding-bottom: 0; color: #000;}
+/*p.i-am {text-align: center; margin-bottom: 0; padding-bottom: 0; color: #000;}*/
+
 hr {  
   border-top: 1px dashed #F68A16; 
   color: rgba(0,0,0,0);
@@ -77,15 +80,17 @@ hr {
    ========================================================================== */
 h1#title {
   text-align: center;
-  text-decoration: 3px underline #fff;
+  text-decoration: none;
   margin-top: 25px;
 }
 
 h1#title a {
-  color: #F68A16;
+  color: #000;
   background-color: #fff;
-  border: 3px solid #F68A16;
-  box-shadow: 5px 5px 0px #F68A16;
+  border: 3px solid #000;
+  box-shadow: 5px 5px 0px #000;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 h1#title a:hover {
@@ -267,6 +272,7 @@ li a:hover, .dropdown:hover .dropbtn {
 
 .jar-one h3 { 
   margin: 4em 0 1em 0;
+  font-weight: 400;
 }
 
 .jar-one p { 

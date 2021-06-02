@@ -153,6 +153,8 @@ h1#title a {
   background-color: #fff;
   border: 3px solid #F68A16;
   box-shadow: 5px 5px 0px #F68A16;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 h1#title a:hover {
