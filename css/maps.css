@@ -322,6 +322,49 @@ iframe {
   width: 75%;
 }
 
+.footer {
+  position: static;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #F68A16;
+  color: #fff;
+  text-align: left;
+  padding: 1em 0;
+  text-align: center;
+}
+
+.footer .dropup {
+  display: block;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #F68A16; 
+  color: #fff;
+}
+
+.footer .dropup-content {
+  bottom: 34px;
+}
+
+.footer .dropup button {
+  background-color: #F68A16; 
+  color: #fff;
+  border: 1px dashed #fff;
+}
+
+#social-buttons {
+  display: block;
+}
+
+.social img {
+  width: 40px;
+  margin: 5px;
+}
+
+.social img:hover {
+  filter: blur(2px);
+}
 /*MEDIA QUERIES*/
 @media only screen and (max-width: 768px) {
 
