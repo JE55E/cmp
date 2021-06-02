@@ -89,9 +89,9 @@ h1#title a {
 }
 
 h1#title a:hover {
-  background-color: #F68A16;
-  color: #fff;
+  cursor: default;
 }
+
 h2 {
   font-size: 1.5em;
 }
