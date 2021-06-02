@@ -243,7 +243,7 @@ li a:hover, .dropdown:hover .dropbtn {
   color: #fff;
 }
 
-#i-too-small-screen {display: none;}
+/*#i-too-small-screen {display: none;}*/
 
 /* ==========================================================================
    jar-one
@@ -654,6 +654,22 @@ a.school-page {
 }
 
 @media only screen and (max-width: 560px) {
+
+    #i-too {
+/*    float: left;*/
+    background-color: #fff;
+    width: 100%;
+    color: #f68a16;
+    padding: 5px 0 0 0;
+  }
+
+  #i-too a {
+    color: #f68a16;
+    font-size: .7em;
+    text-align: right;
+    padding: 0;
+  }
+
   .grid-container {
     grid-template-columns: auto;
     grid-template-rows: auto;
