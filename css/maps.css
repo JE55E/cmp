@@ -59,7 +59,7 @@ img {
 
 h1#title {
   text-align: center;
-  text-decoration: 3px underline #fff;
+  /*text-decoration: 3px underline #fff;*/
   margin-top: 25px;
 }
 
@@ -70,6 +70,7 @@ h1#title a {
   box-shadow: 5px 5px 0px #F68A16;
   padding-left: 10px;
   padding-right: 10px;
+  text-decoration: none;
 }
 
 h1#title a:hover {
@@ -77,7 +78,6 @@ h1#title a:hover {
 }
 
 a {
-	text-decoration: none;
 	color: #F68A16;
 }
 
@@ -123,6 +123,7 @@ a#personal-map-home {}
 
 p {
 	color: #333;
+  text-align: left;
 }
 
 table, td, th {

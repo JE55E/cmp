@@ -11,7 +11,7 @@ body {
 }
 
 a {
-  text-decoration: none;
+  /*text-decoration: none;*/
   color: #F68A16;
   cursor: pointer;
 }
@@ -155,11 +155,17 @@ h1#title a {
   box-shadow: 5px 5px 0px #F68A16;
   padding-left: 10px;
   padding-right: 10px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 h1#title a:hover {
-  cursor: default;
+  cursor: pointer;
 }
+
+.vid-div {background-color: #b3d4fc; padding: 24px 50px;}
+.vid-text {text-align: center; margin-top: 50px; font-size: 1.5em;}
+.vid {text-align: center; margin-bottom: 50px;}
 
 /* Center website */
 .main {
@@ -167,7 +173,7 @@ h1#title a:hover {
   isolation: isolate;
 }
 
-#photos {margin-top: 12px;}
+#photos {margin-top: 24px;}
 /*.row {margin: 10px -16px;}*/
 
 /* Add padding BETWEEN each column */
