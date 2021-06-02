@@ -12,7 +12,6 @@ body {
 }
 
 a {
-  text-decoration: none;
   color: #F68A16;
   cursor: pointer;
 }
@@ -21,8 +20,13 @@ a:hover {
   color: #b3d4fc;
 }
 
+h1.site-title a {
+  display: inline;
+  text-decoration: none;
+}
+
+p.project-info {margin: 40px; text-align: left; padding-bottom: 0; color: #000;}
 p {text-align: center; margin-bottom: 0; padding-bottom: 0; color: #000;}
-/*p.i-am {text-align: center; margin-bottom: 0; padding-bottom: 0; color: #000;}*/
 
 hr {  
   border-top: 1px dashed #F68A16; 

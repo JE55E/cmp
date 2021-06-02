@@ -77,6 +77,11 @@ h1#title a:hover {
   cursor: default;
 }
 
+h1.site-title a {
+  display: inline;
+  text-decoration: none;
+}
+
 a {
 	color: #F68A16;
 }
@@ -125,6 +130,8 @@ p {
 	color: #333;
   text-align: left;
 }
+
+p.project-info {margin: 50px; text-align: left; margin-bottom: 0; padding-bottom: 0; color: #000;}
 
 table, td, th {
   border: 1px dotted #333;
@@ -388,6 +395,8 @@ iframe {
     font-size: 12px;
   }
 
+  p.project-info {margin: 40px; text-align: left; padding-bottom: 0; color: #000;}
+
   .logo .site-title {
     text-align: center;
     font-size: 1.4em;
@@ -403,7 +412,7 @@ iframe {
 
   #i-too { display: none; }
 
-  ul {font-size: 12px;}
+/*  ul {font-size: 12px;}*/
 
   ul.general-list { width: 280px; }
 
