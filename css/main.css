@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html {
-  color: #F68A16;
+  color: #333;
 }
 
 body {
@@ -12,12 +12,12 @@ body {
 }
 
 a {
-  color: #F68A16;
+  color: #333;
   cursor: pointer;
 }
 
 a:hover {
-  color: #b3d4fc;
+  color: #F68A16;
 }
 
 h1.site-title a {
@@ -25,11 +25,11 @@ h1.site-title a {
   text-decoration: none;
 }
 
-p.project-info {margin: 40px; text-align: left; padding-bottom: 0; color: #000;}
-p {text-align: center; margin-bottom: 0; padding-bottom: 0; color: #000;}
+p.project-info {margin: 40px; text-align: left; padding-bottom: 0; color: #333;}
+p {text-align: center; margin-bottom: 0; padding-bottom: 0; }
 
 hr {  
-  border-top: 1px dashed #F68A16; 
+  border-top: 1px dashed #333; 
   color: rgba(0,0,0,0);
   margin: 0;
   display: block;
@@ -40,21 +40,21 @@ hr {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #F68A16;
+  background-color: #333;
   color: #fff;
   text-align: left;
   padding: 1em 0;
   text-align: center;
 }
 
-footer p {margin-top: 10px; }
+footer p {margin-top: 10px; color: #fff;}
 
 .footer .dropup {
   display: block;
   width: 20%;
   margin-left: auto;
   margin-right: auto;
-  background-color: #F68A16; 
+  background-color: #333; 
   color: #fff;
 }
 
@@ -63,7 +63,7 @@ footer p {margin-top: 10px; }
 }
 
 .footer .dropup button {
-  background-color: #F68A16; 
+  background-color: #333; 
   color: #fff;
   border: 1px dashed #fff;
 }
@@ -91,10 +91,10 @@ h1#title {
 }
 
 h1#title a {
-  color: #000;
+  color: #333;
   background-color: #fff;
-  border: 3px solid #000;
-  box-shadow: 5px 5px 0px #000;
+  border: 3px solid #333;
+  box-shadow: 5px 5px 0px #333;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -108,12 +108,12 @@ h2 {
 }
 
 h3 {
-  color: #F68A16;
-  border: 1px solid #F68A16;
-  box-shadow: 5px 5px 0px #F68A16;
+  color: #333;
+  border: 1px solid #333;
+  box-shadow: 5px 5px 0px #333;
   display: inline-block;
   padding: 10px;
-  font-weight: 300;
+  font-weight: 500;
   min-width: 200px;
 }
 
@@ -192,7 +192,7 @@ li a {
 
 li a:hover:not(.active) {
   background-color: #fff;
-  color: #F68A16;
+  color: #333;
 }
 
 .active {
@@ -201,7 +201,7 @@ li a:hover:not(.active) {
 
 /*Dropdown*/
 li a:hover, .dropdown:hover .dropbtn {
-  background-color: #b3d4fc;
+  background-color: #F68A16;
 }
 
 .dropdown {
@@ -219,7 +219,7 @@ li a:hover, .dropdown:hover .dropbtn {
 }
 
 .dropdown-content a {
-  color: #F68A16;
+  color: #333;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -239,7 +239,7 @@ li a:hover, .dropdown:hover .dropbtn {
 }
 
 #i-too a:hover {
-  background-color: #F68A16;
+  background-color: #333;
   color: #fff;
 }
 
@@ -257,9 +257,55 @@ li a:hover, .dropdown:hover .dropbtn {
   text-decoration: underline;
 }
 
-.jar-one {}
+.jar-one {
+  text-align: center; 
+  padding: 100px;
+  margin-top: 25px;
+  background-image: url('../img/group2.png');
+  background-size: cover;
+/*  margin: auto;
+  display: block;*/
+}
 
-.jar-one #circle-img {
+/*TEST*/
+
+#about-text {
+/*  background-color: rgba(0, 0, 0, .5);*/
+/*  z-index: 1;*/
+/*  background-image: url('../img/landing-img.png');
+  background-size: 50%;*/
+  text-align: center;
+  margin: auto;
+  display: block;
+  z-index: 2;
+  /*position: absolute;*/
+}
+
+.jar-one h3 { 
+  margin: 4em 0 1em 0;
+  font-weight: 500;
+  background-color: rgba(255,255,255,1);
+}
+
+.jar-one p { 
+  text-align: center; 
+  margin: auto;
+  display: block;
+  z-index: 1;
+  padding: 50px 100px;
+  background-color: rgba(255,255,255,.9);
+  font-size: 1em;
+  line-height: 1.6;
+  font-weight: 500;
+/*  width: 100%;*/
+}
+
+h3#about {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+/*.jar-one #circle-img {
   float: left;
   width: 350px;
   height: 350px;
@@ -316,7 +362,7 @@ li a:hover, .dropdown:hover .dropbtn {
 }
 
 .grid-item {
-  background-color: #F68A16;
+  background-color: #333;
   border: 1px solid #fff;
   padding: 20px;
   text-align: center;
@@ -357,7 +403,7 @@ li a:hover, .dropdown:hover .dropbtn {
 
 .dropbtn-projects {
   background-color: rgba(255,255,255,.9);
-  color: #F68A16;
+  color: #333;
   padding: 1em;
   font-size: .8em;
   border: none;
@@ -375,7 +421,7 @@ li a:hover, .dropdown:hover .dropbtn {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  color: #F68A16;
+  color: #333;
   width: 100%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -383,7 +429,7 @@ li a:hover, .dropdown:hover .dropbtn {
 }
 
 .dropdown-content-projects a {
-  color: #F68A16;
+  color: #333;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -393,7 +439,7 @@ li a:hover, .dropdown:hover .dropbtn {
 
 .dropdown-projects:hover .dropdown-content-projects {display: block;}
 
-.dropdown-projects:hover .dropbtn-projects {background-color: #b3d4fc;}
+.dropdown-projects:hover .dropbtn-projects {background-color: #F68A16;}
 
 
 /* ==========================================================================
@@ -438,8 +484,8 @@ li a:hover, .dropdown:hover .dropbtn {
   font-size: .8em;
   padding: .5em;
   background-color: rgba(255,255,255,.9);
-  color: #F68A16;
-  border: 1px solid #F68A16;
+  color: #333;
+  border: 1px solid #333;
   border-radius: 4px;
   margin: 1em;
   width: 150px;
@@ -465,7 +511,7 @@ li a:hover, .dropdown:hover .dropbtn {
 }
 
 .dropup-content a {
-  color: #F68A16;
+  color: #333;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -478,22 +524,22 @@ li a:hover, .dropdown:hover .dropbtn {
 }
 
 .dropup:hover .dropbtn {
-  background-color: #b3d4fc;
+  background-color: #F68A16;
 }
 
 a.schools-menu-title {
-  background-color: #F68A16;
+  background-color: #333;
   color: #fff;
 }
 
 a.schools-menu-title:hover {
-  background-color: #F68A16;
+  background-color: #333;
   color: #fff;
 }
 
 a.school-page {
-  color: #F68A16;
-  border-top: 1px dashed #F68A16;
+  color: #333;
+  border-top: 1px dashed #333;
 }
 
 /*MEDIA QUERIES*/
@@ -514,9 +560,9 @@ a.school-page {
     font-size: .9em;
   }
 
-  #i-too { display: none; }
+/*  #i-too { display: none; }*/
 
-  #circle-img #i-too-small-screen {
+/*  #circle-img #i-too-small-screen {
     position: absolute; 
     bottom: 0;    
     left: 50%;
@@ -525,16 +571,18 @@ a.school-page {
     color: rgba(246,138,22,1);;
     padding: 1em;
     opacity: 0.9; 
-  }
+  }*/
 
   #arrow {display: none;}
+
   .jar {
     text-align: center;
     padding: 0;
   }
 
   .jar-one {
-    text-align: left;
+    margin: 0;
+    background-size: contain;
   }
 
   .jar-one img {
@@ -556,18 +604,19 @@ a.school-page {
     float: none;
     text-align: center;
     padding: 1em 0;
-    margin: 1em 0;
+    margin: 1em 0 0 0;
     font-size: 1em;
     color: #fff;
     box-shadow: none;
-    width: 100%;
-    background-color: #F68A16;
+    width: 50%;
+    background-color: rgba(0, 0, 0, .8);
   }
 
   .jar-one p {
     text-align: justify;
-    padding: 0;
-    margin: 0;
+    padding: 25px;
+    margin: 10px;
+    font-size: .8em;
   }
 
 
@@ -580,7 +629,7 @@ a.school-page {
     color: #fff;
     box-shadow: none;
     width: 100%;
-    background-color: #F68A16;
+    background-color: #333;
   }
 
   .grid-container {
@@ -612,7 +661,7 @@ a.school-page {
     color: #fff;
     box-shadow: none;
     width: 100%;
-    background-color: #F68A16;
+    background-color: #333;
   }
 
   hr {display: none;}
@@ -655,16 +704,16 @@ a.school-page {
 
 @media only screen and (max-width: 560px) {
 
-    #i-too {
+  #i-too {
 /*    float: left;*/
     background-color: #fff;
     width: 100%;
-    color: #f68a16;
+    color: #333;
     padding: 5px 0 0 0;
   }
 
   #i-too a {
-    color: #f68a16;
+    color: #333;
     font-size: .7em;
     text-align: right;
     padding: 0;
