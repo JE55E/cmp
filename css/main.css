@@ -266,7 +266,7 @@ li a:hover, .dropdown:hover .dropbtn {
   border-radius: 50%;
   position: relative;
   padding: 1em 1em 0 1em;
-  opacity: .8;
+  opacity: .75;
 }
 
 .jar-one img {
