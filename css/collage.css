@@ -16,7 +16,7 @@ a {
   cursor: pointer;
 }
 
-  p.project-info {margin: 40px; text-align: left; padding-bottom: 0; color: #000;}
+  p.project-info {margin: 40px; text-align: left; padding-bottom: 0; color: #333;}
 
   .footer-title {font-size:1.5em; font-weight: 500;}
   
@@ -271,7 +271,7 @@ h1#title a:hover {
   left: 2.5%;
   padding: 5px;
   line-height: 1.6;
-  text-shadow: 2px 2px 4px #000;
+  text-shadow: 2px 2px 4px #333;
   text-transform: uppercase;
   transform: skew(5deg, -15deg);
   font-style: italic;
@@ -285,7 +285,7 @@ h1#title a:hover {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #000;
+  background-color: #333;
   color: #fff;
   text-align: left;
   padding: 1em 0;
@@ -309,7 +309,7 @@ h1#title a:hover {
 
 @media screen and (max-width: 720px) {
 
-  p.project-info {margin: 25px; text-align: left; margin-bottom: 0; padding-bottom: 0; color: #000;}
+  p.project-info {margin: 25px; text-align: left; margin-bottom: 0; padding-bottom: 0; color: #333;}
 
   .logo .site-title {
     text-align: center;

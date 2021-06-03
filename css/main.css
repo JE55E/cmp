@@ -347,6 +347,8 @@ h3#about {
   text-align: center;
 }
 
+.jar-two a {text-decoration: none;}
+
 /* ==========================================================================
    Projects
    ========================================================================== */
@@ -439,7 +441,7 @@ h3#about {
 
 .dropdown-projects:hover .dropdown-content-projects {display: block;}
 
-.dropdown-projects:hover .dropbtn-projects {background-color: #F68A16;}
+.dropdown-projects:hover .dropbtn-projects {background-color: #F68A16; color: #fff;}
 
 
 /* ==========================================================================
