@@ -7,8 +7,8 @@ html {
 body {
   font-family: 'Montserrat', sans-serif; 
   letter-spacing: 0.03em;
-  font-size: 1em;
-  line-height: 1.4;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 a {
@@ -25,8 +25,8 @@ h1.site-title a {
   text-decoration: none;
 }
 
-p.project-info {margin: 40px; text-align: left; padding-bottom: 0; color: #333;}
-p {text-align: center; margin-bottom: 0; padding-bottom: 0; }
+.project-info {margin: 50px 100px; text-align: left; padding-bottom: 0; color: #333; border: 1px dashed #333; padding: 12px; background-color: #fff;}
+p {text-align: center;}
 
 hr {  
   border-top: 1px dashed #333; 
@@ -47,7 +47,9 @@ hr {
   text-align: center;
 }
 
-footer p {margin-top: 10px; color: #fff;}
+.footer p {margin-top: 10px; color: #fff; font-size: 1.5em; font-weight: 500;}
+.footer i {color: #F68A16;}
+.footer #contact {font-weight: 300; font-size: 1em;}
 
 .footer .dropup {
   display: block;
@@ -115,6 +117,7 @@ h3 {
   padding: 10px;
   font-weight: 500;
   min-width: 200px;
+  font-size: 1.25em;
 }
 
 /* ==========================================================================
@@ -152,7 +155,7 @@ h3 {
   margin: 0 0 0 1rem;
   text-transform: lowercase;
   letter-spacing: 0.02em;
-  line-height: 1.7;
+  line-height: 1.6;
   font-weight: normal;
 }
 
@@ -260,7 +263,7 @@ li a:hover, .dropdown:hover .dropbtn {
 .jar-one {
   text-align: center; 
   padding: 100px;
-  margin-top: 25px;
+  /*margin-top: 25px;*/
   background-image: url('../img/group2.png');
   background-size: cover;
 /*  margin: auto;
@@ -348,6 +351,8 @@ h3#about {
 }
 
 .jar-two a {text-decoration: none;}
+
+.jar-two h3 {margin-top: 0px;}
 
 /* ==========================================================================
    Projects
@@ -546,7 +551,7 @@ a.school-page {
 
 /*MEDIA QUERIES*/
 @media only screen and (max-width: 768px) {
-
+  body {font-size: 1rem;}
   .logo { }
 
   .logo .site-title {
@@ -607,7 +612,7 @@ a.school-page {
     text-align: center;
     padding: 1em 0;
     margin: 1em 0 0 0;
-    font-size: 1em;
+    font-size: .9em;
     color: #fff;
     box-shadow: none;
     width: 50%;
@@ -627,7 +632,7 @@ a.school-page {
     text-align: center;
     padding: 1em 0;
     margin: 1em 0;
-    font-size: 1em;
+    font-size: .9em;
     color: #fff;
     box-shadow: none;
     width: 100%;
@@ -683,8 +688,11 @@ a.school-page {
   .footer {
     text-align: center;
     margin: 0;
-    width: 100%;
   }
+
+  .footer p {font-size: 1.25em; font-weight: 500;}
+/*  .footer i {color: orange; }*/
+  .footer #contact {font-size: .9em;}
 
   .footer .dropup {
     display: block;
@@ -720,6 +728,8 @@ a.school-page {
     text-align: right;
     padding: 0;
   }
+
+  .project-info {margin: 12px 0; font-size: .8em; background-color: rgba(255, 255, 255, .8); border: 1px dashed #333; padding: 10px;}
 
   .grid-container {
     grid-template-columns: auto;
