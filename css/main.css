@@ -549,7 +549,20 @@ a.school-page {
   border-top: 1px dashed #333;
 }
 
-/*MEDIA QUERIES*/
+/* ==========================================================================
+   About Page
+   ========================================================================== */
+/*.about-nav {background-color: #F68A16;}*/
+.about-div {padding: 25px 50px;}
+.about-div p, ul.h4-about, li.h4-about {text-align: left; padding: 6px 8px; background-color: #fff;}
+.about-div p { background-color: #b3d4fc; }
+.about-div ul.h4-about {padding: 10px 12px; color: #333; border: 1px solid #333;}
+.about-div li {padding: 6px 8px; list-style: none;}
+.about-div h4.h4-about {display: inline-block ;padding: 6px 8px; background-color: #333; color: #fff;}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
 @media only screen and (max-width: 768px) {
   body {font-size: 1rem;}
   .logo { }
@@ -567,6 +580,7 @@ a.school-page {
     font-size: .9em;
   }
 
+  .about-div ul {}
 /*  #i-too { display: none; }*/
 
 /*  #circle-img #i-too-small-screen {
