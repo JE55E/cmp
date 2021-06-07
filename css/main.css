@@ -238,6 +238,9 @@ li a:hover, .dropdown:hover .dropbtn {
   display: block;
 }
 
+/*li#home:hover {background-color: #fff; color: #333;}*/
+li#home:hover > a:hover {color: #b3d4fc; background-color: #fff;}
+
 #i-too {
   float: right;
 }
@@ -554,6 +557,7 @@ a.school-page {
    ========================================================================== */
 /*.about-nav {background-color: #F68A16;}*/
 .about-div {padding: 25px;}
+
 .about-list {font-size: 22px; font-weight: 300; margin-bottom: 25px;}
 .about-list b {font-weight: 700;}
 .about-div p, ul.h4-about, li.h4-about {text-align: left; padding: 24px; background-color: #fff;}
@@ -562,21 +566,23 @@ a.school-page {
 .about-div li {padding: 8px 0; list-style: none; }
 .about-div h4.h4-about {display: inline-block; padding: 6px 8px; background-color: #333; color: #fff;}
 .about-text {margin-bottom: 24px;}
+/*.about-text{background-image: url('../img/maps/sarahi-gallegos-map-1.png'); background-size: cover;}*/
+/*ul.about-list {background-color: rgba(0, 0, 0, .20);}*/
+/*.about-list > li {background-color: rgba(0, 0, 0, 1.0);}*/
 .about-info-block h4 {margin-bottom: 4px; }
 .about-info-block li {background-color: #333; color: #fff; padding: 12px 50px;}
 .about-info-block p {  }
-/*div.about-info-block {color: #b3d4fc; margin-bottom: 25px; }*/
 .mentor-row-1 {display: block; float: left; width: 100%;}
 .mentor-row-2 {display: block; float: left; width: 100%;}
 
-.mentor { float: left; width: 33%; margin-top: 50px; }
+.mentor { float: left; width: 33%; margin-top: 50px; text-align: center;}
 /*.mentor-row-2 > .mentor {float: none; display: inline-block; margin-top: 50px;}*/
 .mentor-img { width: 300px; margin: 6px; display: block; margin-left: auto; margin-right: auto;border-radius: 4px;}
 .mentor p {font-size: .9em; border: none; text-align: center; width: 300px; margin-left: auto; margin-right: auto; display: block; text-align: justify;}
-#h3-mentor {margin-top: 50px; margin-bottom: 0;}
+#h3-mentor {margin-top: 50px; margin-bottom: 0; text-align: center;}
 #about-link {text-decoration: none;}
 /*#about-link:hover {background-color: #333;} */
-#about:hover { border: 1px solid #fff; box-shadow: 5px 5px 0 #b3d4fc;}
+#about:hover { border: 1px solid #fff; box-shadow: 5px 5px 0 #fff; color: #fff; background-color: rgba(0, 0, 0, .750);}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
