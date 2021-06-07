@@ -279,9 +279,9 @@ li a:hover, .dropdown:hover .dropbtn {
 /*  background-image: url('../img/landing-img.png');
   background-size: 50%;*/
   text-align: center;
-  margin: auto;
+/*  margin: auto;*/
   display: block;
-  z-index: 2;
+
   /*position: absolute;*/
 }
 
@@ -553,23 +553,30 @@ a.school-page {
    About Page
    ========================================================================== */
 /*.about-nav {background-color: #F68A16;}*/
-.about-div {padding: 25px 50px;}
-.about-div p, ul.h4-about, li.h4-about {text-align: left; padding: 6px 8px; background-color: #fff;}
-.about-div p { border: 10px double #b3d4fc; }
+.about-div {padding: 25px;}
+.about-list {font-size: 22px; font-weight: 300; margin-bottom: 25px;}
+.about-list b {font-weight: 700;}
+.about-div p, ul.h4-about, li.h4-about {text-align: left; padding: 24px; background-color: #fff;}
+.about-div p { border: 1px solid #F68A16; border-radius: 8px;}
 .about-div ul.h4-about {padding: 10px 12px; color: #333;}
-.about-div li {padding: 6px 8px; list-style: none; }
+.about-div li {padding: 8px 0; list-style: none; }
 .about-div h4.h4-about {display: inline-block; padding: 6px 8px; background-color: #333; color: #fff;}
-.about-info-block {background-color: #b3d4fc; margin-bottom: 8px;}
+.about-text {margin-bottom: 24px;}
 .about-info-block h4 {margin-bottom: 4px; }
-.about-info-block li {background-color: #b3d4fc; padding: 4px;}
+.about-info-block li {background-color: #333; color: #fff; padding: 12px 50px;}
+.about-info-block p {  }
+/*div.about-info-block {color: #b3d4fc; margin-bottom: 25px; }*/
 .mentor-row-1 {display: block; float: left; width: 100%;}
-.mentor-row-2 {display: block; width: 100%; margin-left: auto; margin-right: auto; float: none;}
+.mentor-row-2 {display: block; float: left; width: 100%;}
 
 .mentor { float: left; width: 33%; margin-top: 50px; }
 /*.mentor-row-2 > .mentor {float: none; display: inline-block; margin-top: 50px;}*/
 .mentor-img { width: 300px; margin: 6px; display: block; margin-left: auto; margin-right: auto;border-radius: 4px;}
 .mentor p {font-size: .9em; border: none; text-align: center; width: 300px; margin-left: auto; margin-right: auto; display: block; text-align: justify;}
 #h3-mentor {margin-top: 50px; margin-bottom: 0;}
+#about-link {text-decoration: none;}
+/*#about-link:hover {background-color: #333;} */
+#about:hover { border: 1px solid #fff; box-shadow: 5px 5px 0 #b3d4fc;}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -578,6 +585,9 @@ a.school-page {
   .mentor p {width: 90%; }
   .mentor-img {width: 90%;}
 }
+
+.about-list {font-size: 1em; font-weight: 300;}
+.about-list b {font-weight: 500;}
 
 @media only screen and (max-width: 768px) {
   body {font-size: 1rem;}
