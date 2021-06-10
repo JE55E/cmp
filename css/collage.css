@@ -16,7 +16,7 @@ a {
   cursor: pointer;
 }
 
-.project-info {margin: 50px 100px; text-align: left; padding-bottom: 0; color: #333; border: 1px dashed #333; padding: 12px; background-color: #fff;}
+.project-info {margin: 50px 100px; text-align: left; padding-bottom: 0; color: #202020; border: 1px dashed #202020; padding: 12px; background-color: #fff;}
 
 /*  .footer-title {font-size:1.5em; font-weight: 500;}*/
   
@@ -274,7 +274,7 @@ h1#title a:hover {
   left: 2.5%;
   padding: 5px;
   line-height: 1.6;
-  text-shadow: 2px 2px 4px #333;
+  text-shadow: 2px 2px 4px #202020;
   text-transform: uppercase;
   transform: skew(5deg, -15deg);
   font-style: italic;
@@ -288,7 +288,7 @@ h1#title a:hover {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #333;
+  background-color: #202020;
   color: #fff;
   text-align: left;
   padding: 1em 0;
@@ -312,7 +312,7 @@ h1#title a:hover {
 
 @media screen and (max-width: 720px) {
 body {font-size: 1rem;}
-.project-info {margin: 12px 0px; font-size: .8em; background-color: rgba(255, 255, 255, .8); border: 1px dashed #333; padding: 10px;}
+.project-info {margin: 12px 0px; font-size: .8em; background-color: rgba(255, 255, 255, .8); border: 1px dashed #202020; padding: 10px;}
 
   .logo .site-title {
     text-align: center;

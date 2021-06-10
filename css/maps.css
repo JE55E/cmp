@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-	color: #333;
+	/*color: #202020;*/
 }
 
 div#grid {
@@ -16,7 +16,7 @@ div#grid {
 }
 
 h1.names {
-  /*text-shadow: 1px 1px 1px #333;*/
+  text-shadow: 1px 1px 1px #202020;
   text-align: center;
   display: inline-block;
   /*margin-top: 50px;*/
@@ -31,7 +31,7 @@ h1.names:hover {
 }
 
 h4 {
-  color:#333;
+  /*color:#202020;*/
 }
 
 .names img {
@@ -127,14 +127,14 @@ span.map-nav a {
 a#personal-map-home {}
 
 p {
-	color: #333;
+	/*color: #202020;*/
   /*text-align: left;*/
 }
 
-.project-info {margin: 50px 100px; text-align: left; padding-bottom: 0; color: #333; border: 1px dashed #333; padding: 12px; background-color: #fff;}
+.project-info {margin: 50px 100px; text-align: left; padding-bottom: 0; color: #202020; border: 1px dashed #202020; padding: 12px; background-color: #fff;}
 
 table, td, th {
-  border: 1px dotted #333;
+  /*border: 1px dotted #202020;*/
   padding: 5px;
 }
 
@@ -146,7 +146,7 @@ table {
 
 ul.general-list {
 	margin: 25px;
-	border: 1px solid #333;
+	/*border: 1px solid #202020;*/
 	width: 400px;
 	margin: 25px auto;
 	display: block;
@@ -213,7 +213,7 @@ h1.site-title {
 }
 
 #personal-map-main.site-title a {
-  color: #333;
+  /*color: #202020;*/
 }
 
 #personal-map-main.site-title a:hover {
@@ -399,7 +399,7 @@ footer a, p {margin-top: 10px; margin-bottom: 5px;}
     font-size: 12px;
   }
 
-.project-info {margin: 12px 0; font-size: .8em; background-color: rgba(255, 255, 255, .8); border: 1px dashed #333; padding: 10px;}
+/*.project-info {margin: 12px 0; font-size: .8em; background-color: rgba(255, 255, 255, .8); border: 1px dashed #202020; padding: 10px;}*/
 
   .logo .site-title {
     text-align: center;
