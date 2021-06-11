@@ -202,7 +202,8 @@ li a:hover:not(.active) {
 
 /*Dropdown*/
 li a:hover, .dropdown:hover .dropbtn {
-  background-color: #F68A16;
+  background-color: #fff;
+  color: #202020;
 }
 
 .dropdown {
@@ -236,7 +237,7 @@ li a:hover, .dropdown:hover .dropbtn {
 }
 
 /*li#home:hover {background-color: #fff; color: #202020;}*/
-li#home:hover > a:hover {color: #b3d4fc; background-color: #fff;}
+/*li#home:hover > a:hover {color: #b3d4fc; background-color: #fff;}*/
 
 #i-too {
   float: right;
