@@ -96,6 +96,7 @@
         border-radius: 3px;
         user-select: none;
         -webkit-user-select: none;
+        z-index: 1;
       }
 
       /* Position the "next button" to the right */
@@ -134,6 +135,20 @@
         object-fit: contain;
       }
 
+      iframe {
+        margin-bottom: -4px;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .mySlides iframe {
+        /*width: auto;*/
+        height: 80vh;
+        /*object-fit: all;*/
+        object-fit: contain;
+      }
+
 
       .caption-container {
         text-align: center;
@@ -166,11 +181,18 @@
    ========================================================================== */
 
       @media only screen and (max-width: 660px) {
+
+        .numbertext {
+          position: relative;    
+        }
+
+        #arrow-div {text-align: center;}
         /* Next & previous buttons */
         .prev,
         .next {
           cursor: pointer;
-          position: absolute;
+          position: relative;
+          margin: auto;
           top: 20%;
           /*padding: 12px;*/
           color: #F68A16;
@@ -182,7 +204,6 @@
           border-radius: 0 3px 3px 0;
           user-select: none;
           -webkit-user-select: none;
-          
         }
       }
 
@@ -223,12 +244,15 @@
       <div class="column">
         <img src="img/advocacy/AIDEN-VEGA.jpeg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
       </div>
+
       <div class="column">
         <img src="img/advocacy/MALIAH-LEVY.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
       </div>
+
       <div class="column">
         <img src="img/advocacy/SHAMIRA-ALTAMIRANO.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
       </div>
+
       <div class="column">
         <img src="img/advocacy/anon-AILEEN-ZELAYA.jpeg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
       </div>
@@ -236,6 +260,57 @@
       <div class="column">
         <img src="img/advocacy/anon-ESTEBAN-JIMENEZ.jpeg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
       </div>
+
+    <div class="column">
+        <img src="img/advocacy/BRANDON-MARTINEZ.png" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+      </div>
+
+    <div class="column">
+      <img src="img/advocacy/Onima-Khan.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+    </div>
+
+    <div class="column">
+      <img src="img/advocacy/CALI-PETERSON.png" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+    </div>
+
+    <div class="column">
+      <img src="img/advocacy/ISABELLA-ROSAS.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+    </div>
+
+    <div class="column">
+      <img src="img/advocacy/WARENN-TRUJEQUE.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+    </div>
+
+    <div class="column">
+      <img src="img/advocacy/SARAH-VERGARA.jpeg" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+    </div>
+
+    <div class="column">
+      <img src="img/advocacy/SAMUEL_COLEOTE-VASQUEZ.jpg" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+    </div>
+
+    <div class="column">
+      <img src="img/advocacy/Kaleb-Machleit.jpeg" style="width:100%" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
+    </div>
+
+    <div class="column">
+      <img src="img/advocacy/MICHAELA-TOBITT.jpeg" style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+    </div>
+
+    <div class="column">
+      <img src="img/advocacy/KALVIN-KEATON.png" style="width:100%" onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
+    </div>
+
+    <div class="column">
+      <img src="img/advocacy/Marcella_Naranjo-Rodriguez.png" style="width:100%" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
+    </div>
+
+    <div class="column">
+      <img src="img/advocacy/Max-Arce.jpg" style="width:100%" onclick="openModal();currentSlide(17)" class="hover-shadow cursor">
+    </div>
+
+
+<!--  -->
     </div>
 
 <!-- IMG SECTION 2 -->
@@ -250,38 +325,101 @@
           <p id="caption"></p>
         </div>
 <!-- ARROWS -->   
-        <a class="prev" onclick="plusSlides(-1)">⇦</a>
-        <a class="next" onclick="plusSlides(1)">⇨</a>
+        <div id="arrow-div">
+          <a class="prev" onclick="plusSlides(-1)">⇦</a>
+          <a class="next" onclick="plusSlides(1)">⇨</a>
+        </div>
 <!-- SLIDES -->
         <div class="mySlides">
-        <!-- <div class="numbertext">1 / </div> -->
-        <img src="img/advocacy/AIDEN-VEGA.jpeg" style="width:100%">
+        <!-- <div class="numbertext">1 / 18</div> -->
+          <img src="img/advocacy/AIDEN-VEGA.jpeg" style="width:100%">
         </div>
 
         <div class="mySlides">
-          <!-- <div class="numbertext">2 / </div> -->
+          <!-- <div class="numbertext">2 /18</div> -->
           <img src="img/advocacy/MALIAH-LEVY.jpg" style="width:100%">
         </div>
 
         <div class="mySlides">
-          <!-- <div class="numbertext">3 / </div> -->
+          <!-- <div class="numbertext">3 / 18</div> -->
           <img src="img/advocacy/SHAMIRA-ALTAMIRANO.jpg" style="width:100%">
         </div>
         
         <div class="mySlides">
-          <!-- <div class="numbertext">4 / </div> -->
+          <!-- <div class="numbertext">4 / 18</div> -->
           <img src="img/advocacy/anon-AILEEN-ZELAYA.jpeg" style="width:100%">
         </div>
 
         <div class="mySlides">
-          <!-- <div class="numbertext">5 / </div> -->
+          <!-- <div class="numbertext">5 / 18</div> -->
           <img src="img/advocacy/anon-ESTEBAN-JIMENEZ.jpeg" style="width:100%">
         </div>
+
+        <div class="mySlides">
+          <!-- <div class="numbertext">6 / 18</div> -->
+          <img src="img/advocacy/BRANDON-MARTINEZ.png" style="width:100%;">
+        </div>
+
+        <div class="mySlides">
+          <!-- <div class="numbertext">7 / 18</div> -->
+          <script src="https://fast.wistia.com/embed/medias/6j51iew2jy.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_6j51iew2jy videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/6j51iew2jy/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+        </div>
+
+        <div class="mySlides">
+          <!-- <div class="numbertext">8 / 18</div> -->
+          <img src="img/advocacy/CALI-PETERSON.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <!-- <div class="numbertext">8 / 18</div> -->
+          <img src="img/advocacy/ISABELLA-ROSAS.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <!-- <div class="numbertext">8 / 18</div> -->
+          <img src="img/advocacy/WARENN-TRUJEQUE.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <!-- <div class="numbertext">8 / 18</div> -->
+          <img src="img/advocacy/SARAH-VERGARA.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <!-- <div class="numbertext">8 / 18</div> -->
+          <img src="img/advocacy/SAMUEL_COLEOTE-VASQUEZ.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <!-- <div class="numbertext">8 / 18</div> -->
+          <img src="img/advocacy/Kaleb-Machleit.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <!-- <div class="numbertext">8 / 18</div> -->
+          <img src="img/advocacy/MICHAELA-TOBITT.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <!-- <div class="numbertext">8 / 18</div> -->
+          <img src="img/advocacy/KALVIN-KEATON.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <!-- <div class="numbertext">8 / 18</div> -->
+          <script src="https://fast.wistia.com/embed/medias/beprdq1wax.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_beprdq1wax videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/beprdq1wax/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+        </div>
+
+        <div class="mySlides">
+          <!-- <div class="numbertext">8 / 18</div> -->
+          <img src="img/advocacy/Max-Arce.jpg" style="width:100%">
+        </div>
+
 
 <!-- IMG SECTION 3 -->
 <!-- IMG SECTION 3 -->
         <div class="column hidden-row">
-          <img class="demo cursor" src="img/advocacy/AIDEN-VEGA.jpeg" style="width:100%" onclick="currentSlide(1)" alt="AIDEN VEGA, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 1">
+          <img class="demo cursor" src="img/advocacy/AIDEN-VEGA.jpeg" style="width:100%" onclick="currentSlide(1)" alt="32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 1">
         </div>
         <div class="column hidden-row">
           <img class="demo cursor" src="img/advocacy/MALIAH-LEVY.jpg" style="width:100%" onclick="currentSlide(2)" alt="MALIAH LEVY, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 2">
@@ -295,7 +433,45 @@
         <div class="column hidden-row">
           <img class="demo cursor" src="img/advocacy/anon-ESTEBAN-JIMENEZ.jpeg" style="width:100%" onclick="currentSlide(5)" alt="32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 1">
         </div>
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/advocacy/BRANDON-MARTINEZ.png" style="width:100%" onclick="currentSlide(6)" alt="BRANDON MARTINEZ, Bravo Medical Magnet">
+        </div>
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/advocacy/Onima-Khan.jpg" style="width:100%" onclick="currentSlide(7)" alt="ONIMA KHAN, Bravo Medical Magnet">
+        </div>
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/advocacy/CALI-PETERSON.png" style="width:100%" onclick="currentSlide(8)" alt="CALI PETERSON, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 1">
+        </div>
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/advocacy/ISABELLA-ROSAS.jpg" style="width:100%" onclick="currentSlide(9)" alt="ISABELLA ROSAS, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 1">
+        </div>
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/advocacy/WARENN-TRUJEQUE.jpg" style="width:100%" onclick="currentSlide(10)" alt="WARENN TRUJEQUE, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 1">
+        </div>
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/advocacy/SARAH-VERGARA.jpeg" style="width:100%" onclick="currentSlide(11)" alt="SARAH VERGARA, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 2">
+        </div>
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/advocacy/SAMUEL_COLEOTE-VASQUEZ.jpg" style="width:100%" onclick="currentSlide(12)" alt="32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 1">
+        </div>
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/advocacy/Kaleb-Machleit.jpeg" style="width:100%" onclick="currentSlide(13)" alt="32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 1">
+        </div>
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/advocacy/MICHAELA-TOBITT.jpeg" style="width:100%" onclick="currentSlide(14)" alt="32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 1">
+        </div>
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/advocacy/KALVIN-KEATON.png" style="width:100%" onclick="currentSlide(15)" alt="32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 1">
+        </div>
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/advocacy/Marcella_Naranjo-Rodriguez.png" style="width:100%" onclick="currentSlide(16)" alt="32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 1">
+        </div>
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/advocacy/Max-Arce.jpg" style="width:100%" onclick="currentSlide(17)" alt="32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 1">
+        </div>
 
+
+<!--  -->
       </div>
     </div>
 
