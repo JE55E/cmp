@@ -45,7 +45,7 @@ h1#title a {
   text-decoration: none;
 }
 
-.project-info {margin: 50px 100px; text-align: left; padding-bottom: 0; color: #202020; border: 1px dashed #202020; padding: 12px; background-color: #fff;}
+.project-info {margin: 50px 100px; text-align: center; padding-bottom: 0; color: #202020; border: 1px dashed #202020; padding: 12px; background-color: #fff;}
 
 /*p {text-align: center;}*/
 

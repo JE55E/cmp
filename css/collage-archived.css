@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif; 
+  letter-spacing: 0.03em;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+a {
+  /*text-decoration: none;*/
+  color: #F68A16;
+  cursor: pointer;
+}
+
+.project-info {margin: 50px 100px; text-align: left; padding-bottom: 0; color: #202020; border: 1px dashed #202020; padding: 12px; background-color: #fff;}
+
+/*  .footer-title {font-size:1.5em; font-weight: 500;}*/
+  
+.footer p {margin-top: 10px; color: #fff; font-size: 1.5em; font-weight: 500;}
+.footer i {color: #F68A16;}
+.footer #contact {font-weight: 300; font-size: 1em;}
+
+/* ==========================================================================
+   Main Header
+   ========================================================================== */
+
+#header {
+  margin: 0;
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+  padding: 0;
+  z-index: 1;
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 6px;
+}
+
+.logo {
+  display: inline;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.logo img {
+  width: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.logo .site-title {
+  font-size: 1.5rem;
+  display: inline;
+  margin: 0 0 0 1rem;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+h1.site-title a {
+  display: inline;
+  text-decoration: none;
+}
+
+#cml {
+  float: right;
+  padding: 1em;
+}
+
+
+/* ==========================================================================
+   Menus
+   ========================================================================== */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #F68A16;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #fff;
+  color: #F68A16;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+/*Dropdown*/
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #b3d4fc;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+  z-index: 1;
+  font-size: .8em;
+}
+
+.dropdown-content a {
+  color: #F68A16;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#i-too {
+  float: right;
+}
+
+#i-too a:hover {
+  background-color: #F68A16;
+  color: #fff;
+}
+
+h1#title {
+  text-align: center;
+  text-decoration: 3px underline #fff;
+  margin-top: 25px;
+}
+
+h1#title a {
+  color: #F68A16;
+  background-color: #fff;
+  border: 3px solid #F68A16;
+  box-shadow: 5px 5px 0px #F68A16;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+h1#title a:hover {
+  cursor: pointer;
+}
+
+.vid-div {background-color: #b3d4fc; padding: 24px 50px;}
+.vid-text {text-align: center; margin-top: 50px; font-size: 1.5em;}
+.vid {text-align: center; margin-bottom: 50px;}
+
+/* Center website */
+.main {
+  margin: auto;
+  isolation: isolate;
+}
+
+#photos {margin-top: 24px;}
+/*.row {margin: 10px -16px;}*/
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  /*padding: 6px 0;*/
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%; 
+  margin: auto;
+  padding: 0 2.5px;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  position: relative;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  /*border-radius: 5px;*/
+  object-fit: cover;
+  /*box-shadow: 2px 2px 2px black;*/
+}
+
+.name {
+  position: absolute; 
+  bottom: 5px; 
+  background: rgba( 22, 130, 246, 0.75);
+  width: 100%;
+  transition: .5s ease;
+  opacity: 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1em;
+}
+
+.content:hover .name {
+  opacity: 1;
+}
+
+/*LIGHTBOX*/
+#overlay {
+  background: #0d0700;
+  width: 100%;
+  height: 200%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  text-align: center;
+  z-index: 2;
+}
+
+#overlay img {
+  margin: 9% auto 0;
+  height: 500px;
+  max-width: 100%;
+  /*border-radius: 5px;*/
+  /*z-index: 2;*/
+}
+
+#caption {
+  color: #fff;
+/*  font-weight: 700;*/
+  font-size: 24px;
+  position: fixed;
+  top: 5%;
+  left: 2.5%;
+  padding: 5px;
+  line-height: 1.6;
+  text-shadow: 2px 2px 4px #202020;
+  text-transform: uppercase;
+  transform: skew(5deg, -15deg);
+  font-style: italic;
+  z-index: 2;
+}
+
+/*Footer*/
+
+.footer {
+  position: static;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #202020;
+  color: #fff;
+  text-align: left;
+  padding: 1em 0;
+  text-align: center;
+}
+
+#social-buttons {
+  display: block;
+}
+
+.social img {
+  width: 40px;
+  margin: 25px 5px;
+}
+
+.social img:hover {
+  filter: blur(2px);
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 720px) {
+body {font-size: 1rem;}
+.project-info {margin: 12px 0px; font-size: .8em; background-color: rgba(255, 255, 255, .8); border: 1px dashed #202020; padding: 10px;}
+
+  .logo .site-title {
+    text-align: center;
+    font-size: 1.4em;
+  }
+
+  #logo { 
+    width: 50px;
+  }
+
+  #i-too {
+/*    float: left;*/
+    background-color: #fff;
+    width: 100%;
+    color: #f68a16;
+    padding: 5px 0 0 0;
+  }
+
+  #i-too a {
+    color: #f68a16;
+    font-size: .7em;
+    text-align: right;
+    padding: 0;
+  }
+
+  #i-too a:hover {
+  background-color: #fff;
+  color: #F68A16;
+}
+
+  h1 {font-size: 22px;}
+
+  h1#title {
+    /*font-size: 1.5em;*/
+    margin-bottom: 20px;
+  }
+
+  .dropdown-content a {
+    font-size: .9em;
+  }
+
+  .column { 
+    width: 33%; 
+  }
+
+  .image {
+    height: 100px;
+  }
+
+  .name {
+    opacity: 1;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: rgba(0,0,0,.75);
+    padding: 0;
+  }
+
+  .row { 
+    margin-top: 0;
+   }
+
+  #overlay img { 
+    height: 280px;
+    max-width: 100%;
+    margin-top: 50px;
+  }
+
+  #caption {
+    top: 55%;
+    left: 25%;
+  }
+
+  /*Footer*/
+
+  .footer p {
+    text-align: center;
+    font-size: .7em;
+  }
+
+  footer p.footer-title {font-weight: 500;}
+
+  #social-buttons {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .social img {
+    display: inline-block;
+    width: 30px;
+  }
+}

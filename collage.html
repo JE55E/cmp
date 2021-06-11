@@ -1,630 +1,1057 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>CMP: Critical Makers Lab</title>
-<link rel="icon" href="img/icon.png">
-<meta name="description" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-<link rel="stylesheet" href="css/collage.css" type="text/css">
-<style></style>
-</head>
-<body>
-<div id="header">
-  <div class="logo">
-    <a href="index.html"><img id="logo" src="img/icon.png"></a>
-    <sup><h1 class="site-title"><a href="https://criticalmediaproject.org" target="_blank">critical media project</a></h1></sup>
-  </div>
-</div>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <title>CMP: Critical Makers Lab</title>
+    <link rel="icon" href="img/icon.png">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="stylesheet" href="css/slideshow.css" type="text/css">
+    <style>
 
-<!-- Main menu -->
-<ul>
-  <li><a href="index.html">home</a></li>
-  <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">projects</a>
-    <div class="dropdown-content">
-      <a style="color: #333;">IDENTITY: collage</a>
-      <a href="personal-map.html">PLACE: personal map</a>
-      <a href="community-interviews.html">BELONGING: community interview</a>
-      <a href="i-am-i-am-not.html">STEREOTYPES: I am, I am not</a>
-      <a href="movie-posters.html">VISIBILITY: movie poster</a>
-      <a href="advocacy.html">ADVOCACY: open medium</a> 
+      .row > .column {
+        /*padding: 0 8px;*/
+      }
+
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .column {
+        float: left;
+        width: 25%;
+        margin: auto;
+        padding: 0 2.5px;
+      }
+
+      /* The Modal (background) */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 50px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: black;
+      }
+
+      /* Modal Content */
+      .modal-content {
+        position: relative;
+        background-color: #000;
+        margin: auto;
+        padding: 0;
+        width: 90%;
+        max-width: 1200px;
+      }
+
+      /* The Close Button */
+      .close {
+        color: white;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 35px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #999;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .mySlides {
+        display: none;
+      }
+
+      .cursor {
+        cursor: pointer;
+      }
+
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: #F68A16;
+        border: 1px solid #F68A16;
+        /*background-color: rgba(0, 0, 0, .20);*/
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.6s ease;
+        border-radius: 3px;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px;
+      }
+
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        color: #333;
+      }
+
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+      img {
+        margin-bottom: -4px;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .mySlides img {
+        /*width: auto;*/
+        height: 80vh;
+        /*object-fit: all;*/
+        object-fit: contain;
+      }
+
+
+      .caption-container {
+        text-align: center;
+        background-color: black;
+        padding: 2px 16px;
+        color: #fff;
+      }
+
+      /*.demo {
+        opacity: 0.6;
+      }
+
+      .active,
+      .demo:hover {
+        opacity: 1;
+      }*/
+
+      img.hover-shadow {
+        transition: 0.3s;
+      }
+
+      .hover-shadow:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      .hidden-row {display: none;}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+      @media only screen and (max-width: 660px) {
+
+        .numbertext {
+          position: relative;    
+        }
+
+        #arrow-div {text-align: center;}
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: relative;
+          margin: auto;
+          top: 20%;
+          /*padding: 12px;*/
+          color: #F68A16;
+          border: none;
+          /*background-color: rgba(255, 255, 255, .25);*/
+          font-weight: bold;
+          font-size: 30px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div id="header">
+      <div class="logo">
+        <a href="index.html"><img id="logo" src="img/icon.png"></a>
+        <sup><h1 class="site-title"><a href="https://criticalmediaproject.org" target="_blank">critical media project</a></h1></sup>
+      </div>
     </div>
-  </li>
-  <li id="home"><a style="" href="about.html">about</a></li>
-  <li id="i-too"><a href="about.html"><i>I TOO AM</i> critical makers lab</a></li>
-</ul>
-<h1 id="title"><a>IDENTITY COLLAGE</a></h1>
-<p class="project-info">Who am I? What am I? When am I? How am I defined by others? Create a self portrait in the form of a physical or digital collage. <a href="https://criticalmediaproject.org/activities/identity-collage/" target="_blank">Read more</a></p>
-<!-- Image Gallery Grid -->
-<div id="photos" class="row">
-	<div id="photo-gallery" class="lightbox-gallery">
 
-		<div class="column groupA">
-			<div id="" class="content">
-				<a href="img/collages/justin-lee.png" alt="Justin Lee">
-					<img class="image" src="img/collages/justin-lee.png" style="width:100%">  
-					<div class="name">Justin Lee</div>
-				</a>
-			</div>
-		</div>
+    <!-- Main menu -->
+    <ul>
+      <li><a href="index.html">home</a></li>
+      <li id="home"><a style="" href="about.html">about</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">projects</a>
+        <div class="dropdown-content">
+          <a style="color: #F68A16;">IDENTITY: collage</a>
+          <a href="personal-map.html">PLACE: personal map</a>
+          <a href="community-interviews.html">BELONGING: community interview</a>
+          <a href="i-am-i-am-not.html">STEREOTYPES: I am, I am not</a>
+          <a href="movie-posters.html">VISIBILITY: movie poster</a>
+          <a href="advocacy.html">ADVOCACY: open medium</a> 
+        </div>
+      </li>
+      <li id="i-too"><a href="index.html#about"><i>I TOO AM</i> critical makers lab</a></li>
+    </ul>
+    <h1 id="title"><a>IDENTITY COLLAGE</a></h1>
+    <p class="project-info">Who am I? What am I? When am I? How am I defined by others? Create a self portrait in the form of a physical or digital collage. <a href="https://criticalmediaproject.org/activities/identity-collage/" target="_blank">Read more</a></p>
 
-		<div class="column groupB">
-			<div class="content">
-				<a href="img/collages/cali-peterson.jpeg" alt="Cali Peterson">
-					<img class="image" src="img/collages/cali-peterson.jpeg" alt="" style="width:100%">
-					<div class="name">Cali Peterson</div>
-				</a>
-				</div>
-			</div>
+    <div class="row">
 
-		<div class="column groupA">
-			<div id="" class="content">
-				<a href="img/collages/ABRIL_LOPANCE-FERNANDEZ.png" alt="ABRIL LOPANCE-FERNANDEZ">
-					<img class="image" src="img/collages/ABRIL_LOPANCE-FERNANDEZ.png" style="width:100%">  
-					<div class="name">ABRIL LOPANCE-FERNANDEZ</div>
-				</a>
-			</div>
-		</div>
+<!-- IMG SECTION 1 -->
+      <div class="column">
+        <img src="img/collages/justin-lee.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupB">
-			<div class="content">
-				<a href="img/collages/ADRIANA_SEBASTIAN-AMBROSIO.png" alt="ADRIANA SEBASTIAN-AMBROSIO">
-					<img class="image" src="img/collages/ADRIANA_SEBASTIAN-AMBROSIO.png" alt="" style="width:100%">
-					<div class="name">ADRIANA SEBASTIAN-AMBROSIO</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+        <img src="img/collages/cali-peterson.jpeg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupC">
-			<div class="content">
-				<a href="img/collages/AFRID-HASSAN.png" alt="AFRID HASSAN">
-					<img class="image" src="img/collages/AFRID-HASSAN.png" alt="" style="width:100%">
-					<div class="name">AFRID HASSAN</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+        <img src="img/collages/ABRIL_LOPANCE-FERNANDEZ.png" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/AIDEN-VEGA.png" alt="AIDEN VEGA">
-					<img class="image" src="img/collages/AIDEN-VEGA.png" alt="" style="width:100%">
-					<div class="name">AIDEN VEGA</div>
-				</a>
-			</div>
-		</div>		
+      <div class="column">
+        <img src="img/collages/ADRIANA_SEBASTIAN-AMBROSIO.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupB">
-			<div class="content">
-				<a href="img/collages/ALAN_ESCAMILLA-SANCHEZ.png" alt="ALAN ESCAMILLA-SANCHEZ">
-					<img class="image" src="img/collages/ALAN_ESCAMILLA-SANCHEZ.png" alt="" style="width:100%">
-					<div class="name">ALAN ESCAMILLA-SANCHEZ</div>
-				</a>
-			</div>
-		</div>				
+      <div class="column">
+        <img src="img/collages/AFRID-HASSAN.png" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupC">
-			<div class="content">
-				<a href="img/collages/ALLISON-EVANS.jpeg" alt="ALLISON EVANS">
-					<img class="image" src="img/collages/ALLISON-EVANS.jpeg" alt="" style="width:100%">
-					<div class="name">ALLISON EVANS</div>
-				</a>
-			</div>
-		</div>		
+      <div class="column">
+          <img src="img/collages/AIDEN-VEGA.png" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/ASHLEY-MARTINEZ.png" alt="ASHLEY MARTINEZ">
-					<img class="image" src="img/collages/ASHLEY-MARTINEZ.png" alt="" style="width:100%">
-					<div class="name">ASHLEY MARTINEZ</div>
-				</a>
-			</div>
-		</div>		
+      <div class="column">
+          <img src="img/collages/ALAN_ESCAMILLA-SANCHEZ.png" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupC">
-			<div class="content">
-				<a href="img/collages/CHELSEA-PENA.png" alt="CHELSEA PENA">
-					<img class="image" src="img/collages/CHELSEA-PENA.png" alt="" style="width:100%">
-					<div class="name">CHELSEA PENA</div>
-				</a>
-			</div>
-		</div>	
+      <div class="column">
+          <img src="img/collages/ALLISON-EVANS.jpeg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/CINDY-REYES.png" alt="CINDY REYES">
-					<img class="image" src="img/collages/CINDY-REYES.png" alt="" style="width:100%">
-					<div class="name">CINDY REYES</div>
-				</a>
-			</div>
-		</div>	
+      <div class="column">
+          <img src="img/collages/ASHLEY-MARTINEZ.png" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupB">
-			<div class="content">
-				<a href="img/collages/David-Rodriguez.png" alt="David Rodriguez">
-					<img class="image" src="img/collages/David-Rodriguez.png" alt="" style="width:100%">
-					<div class="name">David Rodriguez</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/CHELSEA-PENA.png" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupC">
-			<div class="content">
-				<a href="img/collages/DESTINY_ESTRADA-MENDOZA.jpeg" alt="DESTINY ESTRADA-MENDOZA">
-					<img class="image" src="img/collages/DESTINY_ESTRADA-MENDOZA.jpeg" alt="" style="width:100%">
-					<div class="name">DESTINY ESTRADA-MENDOZA</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/CINDY-REYES.png" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/ERIQ-FERNANDEZ.png" alt="ERIQ FERNANDEZ">
-					<img class="image" src="img/collages/ERIQ-FERNANDEZ.png" alt="" style="width:100%">
-					<div class="name">ERIQ FERNANDEZ</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/David-Rodriguez.png" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupB">
-			<div class="content">
-				<a href="img/collages/ESTEBAN-JIMENEZ.png" alt="ESTEBAN JIMENEZ">
-					<img class="image" src="img/collages/ESTEBAN-JIMENEZ.png" alt="" style="width:100%">
-					<div class="name">ESTEBAN JIMENEZ</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/DESTINY_ESTRADA-MENDOZA.jpeg" style="width:100%" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupC">
-			<div class="content">
-				<a href="img/collages/fariha-anwar.png" alt="Fariha Anwar">
-					<img class="image" src="img/collages/fariha-anwar.png" alt="" style="width:100%">
-					<div class="name">Fariha Anwar</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/ERIQ-FERNANDEZ.png" style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/FARRAH-PEREZ.jpg" alt="FARRAH PEREZ">
-					<img class="image" src="img/collages/FARRAH-PEREZ.jpg" alt="" style="width:100%">
-					<div class="name">FARRAH PEREZ</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/ESTEBAN-JIMENEZ.png" style="width:100%" onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupB">
-			<div class="content">
-				<a href="img/collages/ISABELLA-ROSAS.jpg" alt="ISABELLA ROSAS">
-					<img class="image" src="img/collages/ISABELLA-ROSAS.jpg" alt="" style="width:100%">
-					<div class="name">ISABELLA ROSAS</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/fariha-anwar.png" style="width:100%" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupC">
-			<div class="content">
-				<a href="img/collages/Jasmin-Moreno.png" alt="Jasmin Moreno">
-					<img class="image" src="img/collages/Jasmin-Moreno.png" alt="" style="width:100%">
-					<div class="name">Jasmin Moreno</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/ISABELLA-ROSAS.jpg" style="width:100%" onclick="openModal();currentSlide(17)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/JOHN-LAINEZ.jpeg" alt="JOHN LAINEZ">
-					<img class="image" src="img/collages/JOHN-LAINEZ.jpeg" alt="" style="width:100%">
-					<div class="name">JOHN LAINEZ</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/Jasmin-Moreno.png" style="width:100%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupB">
-			<div class="content">
-				<a href="img/collages/JONATHAN-YI.jpg" alt="JONATHAN YI">
-					<img class="image" src="img/collages/JONATHAN-YI.jpg" alt="" style="width:100%">
-					<div class="name">JONATHAN YI</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/JOHN-LAINEZ.jpeg" style="width:100%" onclick="openModal();currentSlide(19)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupC">
-			<div class="content">
-				<a href="img/collages/JORGE-FERNANDEZ.jpg" alt="JORGE FERNANDEZ">
-					<img class="image" src="img/collages/JORGE-FERNANDEZ.jpg" alt="" style="width:100%">
-					<div class="name">JORGE FERNANDEZ</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/JONATHAN-YI.jpg" style="width:100%" onclick="openModal();currentSlide(20)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/Julissa-Ramos.png" alt="Julissa Ramos">
-					<img class="image" src="img/collages/Julissa-Ramos.png" alt="" style="width:100%">
-					<div class="name">Julissa Ramos</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/JORGE-FERNANDEZ.jpg" style="width:100%" onclick="openModal();currentSlide(21)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupB">
-			<div class="content">
-				<a href="img/collages/KALVIN-KEATON.png" alt="KALVIN KEATON">
-					<img class="image" src="img/collages/KALVIN-KEATON.png" alt="" style="width:100%">
-					<div class="name">KALVIN KEATON</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/Julissa-Ramos.png" style="width:100%" onclick="openModal();currentSlide(22)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupC">
-			<div class="content">
-				<a href="img/collages/KAMARYE-HEMMANS.png" alt="KAMARYE HEMMANS">
-					<img class="image" src="img/collages/KAMARYE-HEMMANS.png" alt="" style="width:100%">
-					<div class="name">KAMARYE HEMMANS</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/KALVIN-KEATON.png" style="width:100%" onclick="openModal();currentSlide(23)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/KAREN-AGUILAR-IXMATA.jpg" alt="KAREN AGUILAR-IXMATA">
-					<img class="image" src="img/collages/KAREN-AGUILAR-IXMATA.jpg" alt="" style="width:100%">
-					<div class="name">KAREN AGUILAR-IXMATA</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/KAMARYE-HEMMANS.png" style="width:100%" onclick="openModal();currentSlide(24)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupB">
-			<div class="content">
-				<a href="img/collages/KATHERINE-LOPEZ.png" alt="KATHERINE LOPEZ">
-					<img class="image" src="img/collages/KATHERINE-LOPEZ.png" alt="" style="width:100%">
-					<div class="name">KATHERINE LOPEZ</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/KAREN-AGUILAR-IXMATA.jpg" style="width:100%" onclick="openModal();currentSlide(25)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupB">
-			<div class="content">
-				<a href="img/collages/KEVIN-LICONA.jpg" alt="KEVIN LICONA">
-					<img class="image" src="img/collages/KEVIN-LICONA.jpg" alt="" style="width:100%">
-					<div class="name">KEVIN LICONA</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/KATHERINE-LOPEZ.png" style="width:100%" onclick="openModal();currentSlide(26)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/LIANI-CHAVEZ.png" alt="LIANI CHAVEZ">
-					<img class="image" src="img/collages/LIANI-CHAVEZ.png" alt="" style="width:100%">
-					<div class="name">LIANI CHAVEZ</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/KEVIN-LICONA.jpg" style="width:100%" onclick="openModal();currentSlide(27)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupB">
-			<div class="content">
-				<a href="img/collages/MADISON-DOMINGUEZ.png" alt="MADISON DOMINGUEZ">
-					<img class="image" src="img/collages/MADISON-DOMINGUEZ.png" alt="" style="width:100%">
-					<div class="name">MADISON DOMINGUEZ</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/MADISON-DOMINGUEZ.png" style="width:100%" onclick="openModal();currentSlide(28)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupC">
-			<div class="content">
-				<a href="img/collages/Maimuna-Chowdhury.png" alt="Maimuna Chowdhury">
-					<img class="image" src="img/collages/Maimuna-Chowdhury.png" alt="" style="width:100%">	
-					<div class="name">Maimuna Chowdhury</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/Maimuna-Chowdhury.png" style="width:100%" onclick="openModal();currentSlide(29)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/MARIANA_LOPEZ-GUZMAN.png" alt="MARIANA LOPEZ-GUZMAN">
-					<img class="image" src="img/collages/MARIANA_LOPEZ-GUZMAN.png" alt="" style="width:100%">
-					<div class="name">MARIANA LOPEZ-GUZMAN</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/MARIANA_LOPEZ-GUZMAN.png" style="width:100%" onclick="openModal();currentSlide(30)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupB">
-			<div class="content">
-				<a href="img/collages/MARINA-NAVARRO.png" alt="MARINA NAVARRO">
-					<img class="image" src="img/collages/MARINA-NAVARRO.png" alt="" style="width:100%">
-					<div class="name">MARINA NAVARRO</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/MARINA-NAVARRO.png" style="width:100%" onclick="openModal();currentSlide(31)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupC">
-			<div class="content">
-				<a href="img/collages/MARIO-REYNOZA-GRANADOS.png" alt="MARIO REYNOZA-GRANADOS">
-					<img class="image" src="img/collages/MARIO-REYNOZA-GRANADOS.png" alt="" style="width:100%">
-					<div class="name">MARIO REYNOZA-GRANADOS</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/MARIO-REYNOZA-GRANADOS.png" style="width:100%" onclick="openModal();currentSlide(32)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/METADEL-TEFERA.png" alt="METADEL TEFERA">
-					<img class="image" src="img/collages/METADEL-TEFERA.png" alt="" style="width:100%">
-					<div class="name">METADEL TEFERA</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/METADEL-TEFERA.png" style="width:100%" onclick="openModal();currentSlide(33)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupB">
-			<div class="content">
-				<a href="img/collages/NOELIA-ROQUE.JPG" alt="NOELIA ROQUE">
-					<img class="image" src="img/collages/NOELIA-ROQUE.JPG" alt="" style="width:100%">
-					<div class="name">NOELIA ROQUE</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/NOELIA-ROQUE.JPG" style="width:100%" onclick="openModal();currentSlide(34)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupC">
-			<div class="content">
-				<a href="img/collages/onima-khan.png" alt="Onima Khan">
-					<img class="image" src="img/collages/onima-khan.png" alt="" style="width:100%">
-					<div class="name">Onima Khan</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/onima-khan.png" style="width:100%" onclick="openModal();currentSlide(35)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/PAOLA-DUBON.jpg" alt="PAOLA DUBON">
-					<img class="image" src="img/collages/PAOLA-DUBON.jpg" alt="" style="width:100%">
-					<div class="name">PAOLA DUBON</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/PAOLA-DUBON.jpg" style="width:100%" onclick="openModal();currentSlide(36)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupB">
-			<div class="content">
-				<a href="img/collages/Sameer-Abdullah.PNG" alt="Sameer Abdullah">
-					<img class="image" src="img/collages/Sameer-Abdullah.PNG" alt="" style="width:100%">
-					<div class="name">Sameer Abdullah</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/Sameer-Abdullah.PNG" style="width:100%" onclick="openModal();currentSlide(37)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupC">
-			<div class="content">
-				<a href="img/collages/SARAH-VERGARA.jpg" alt="SARAH VERGARA">
-					<img class="image" src="img/collages/SARAH-VERGARA.jpg" alt="" style="width:100%">
-					<div class="name">SARAH VERGARA</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/SARAH-VERGARA.jpg" style="width:100%" onclick="openModal();currentSlide(38)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/seth-morris.jpeg" alt="Seth Morris">
-					<img class="image" src="img/collages/seth-morris.jpeg" alt="" style="width:100%">
-					<div class="name">Seth Morris</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/seth-morris.jpeg" style="width:100%" onclick="openModal();currentSlide(39)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupB">
-			<div class="content">
-				<a href="img/collages/TAMARA-PEREZ.jpeg" alt="TAMARA PEREZ">
-					<img class="image" src="img/collages/TAMARA-PEREZ.jpeg" alt="" style="width:100%">
-					<div class="name">TAMARA PEREZ</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/TAMARA-PEREZ.jpeg" style="width:100%" onclick="openModal();currentSlide(40)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupC">
-			<div class="content">
-				<a href="img/collages/VIVIAN-SANCHEZ.PNG" alt="VIVIAN SANCHEZ">
-					<img class="image" src="img/collages/VIVIAN-SANCHEZ.PNG" alt="" style="width:100%">
-					<div class="name">VIVIAN SANCHEZ</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/VIVIAN-SANCHEZ.PNG" style="width:100%" onclick="openModal();currentSlide(41)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/WARENN-TRUJEQUE.png" alt="WARENN TRUJEQUE">
-					<img class="image" src="img/collages/WARENN-TRUJEQUE.png" alt="" style="width:100%">
-					<div class="name">WARENN TRUJEQUE</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/WARENN-TRUJEQUE.png" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupB">
-			<div class="content">
-				<a href="img/collages/WENDY-CHAVEZ.png" alt="WENDY CHAVEZ">
-					<img class="image" src="img/collages/WENDY-CHAVEZ.png" alt="" style="width:100%">
-					<div class="name">WENDY CHAVEZ</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/WENDY-CHAVEZ.png" style="width:100%" onclick="openModal();currentSlide(43)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupC">
-			<div class="content">
-				<a href="img/collages/Youngin-Darwin.jpeg" alt="Youngin Darwin">
-					<img class="image" src="img/collages/Youngin-Darwin.jpeg" alt="" style="width:100%">
-					<div class="name">Youngin Darwin</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/Youngin-Darwin.jpeg" style="width:100%" onclick="openModal();currentSlide(44)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/Tavor-Davis.jpeg" alt="Tavor Davis">
-					<img class="image" src="img/collages/Tavor-Davis.jpeg" alt="" style="width:100%">
-					<div class="name">Tavor Davis</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/Tavor-Davis.jpeg" style="width:100%" onclick="openModal();currentSlide(45)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/Gabriela-Acosta.png" alt="Gabriela Acosta">
-					<img class="image" src="img/collages/Gabriela-Acosta.png" alt="" style="width:100%">
-					<div class="name">Gabriela Acosta</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/Gabriela-Acosta.png" style="width:100%" onclick="openModal();currentSlide(46)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/BRANDON-MARTINEZ.png" alt="BRANDON MARTINEZ">
-					<img class="image" src="img/collages/BRANDON-MARTINEZ.png" alt="" style="width:100%">
-					<div class="name">BRANDON MARTINEZ</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/BRANDON-MARTINEZ.png" style="width:100%" onclick="openModal();currentSlide(47)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/BELL-MOTHER_DJAMGBIEKOU.png" alt="BELL-MOTHER DJAMGBIEKOU">
-					<img class="image" src="img/collages/BELL-MOTHER_DJAMGBIEKOU.png" alt="" style="width:100%">
-					<div class="name">BELL-MOTHER DJAMGBIEKOU</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/BELL-MOTHER_DJAMGBIEKOU.png" style="width:100%" onclick="openModal();currentSlide(48)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/SARAHI-GALLEGOS.png" alt="SARAH GALLEGOS">
-					<img class="image" src="img/collages/SARAHI-GALLEGOS.png" alt="" style="width:100%">
-					<div class="name">SARAHI GALLEGOS</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/SARAHI-GALLEGOS.png" style="width:100%" onclick="openModal();currentSlide(49)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/GISELLE_DONIZ_ALCARAZ.png" alt="GISELLE DONIZ ALCARAZ">
-					<img class="image" src="img/collages/GISELLE_DONIZ_ALCARAZ.png" alt="" style="width:100%">
-					<div class="name">GISELLE DONIZ ALCARAZ</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/GISELLE_DONIZ_ALCARAZ.png" style="width:100%" onclick="openModal();currentSlide(50)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/Kenny-Castillo.png" alt="Kenny Castillo">
-					<img class="image" src="img/collages/Kenny-Castillo.png" alt="" style="width:100%">
-					<div class="name">Kenny Castillo</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/Kenny-Castillo.png" style="width:100%" onclick="openModal();currentSlide(51)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/Daffodil-Castillo.jpeg" alt="Daffodil Castillo">
-					<img class="image" src="img/collages/Daffodil-Castillo.jpeg" alt="" style="width:100%">
-					<div class="name">Daffodil Castillo</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/Daffodil-Castillo.jpeg" style="width:100%" onclick="openModal();currentSlide(52)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/Mahia-Razifat.jpg" alt="Mahia Razifat">
-					<img class="image" src="img/collages/Mahia-Razifat.jpg" alt="" style="width:100%">
-					<div class="name">Mahia Razifat</div>
-				</a>
-			</div>
-		</div>
+      <div class="column">
+          <img src="img/collages/Mahia-Razifat.jpg" style="width:100%" onclick="openModal();currentSlide(53)" class="hover-shadow cursor">
+      </div>
 
-		<div class="column groupA">
-			<div class="content">
-				<a href="img/collages/Kayla-Lopez.JPEG" alt="Kayla Lopez">
-					<img class="image" src="img/collages/Kayla-Lopez.JPEG" alt="" style="width:100%">
-					<div class="name">Kayla Lopez</div>
-				</a>
-			</div>
-		</div>
-	<!-- END GRID -->
-	</div>
-<!-- END MAIN -->
-</div>
+      <div class="column">
+          <img src="img/collages/Kayla-Lopez.JPEG" style="width:100%" onclick="openModal();currentSlide(54)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+          <img src="img/collages/JAZMIN-GONZALEZ-LOPEZ.png" style="width:100%" onclick="openModal();currentSlide(55)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+          <img src="img/collages/LETICIA-BARCO-SUAREZ.png" style="width:100%" onclick="openModal();currentSlide(56)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+          <img src="img/collages/MICHELLE-CRISANTO.png" style="width:100%" onclick="openModal();currentSlide(57)" class="hover-shadow cursor">
+      </div>
+
+
+
+
+<!-- ROW CLOSING DIV -->        
+    </div>
+
+<!-- IMG SECTION 2 -->
+<!-- IMG SECTION 2 -->
+
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+
+<!-- NAMES / SCHOOLS -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+<!-- ARROWS -->   
+        <div id="arrow-div">
+          <a class="prev" onclick="plusSlides(-1)">⇦</a>
+          <a class="next" onclick="plusSlides(1)">⇨</a>
+        </div>
+<!-- SLIDES -->
+        <div class="mySlides">
+        <div class="numbertext">1 / 57</div>
+        <img src="img/collages/justin-lee.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 57</div>
+          <img src="img/collages/cali-peterson.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 57</div>
+          <img src="img/collages/ABRIL_LOPANCE-FERNANDEZ.png" style="width:100%">
+        </div>
+        
+        <div class="mySlides">
+          <div class="numbertext">4 / 57</div>
+          <img src="img/collages/ADRIANA_SEBASTIAN-AMBROSIO.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 57</div>
+          <img src="img/collages/AFRID-HASSAN.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 57</div>
+          <img src="img/collages/AIDEN-VEGA.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">7 / 57</div>
+          <img src="img/collages/ALAN_ESCAMILLA-SANCHEZ.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">8 / 57</div>
+          <img src="img/collages/ALLISON-EVANS.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">9 / 57</div>
+          <img src="img/collages/ASHLEY-MARTINEZ.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">10 / 57</div>
+          <img src="img/collages/CHELSEA-PENA.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">11 / 57</div>
+          <img src="img/collages/CINDY-REYES.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">12 / 57</div>
+          <img src="img/collages/David-Rodriguez.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">13 / 57</div>
+          <img src="img/collages/DESTINY_ESTRADA-MENDOZA.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">14 / 57</div>
+          <img src="img/collages/ERIQ-FERNANDEZ.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">15 / 57</div>
+          <img src="img/collages/ESTEBAN-JIMENEZ.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">16 / 57</div>
+          <img src="img/collages/fariha-anwar.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">17 / 57</div>
+          <img src="img/collages/ISABELLA-ROSAS.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">18 / 57</div>
+          <img src="img/collages/Jasmin-Moreno.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">19 / 57</div>
+          <img src="img/collages/JOHN-LAINEZ.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">20 / 57</div>
+          <img src="img/collages/JONATHAN-YI.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">21 / 57</div>
+          <img src="img/collages/JORGE-FERNANDEZ.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">22/ 57</div>
+          <img src="img/collages/Julissa-Ramos.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">23/ 57</div>
+          <img src="img/collages/KALVIN-KEATON.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">24 / 57</div>
+          <img src="img/collages/KAMARYE-HEMMANS.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">25 / 57</div>
+          <img src="img/collages/KAREN-AGUILAR-IXMATA.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">26 / 57</div>
+          <img src="img/collages/KATHERINE-LOPEZ.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">27 / 57</div>
+          <img src="img/collages/KEVIN-LICONA.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">28 / 57</div>
+          <img src="img/collages/MADISON-DOMINGUEZ.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">29 / 57</div>
+          <img src="img/collages/Maimuna-Chowdhury.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">30 / 57</div>
+          <img src="img/collages/MARIANA_LOPEZ-GUZMAN.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">31 / 57</div>
+          <img src="img/collages/MARINA-NAVARRO.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">32 / 57</div>
+          <img src="img/collages/MARIO-REYNOZA-GRANADOS.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">33 / 57</div>
+          <img src="img/collages/METADEL-TEFERA.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">34 / 57</div>
+          <img src="img/collages/NOELIA-ROQUE.JPG" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">35 / 57</div>
+          <img src="img/collages/onima-khan.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">36 / 57</div>
+          <img src="img/collages/PAOLA-DUBON.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">37 / 57</div>
+          <img src="img/collages/Sameer-Abdullah.PNG" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">38 / 57</div>
+          <img src="img/collages/SARAH-VERGARA.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">39 / 57</div>
+          <img src="img/collages/seth-morris.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">40 / 57</div>
+          <img src="img/collages/TAMARA-PEREZ.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">41 / 57</div>
+          <img src="img/collages/VIVIAN-SANCHEZ.PNG" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">42 / 57</div>
+          <img src="img/collages/WARENN-TRUJEQUE.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">43 / 57</div>
+          <img src="img/collages/WENDY-CHAVEZ.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">44 / 57</div>
+          <img src="img/collages/Youngin-Darwin.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">45 / 57</div>
+          <img src="img/collages/Tavor-Davis.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">46 / 57</div>
+          <img src="img/collages/Gabriela-Acosta.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">47 / 57</div>
+          <img src="img/collages/BRANDON-MARTINEZ.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">48 / 57</div>
+          <img src="img/collages/BELL-MOTHER_DJAMGBIEKOU.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">49 / 57</div>
+          <img src="img/collages/SARAHI-GALLEGOS.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">50 / 57</div>
+          <img src="img/collages/GISELLE_DONIZ_ALCARAZ.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">51 / 57</div>
+          <img src="img/collages/Kenny-Castillo.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">52 / 57</div>
+          <img src="img/collages/Daffodil-Castillo.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">53 / 57</div>
+          <img src="img/collages/Mahia-Razifat.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">54 / 57</div>
+          <img src="img/collages/Kayla-Lopez.JPEG" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">55 / 57</div>
+          <img src="img/collages/JAZMIN-GONZALEZ-LOPEZ.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">56 / 57</div>
+          <img src="img/collages/LETICIA-BARCO-SUAREZ.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">57 / 57</div>
+          <img src="img/collages/MICHELLE-CRISANTO.png" style="width:100%">
+        </div>
+
+
+
+<!-- IMG SECTION 3 -->
+<!-- IMG SECTION 3 -->
+<!-- IMG SECTION 3 -->
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/justin-lee.png" style="width:100%" onclick="currentSlide(1)" alt="JUSTIN LEE, Ambassador School of Global Leadership - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/cali-peterson.jpeg" style="width:100%" onclick="currentSlide(2)" alt="CALI PETERSON, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 1">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/ABRIL_LOPANCE-FERNANDEZ.png" style="width:100%" onclick="currentSlide(3)" alt="ABRIL LOPANCE-FERNANDEZ, Ambassador School of Global Leadership - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/ADRIANA_SEBASTIAN-AMBROSIO.png" style="width:100%" onclick="currentSlide(4)" alt="ADRIANA SEBASTIAN-AMBROSIO, Ambassador School of Global Leadership - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/AFRID-HASSAN.png" style="width:100%" onclick="currentSlide(5)" alt="AFRID HASSAN, Ambassador School of Global Leadership - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/AIDEN-VEGA.png" style="width:100%" onclick="currentSlide(6)" alt="AIDEN VEGA, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 1">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/ALAN_ESCAMILLA-SANCHEZ.png" style="width:100%" onclick="currentSlide(7)" alt="ALAN ESCAMILLA-SANCHEZ, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 1">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/ALLISON-EVANS.jpeg" style="width:100%" onclick="currentSlide(8)" alt="ALLISON EVANS, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 1">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/ASHLEY-MARTINEZ.png" style="width:100%" onclick="currentSlide(9)" alt="ASHLEY MARTINEZ, Ambassador School of Global Leadership - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/CHELSEA-PENA.png" style="width:100%" onclick="currentSlide(10)" alt="CHELSEA PENA, Foshay Learning Center">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/CINDY-REYES.png" style="width:100%" onclick="currentSlide(11)" alt="CINDY REYES, Ambassador School of Global Leadership - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/David-Rodriguez.png" style="width:100%" onclick="currentSlide(12)" alt="DAVID RODRIGUEZ, Ambassador School of Global Leadership - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/DESTINY_ESTRADA-MENDOZA.jpeg" style="width:100%" onclick="currentSlide(13)" alt="DESTINY ESTRADA-MENDOZA, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/ERIQ-FERNANDEZ.png" style="width:100%" onclick="currentSlide(14)" alt="ERIQ FERNANDEZ, Ambassador School of Global Leadership - PERIOD 5">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/ESTEBAN-JIMENEZ.png" style="width:100%" onclick="currentSlide(15)" alt="ESTEBAN JIMENEZ, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 1">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/fariha-anwar.png" style="width:100%" onclick="currentSlide(16)" alt="FARIHA ANWAR, Bravo Medical Magnet">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/ISABELLA-ROSAS.jpg" style="width:100%" onclick="currentSlide(17)" alt="ISABELLA ROSAS, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 1">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/Jasmin-Moreno.png" style="width:100%" onclick="currentSlide(18)" alt="JASMIN MORENO, Ambassador School of Global Leadership - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/JOHN-LAINEZ.jpeg" style="width:100%" onclick="currentSlide(19)" alt="JOHN LAINEZ, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/JONATHAN-YI.jpg" style="width:100%" onclick="currentSlide(20)" alt="JONATHAN YI, Ambassador School of Global Leadership - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/JORGE-FERNANDEZ.jpg" style="width:100%" onclick="currentSlide(21)" alt="JORGE FERNANDEZ, Ambassador School of Global Leadership - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/Julissa-Ramos.png" style="width:100%" onclick="currentSlide(22)" alt="JULISSA RAMOS, Foshay Learning Center">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/KALVIN-KEATON.png" style="width:100%" onclick="currentSlide(23)" alt="KALVIN KEATON, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 1">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/KAMARYE-HEMMANS.png" style="width:100%" onclick="currentSlide(24)" alt="KAMARYE HEMMANS, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 1">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/KAREN-AGUILAR-IXMATA.jpg" style="width:100%" onclick="currentSlide(25)" alt="KAREN AGUILAR-IXMATA, Bravo Medical Magnet">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/KATHERINE-LOPEZ.png" style="width:100%" onclick="currentSlide(26)" alt="KATHERINE LOPEZ, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/KEVIN-LICONA.jpg" style="width:100%" onclick="currentSlide(27)" alt="KEVIN LICONA, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/MADISON-DOMINGUEZ.png" style="width:100%" onclick="currentSlide(28)" alt="MADISON DOMINGUEZ, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/Maimuna-Chowdhury.png" style="width:100%" onclick="currentSlide(29)" alt="MAIMUNA CHOWDHURY, Bravo Medical Magnet">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/MARIANA_LOPEZ-GUZMAN.png" style="width:100%" onclick="currentSlide(30)" alt="MARIANA LOPEZ-GUZMAN, Ambassador School of Global Leadership - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/MARINA-NAVARRO.png" style="width:100%" onclick="currentSlide(31)" alt="MARINA NAVARRO, Ambassador School of Global Leadership - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/MARIO-REYNOZA-GRANADOS.png" style="width:100%" onclick="currentSlide(32)" alt="MARIO REYNOZA-GRANADOS, Ambassador School of Global Leadership - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/METADEL-TEFERA.png" style="width:100%" onclick="currentSlide(33)" alt="METADEL TEFERA, Ambassador School of Global Leadership - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/NOELIA-ROQUE.JPG" style="width:100%" onclick="currentSlide(34)" alt="NOELIA ROQUE, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/onima-khan.png" style="width:100%" onclick="currentSlide(35)" alt="ONIMA KHAN, Bravo Medical Magnet">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/PAOLA-DUBON.jpg" style="width:100%" onclick="currentSlide(36)" alt="PAOLA DUBON, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/Sameer-Abdullah.PNG" style="width:100%" onclick="currentSlide(37)" alt="SAMEER ABDULLAH, Ambassador School of Global Leadership - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/SARAH-VERGARA.jpg" style="width:100%" onclick="currentSlide(38)" alt="SARAH VERGARA, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/seth-morris.jpeg" style="width:100%" onclick="currentSlide(39)" alt="SETH MORRIS, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 1">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/TAMARA-PEREZ.jpeg" style="width:100%" onclick="currentSlide(40)" alt="TAMARA PEREZ, Ambassador School of Global Leadership - PERIOD 5">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/VIVIAN-SANCHEZ.PNG" style="width:100%" onclick="currentSlide(41)" alt="VIVIAN SANCHEZ, Foshay Learning Center">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/WARENN-TRUJEQUE.png" style="width:100%" onclick="currentSlide(42)" alt="WARENN TRUJEQUE, 32nd St LAUSD/USC Media Arts & Engineering Magnet - PERIOD 1">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/WENDY-CHAVEZ.png" style="width:100%" onclick="currentSlide(43)" alt="WENDY CHAVEZ, Foshay Learning Center">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/Youngin-Darwin.jpeg" style="width:100%" onclick="currentSlide(44)" alt="DARWIN GIRON, Foshay Learning Center">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/Tavor-Davis.jpeg" style="width:100%" onclick="currentSlide(45)" alt="TAVOR DAVIS, Ambassador School of Global Leadership - PERIOD 5">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/Gabriela-Acosta.png" style="width:100%" onclick="currentSlide(46)" alt="GABRIELA ACOSTA, Bravo Medical Magnet">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/BRANDON-MARTINEZ.png" style="width:100%" onclick="currentSlide(47)" alt="BRANDON MARTINEZ, Bravo Medical Magnet">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/BELL-MOTHER_DJAMGBIEKOU.png" style="width:100%" onclick="currentSlide(48)" alt="BELL-MOTHER DJAMGBIEKOU, Ambassador School of Global Leadership - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/SARAHI-GALLEGOS.png" style="width:100%" onclick="currentSlide(49)" alt="SARAHI GALLEGOS, Foshay Learning Center">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/GISELLE_DONIZ_ALCARAZ.png" style="width:100%" onclick="currentSlide(50)" alt="GISELLE DONIZ ALCARAZ, Ambassador School of Global Leadership - PERIOD 2">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/Kenny-Castillo.png" style="width:100%" onclick="currentSlide(51)" alt="KENNY CASTILLO, Foshay Learning Center">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/Daffodil-Castillo.jpeg" style="width:100%" onclick="currentSlide(52)" alt="DAFFODIL CASTILLO, Ambassador School of Global Leadership - PERIOD 5">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/Mahia-Razifat.jpg" style="width:100%" onclick="currentSlide(53)" alt="MAHIA RAZIFAT, Ambassador School of Global Leadership - PERIOD 5">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/Kayla-Lopez.JPEG" style="width:100%" onclick="currentSlide(54)" alt="ALONDRA LOBOS">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/JAZMIN-GONZALEZ-LOPEZ.png" style="width:100%" onclick="currentSlide(55)" alt="JAZMIN GONZALEZ LOPEZ, Bravo Medical Magnet">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/LETICIA-BARCO-SUAREZ.png" style="width:100%" onclick="currentSlide(56)" alt="LETICIA BARCO SUAREZ, Foshay Learning Center">
+        </div>
+
+        <div class="column hidden-row">
+          <img class="demo cursor" src="img/collages/MICHELLE-CRISANTO.png" style="width:100%" onclick="currentSlide(57)" alt="MICHELLE CRISANTO, Bravo Medical Magnet">
+        </div>
+
+
+
+<!-- CLOSING MODAL CONTENT  -->
+      </div>
+    </div>
 
 <!-- Footer -->
-<div class="footer">
-  <p class="footer-title" style=""><i>I TOO AM</i> critical makers lab</p>
-  <p id="contact">criticalmediaproject@gmail.com</p>
-  <div id="social-buttons">
-    <a class="social" href="https://www.facebook.com/criticalmediaproject" target="_blank"><img src="img/facebook-white.png"></a>
-    <a class="social" href="https://twitter.com/critmedpro" target="_blank"><img src="img/twitter-logo-white.png"></a>
-  </div>
-</div>
+    <div class="footer">
+      <p style=""><i style="">I TOO AM</i> critical makers lab</p>
+      <p id="contact">criticalmediaproject@gmail.com</p>
+      <div id="social-buttons">
+        <a class="social" href="https://www.facebook.com/criticalmediaproject" target="_blank"><img src="img/facebook-white.png"></a>
+        <a class="social" href="https://twitter.com/critmedpro" target="_blank"><img src="img/twitter-logo-white.png"></a>
+      </div>
+    </div>
 
-<script type="text/javascript">
-// RANDOMIZE DIVS
-var cards = $(".column");
+<!-- JS -->
+    <script>
 
-for (var i = 0; i < cards.length; i++){
-	var target = Math.floor(Math.random() * cards.length -1) + 1;
-	var target2 = Math.floor(Math.random() * cards.length -1) +1;
-	cards.eq(target).before(cards.eq(target2));
-}	
+    // LIGHTBOX
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
 
-// LIGHTBOX
-var $overlay = $('<div id="overlay"></div>');
-var $image = $("<img>");
-var $caption = $("<p id='caption'></p>");
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
 
-//An image to name
-$overlay.append($image, $caption);
+    var slideIndex = 1;
+    showSlides(slideIndex);
 
-//Add name
-$("body").append($overlay, $caption);
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
 
-//click the image and a scaled version of the full size image will appear
-$("#photo-gallery a").click( function(e) {
-	e.preventDefault();
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
 
-  var imageLocation = $(this).attr("href");
-  var captionLocation = $(this).attr("alt");
-
-  //update name with the image linked in the link
-  $image.attr("src", imageLocation);
-  $caption.text(captionLocation);
-
-  //show the name
-  $overlay.show();
-  $caption.show();
- });
-
-$("#overlay").click(function() {
-	$( "#overlay" ).hide();
-	$( "#caption" ).hide();
-});
-
-// SHOW & HIDE ADDITIONAL ELEMENTS
-$(document).ready(function(){
-  $('#photo-gallery a').click(function() {
-    $('#caption').css({
-      'display': 'block',
-    });
-    $('.image').css({
-    	'filter': 'grayscale(1)',
-    });
-  });
-  $('#overlay').click(function() {
-  	$('.image').css({
-  		'filter': 'grayscale(0)',
-  	});
-  });
-  $('body').click(function() {
-
-  	$('.name').css({
-  		'background-color': 'rgba(0,0,0,.6)',
-  	});
- 	});
-});
-
-</script>
-	</body>
-		</html>
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>  
+  </body>
+</html>
