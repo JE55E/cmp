@@ -56,7 +56,7 @@ h1#title a {
   width: 100%;
   background-color: #F68A16;
   color: #fff;
-  text-align: left;
+  /*text-align: left;*/
   padding: 1em 0;
   text-align: center;
 }
