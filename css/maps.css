@@ -60,10 +60,10 @@ h1#title {
 }
 
 h1#title a {
-  color: #F68A16;
+  color: #202020;
   background-color: #fff;
-  border: 3px solid #F68A16;
-  box-shadow: 5px 5px 0px #F68A16;
+  border: 3px solid #202020;
+  box-shadow: 5px 5px 0px #202020;
   padding-left: 10px;
   padding-right: 10px;
   text-decoration: none;
@@ -212,7 +212,7 @@ h1.site-title {
 }
 
 #personal-map-main.site-title a {
-  /*color: #202020;*/
+  color: #202020;
 }
 
 #personal-map-main.site-title a:hover {
@@ -347,6 +347,9 @@ iframe {
 }
 
 .footer-title {font-size:1.5em; font-weight: 500;}
+.footer p {margin-top: 10px; color: #fff; font-size: 1.5em; font-weight: 500;}
+.footer i {color: #333;}
+.footer #contact {font-weight: 300; font-size: 1em;}
 
 .footer .dropup {
   display: block;

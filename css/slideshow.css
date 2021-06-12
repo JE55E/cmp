@@ -54,7 +54,7 @@ h1#title a {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #202020;
+  background-color: #F68A16;
   color: #fff;
   text-align: left;
   padding: 1em 0;
@@ -62,7 +62,7 @@ h1#title a {
 }
 
 .footer p {margin-top: 10px; color: #fff; font-size: 1.5em; font-weight: 500;}
-.footer i {color: #F68A16;}
+.footer i {color: #333;}
 .footer #contact {font-weight: 300; font-size: 1em;}
 
 #social-buttons {
