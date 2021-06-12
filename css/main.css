@@ -54,6 +54,7 @@ hr {
   margin-right: auto;
   background-color: #202020; 
   color: #fff;
+  height: auto;
 }
 
 .footer .dropup-content {
@@ -65,7 +66,7 @@ hr {
   color: #fff;
   border: 1px dashed #fff;
 }
-
+/*.footer .dropup button:hover { background-color: #333; }*/
 #social-buttons {
   display: block;
 }
@@ -78,6 +79,8 @@ hr {
 .social img:hover {
   filter: blur(2px);
 }
+
+/*.dropup-foot {height: auto;}*/
 
 /* ==========================================================================
    Headers
@@ -258,7 +261,7 @@ li a:hover, .dropdown:hover .dropbtn {
    ========================================================================== */
 
 .jar {
-  padding: 5em 0;
+  padding: 3em 0;
 }
 
 #about-link {
@@ -351,7 +354,7 @@ h3#about {
    jar-two
    ========================================================================== */
 
-.jar-two {text-align: center;}
+.jar-two {text-align: center; padding-bottom: 1em;}
 
 .jar-two a {text-decoration: none;}
 
@@ -451,6 +454,7 @@ h3#about {
 
 .dropdown-projects:hover .dropbtn-projects {background-color: #F68A16; color: #fff;}
 
+/*div #img-ref:hover {background-color: #333;}*/
 
 /* ==========================================================================
    jar-three
@@ -458,44 +462,53 @@ h3#about {
 
 .jar-three {
   text-align: center;
+  /*padding: 0;
+  margin-bottom: 10px;*/
+  padding-top: 3em;
 }
 
 .jar-three h3 {
   margin-bottom: 3em;
 }
 
+
 /* ==========================================================================
    Schools
    ========================================================================== */
 
 .column {
-  /*float: left;*/
-  width: 200px;
-  padding: 1em;
   display: inline-block;
+  /*border-radius: 50%;*/
+  margin: .5em;
+  /*float: left;*/
+  height: 200px; 
+  width: 80%;
+  max-width: 100%;
 }
 
 /* Style the images inside the grid */
-.column img {
+/*.column img {
   opacity: 0.8; 
   object-fit: cover;
   height: 200px;
   border-radius: 50%;
-}
+  border-radius: 25px;
+}*/
 
 #tab-img-grid {
-  max-width: 100%;
+  width: 100%;
   text-align: center;
+  /*height: 100vh;*/
+  /*padding: 0 60px;*/
 }
+
+.school-site-link {text-decoration: none; color: #fff;}
 
 .dropup button {
   border: none;
-  padding: 10px;
   font-size: .8em;
-  padding: .5em;
   background-color: rgba(255,255,255,.9);
   color: #202020;
-  border: 1px solid #202020;
   border-radius: 4px;
   margin: 1em;
   width: 150px;
@@ -504,12 +517,19 @@ h3#about {
 
 .dropup {
   position: relative;
-  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 200px;
 }
 
+/*.dropup a {margin-top: 100px;}*/
 .dropup:hover {
-  background-color: ;
+  background-color: rgba(255, 255, 255, .5);
+  cursor: pointer;
+  color: #202020;
+  height: 200px;
 }
+
+.dropup:hover a {color: #202020;}
 
 .dropup-content {
   display: none;
@@ -528,30 +548,30 @@ h3#about {
   display: block;
 }
 
-.dropup-content a:hover {background-color: #fff;}
+/*.dropup-content a:hover {background-color: #fff;}*/
 
 .dropup:hover .dropup-content {
   display: block;
 }
-
+/*
 .dropup:hover .dropbtn {
   background-color: #F68A16;
 }
-
-a.schools-menu-title {
+*/
+/*a.schools-menu-title {
   background-color: #202020;
   color: #fff;
-}
+}*/
 
-a.schools-menu-title:hover {
+/*a.schools-menu-title:hover {
   background-color: #202020;
   color: #fff;
-}
+}*/
 
-a.school-page {
+/*a.school-page {
   color: #202020;
   border-top: 1px dashed #202020;
-}
+}*/
 
 /* ==========================================================================
    About Page
@@ -588,14 +608,36 @@ a.school-page {
    Media Queries
    ========================================================================== */
 @media only screen and (max-width: 980px) {
-  .mentor {display: block; width: 100%; margin-top: 4px;}
+/*  .mentor {display: block; width: 100%; margin-top: 4px;}
   .mentor p {width: 90%; }
   .mentor-img {width: 90%;}
 }
 
 .about-list {font-size: 1em; font-weight: 300;}
 .about-list b {font-weight: 500;}
+*/
 
+  .column {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+  }
+  #tab-img-grid {
+  width: 100%;
+  text-align: center;
+  height: auto;
+  padding: 0;
+}
+
+/*#tab-img-grid {
+  max-width: 100%;
+  text-align: center;
+  height: 100vh;
+  padding: 0;
+}*/
+}
 @media only screen and (max-width: 768px) {
   body {font-size: 1rem;}
   
@@ -695,7 +737,7 @@ a.school-page {
   .jar-three h3 {
     float: none;
     text-align: center;
-    padding: 1em 0;
+    /*padding: 1em 0;*/
     margin: 1em 0;
     font-size: 1em;
     color: #fff;
@@ -711,13 +753,21 @@ a.school-page {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    width: 300px;
+    width: 100%;
   }
+
+  .dropup {width: 100%;}
 
   .dropup a {cursor: pointer;}
   .column img {
     height: 300px;
   }
+
+  #tab-img-grid {
+  width: 100%;
+  text-align: center;
+  height: auto;
+}
 
   .footer {
     text-align: center;
