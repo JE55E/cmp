@@ -10,16 +10,16 @@ body {
 div#grid {
   text-align: center;
 }
-
+/*h1 {font-size: 12p}*/
 h1.names {
-  text-shadow: 1px 1px 1px #202020;
+  /*text-shadow: 1px 1px 1px #202020;*/
   text-align: center;
   display: inline-block;
   /*margin-top: 50px;*/
   font-size: 12px;
   margin: 10px;
   background-color: #fffcf9;
-  border: .5px dashed #000;
+  border: .5px solid #000;
 }
 
 h1.names:hover {
@@ -44,7 +44,7 @@ img {
   width: 250px;
   height: 250px;
   object-fit: cover;
-  border-bottom: .5px dashed #000;
+  border-bottom: .5px solid #000;
   /*box-shadow: 1px 1px 2px #000;*/
 }
 
@@ -78,8 +78,11 @@ h1.site-title a {
   text-decoration: none;
 }
 
+
+#container h1 {font-size: 1em; text-align: center; font-weight: 400; background-color: #202020; color: #fff;}
 a {
 	color: #F68A16;
+  text-decoration: none;
 }
 
 a:hover {
@@ -236,8 +239,10 @@ ul {
 
 li {
   float: left;
+  /*padding: 10px;*/
 }
 
+#map-list li {margin-bottom: 12px; font-size: .8em;}
 li a {
   display: block;
   color: #fff;
