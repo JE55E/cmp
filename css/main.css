@@ -580,19 +580,21 @@ h3#about {
 /*.about-nav {background-color: #F68A16;}*/
 .about-div {padding: 25px; }
 
-.about-list {text-align: left; font-size: 22px; font-weight: 300; margin-bottom: 25px;}
-.about-list b {font-weight: 700;}
-.about-div p, ul.h4-about, li.h4-about { padding: 24px; background-color: #fff;}
-.about-div p { border: 3px solid #F68A16; border-radius: 8px;}
-.about-div ul.h4-about {padding: 10px 12px; color: #202020;}
+.about-list {text-align: left; font-size: 24px; font-weight: 300; margin-bottom: 25px; }
+.about-list-left {}
+.about-list-right {}
+.about-list b {font-weight: 800; color: #333; }
+.about-div p, ul.h4-about, li.h4-about {padding: 24px; background-color: #fff; color: #333; font-weight: 400;}
+.about-div p { border: 3px solid #aaa; border-radius: 4px;}
+.about-div ul.h4-about {padding: 10px 12px; color: #fff; background-color: #aaa; border-radius: 4px;}
 .about-div li {padding: 8px 0; list-style: none; }
-.about-div h4.h4-about {display: inline-block; padding: 6px 8px; background-color: #202020; color: #fff;}
+.about-div h4.h4-about {display: inline-block; padding: 6px 8px; background-color: #333; color: #fff;}
 .about-text {margin-bottom: 24px;}
 /*.about-text{background-image: url('../img/maps/sarahi-gallegos-map-1.png'); background-size: cover;}*/
 /*ul.about-list {background-color: rgba(0, 0, 0, .20);}*/
 /*.about-list > li {background-color: rgba(0, 0, 0, 1.0);}*/
 .about-info-block h4 {margin-bottom: 4px;}
-.about-info-block li {background-color: #F68A16; color: #fff; padding: 12px 50px; border-radius: 4px;}
+.about-info-block li {background-color: #F68A16; color: #fff; padding: 12px 50px; }
 .about-info-block p {  }
 
 .mentor-row-1 {display: block; float: left; width: 100%;}
@@ -607,7 +609,7 @@ h3#h3-mentor { text-align: center;}
 /*#about-link:hover {background-color: #202020;} */
 #about:hover { border: 1px solid #fff; box-shadow: 5px 5px 0 #fff; color: #fff; background-color: rgba(0, 0, 0, .750);}
 
-#team-bios h4 {background-color: #202020; color: #fff; border-radius: 4px;}
+#team-bios h4 {background-color: #333; color: #fff; border-radius: 4px;}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -670,6 +672,7 @@ h3#h3-mentor { text-align: center;}
   .jar-one {
     margin: 0;
     background-size: contain;
+    
   }
 
   .jar-one img {

@@ -346,10 +346,10 @@ iframe {
   text-align: center;
 }
 
-.footer-title {font-size:1.5em; font-weight: 500;}
+/*.footer-title {font-size:1.25em; font-weight: 500;}
 .footer p {margin-top: 10px; color: #fff; font-size: 1.5em; font-weight: 500;}
 .footer i {color: #333;}
-.footer #contact {font-weight: 300; font-size: 1em;}
+.footer #contact {font-weight: 300; font-size: 1em;}*/
 
 .footer .dropup {
   display: block;
@@ -386,7 +386,7 @@ footer a, p {margin-top: 10px; margin-bottom: 5px;}
 }
 /*MEDIA QUERIES*/
 @media only screen and (max-width: 768px) {
-  body {font-size: 1rem;}
+  body {font-size: 1em;}
   h1 {
     text-align: center;
     font-size: 22px;
