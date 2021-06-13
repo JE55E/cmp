@@ -592,7 +592,7 @@ h3#about {
 /*ul.about-list {background-color: rgba(0, 0, 0, .20);}*/
 /*.about-list > li {background-color: rgba(0, 0, 0, 1.0);}*/
 .about-info-block h4 {margin-bottom: 4px;}
-.about-info-block li {background-color: #202020; color: #fff; padding: 12px 50px;}
+.about-info-block li {background-color: #F68A16; color: #fff; padding: 12px 50px; border-radius: 4px;}
 .about-info-block p {  }
 
 .mentor-row-1 {display: block; float: left; width: 100%;}
