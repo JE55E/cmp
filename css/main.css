@@ -578,12 +578,12 @@ h3#about {
    About Page
    ========================================================================== */
 /*.about-nav {background-color: #F68A16;}*/
-.about-div {padding: 25px;}
+.about-div {padding: 25px; }
 
-.about-list {font-size: 22px; font-weight: 300; margin-bottom: 25px;}
+.about-list {text-align: left; font-size: 22px; font-weight: 300; margin-bottom: 25px;}
 .about-list b {font-weight: 700;}
 .about-div p, ul.h4-about, li.h4-about { padding: 24px; background-color: #fff;}
-.about-div p { border: 1px solid #F68A16; border-radius: 8px;}
+.about-div p { border: 3px solid #F68A16; border-radius: 8px;}
 .about-div ul.h4-about {padding: 10px 12px; color: #202020;}
 .about-div li {padding: 8px 0; list-style: none; }
 .about-div h4.h4-about {display: inline-block; padding: 6px 8px; background-color: #202020; color: #fff;}
@@ -606,10 +606,13 @@ h3#h3-mentor { text-align: center;}
 #about-link {text-decoration: none;}
 /*#about-link:hover {background-color: #202020;} */
 #about:hover { border: 1px solid #fff; box-shadow: 5px 5px 0 #fff; color: #fff; background-color: rgba(0, 0, 0, .750);}
+
+#team-bios h4 {background-color: #202020; color: #fff; border-radius: 4px;}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 @media only screen and (max-width: 980px) {
+  .about-div {font-size: .8em;}
   .mentor {display: block; width: 100%; margin-top: 4px;}
   .mentor p {width: 90%; }
   .mentor-img {width: 90%;}
